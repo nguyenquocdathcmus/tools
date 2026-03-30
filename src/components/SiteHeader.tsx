@@ -50,6 +50,7 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
           <Link href="/tools/timestamp" onClick={closeMenu}>Timestamp</Link>
           <Link href="/tools/image" onClick={closeMenu}>Image</Link>
           <Link href="/tools/pdf" onClick={closeMenu}>PDF</Link>
+          <Link href="/tools/qrcode" onClick={closeMenu}>QR Code</Link>
         </nav>
       </div>
     </header>

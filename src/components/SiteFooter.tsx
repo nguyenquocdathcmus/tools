@@ -18,6 +18,7 @@ export default function SiteFooter() {
         { href: "/tools/encode", label: "Encode Tools" },
         { href: "/tools/image", label: "Image Tools" },
         { href: "/tools/pdf", label: "PDF Tools" },
+        { href: "/tools/qrcode", label: "QR Code Tools" },
       ],
     },
     {
