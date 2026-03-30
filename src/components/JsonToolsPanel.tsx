@@ -32,20 +32,6 @@ type TreeListData = {
   isExpanded: (path: string) => boolean;
 };
 
-const jsonTools = [
-  "JSON Formatter",
-  "JSON Validator",
-  "JSON Editor",
-  "JSON Pretty Print",
-  "JSON Viewer",
-  "JSON Parser",
-  "JSON Minify",
-  "JSON Reader",
-  "JSON Stringify Online",
-  "JSON to One Line",
-  "JSON Sorter",
-];
-
 const actionMeta: Record<JsonAction, { title: string; desc: string }> = {
   format: { title: "JSON Formatter", desc: "Format and pretty print JSON" },
   validate: { title: "JSON Validator", desc: "Check syntax and report line errors" },
@@ -618,15 +604,6 @@ export default function JsonToolsPanel() {
         <div className="editor-card">
           <p>JSON Parser / Viewer Summary</p>
           <pre>{parsedSummary}</pre>
-        </div>
-
-        <div className="editor-card">
-          <p>Included JSON Tools</p>
-          <ul className="tool-chip-list">
-            {jsonTools.map((tool) => (
-              <li key={tool}>{tool}</li>
-            ))}
-          </ul>
         </div>
       </div>
 

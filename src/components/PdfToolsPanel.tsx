@@ -15,6 +15,7 @@ function pdfBytesToBlob(bytes: Uint8Array): Blob {
 export default function PdfToolsPanel() {
   const [files, setFiles] = useState<File[]>([]);
   const [splitRange, setSplitRange] = useState("1-2");
+  const [selectedAction, setSelectedAction] = useState<"merge" | "split" | "toImage">("merge");
   const [outputUrl, setOutputUrl] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [error, setError] = useState("");
@@ -40,6 +41,7 @@ export default function PdfToolsPanel() {
   }
 
   async function mergePdf() {
+    setSelectedAction("merge");
     setError("");
     if (files.length < 2) {
       setError("Please upload at least 2 PDF files for merge");
@@ -66,6 +68,7 @@ export default function PdfToolsPanel() {
   }
 
   async function splitPdf() {
+    setSelectedAction("split");
     setError("");
     if (files.length < 1) {
       setError("Please upload a PDF for split");
@@ -106,6 +109,7 @@ export default function PdfToolsPanel() {
   }
 
   async function pdfToImage() {
+    setSelectedAction("toImage");
     setError("");
     if (files.length < 1) {
       setError("Please upload a PDF first");
@@ -144,11 +148,12 @@ export default function PdfToolsPanel() {
   }
 
   return (
-    <section className="tool-shell">
+    <section className="tool-shell utility-shell">
       <div className="panel-head">
         <div>
           <p className="eyebrow">PDF tools</p>
           <h2>Merge PDF, Split PDF, PDF to Image</h2>
+          <p className="panel-subtext">Handle common PDF workflows with local processing in your browser.</p>
         </div>
       </div>
 
@@ -162,10 +167,19 @@ export default function PdfToolsPanel() {
         <input value={splitRange} onChange={(event) => setSplitRange(event.target.value)} />
       </label>
 
-      <div className="control-row">
-        <button className="btn primary" onClick={mergePdf}>Merge PDF</button>
-        <button className="btn" onClick={splitPdf}>Split PDF</button>
-        <button className="btn" onClick={pdfToImage}>PDF to Image</button>
+      <div className="action-grid compact">
+        <button className={`mode-btn ${selectedAction === "merge" ? "is-active" : ""}`} onClick={mergePdf} type="button">
+          <span>Merge PDF</span>
+          <small>Combine multiple files into one PDF</small>
+        </button>
+        <button className={`mode-btn ${selectedAction === "split" ? "is-active" : ""}`} onClick={splitPdf} type="button">
+          <span>Split PDF</span>
+          <small>Export a selected page range as new PDF</small>
+        </button>
+        <button className={`mode-btn ${selectedAction === "toImage" ? "is-active" : ""}`} onClick={pdfToImage} type="button">
+          <span>PDF to Image</span>
+          <small>Convert the first page to PNG preview</small>
+        </button>
       </div>
 
       {outputUrl ? (

@@ -144,12 +144,13 @@ export default function ImageToolsPanel() {
         <div>
           <p className="eyebrow">Image tools</p>
           <h2>Compress Image, Resize Image, Convert PNG/JPG</h2>
+          <p className="panel-subtext">Process images directly in your browser with quick export and no server upload.</p>
         </div>
       </div>
 
-      <div className="image-tool-layout">
+      <div className="image-upload-stage">
         <div
-          className={`dropzone ${isDragging ? "is-dragging" : ""}`}
+          className={`dropzone ${isDragging ? "is-dragging" : ""} ${sourceUrl ? "has-preview" : "is-empty"}`}
           onDragOver={(event) => {
             event.preventDefault();
             setIsDragging(true);
@@ -167,11 +168,37 @@ export default function ImageToolsPanel() {
           }}
           aria-label="Upload image by dragging or browsing"
         >
-          <p className="dropzone-title">Drop image here</p>
-          <p className="dropzone-subtitle">Drag and drop PNG/JPG/WEBP or click to browse</p>
-          <button type="button" className="btn primary">
-            Browse file
-          </button>
+          {!sourceUrl ? (
+            <>
+              <p className="dropzone-title">Drop an image here</p>
+              <p className="dropzone-subtitle">Drag and drop PNG, JPG, or WEBP files, or click to browse</p>
+              <button type="button" className="btn primary">
+                Browse file
+              </button>
+            </>
+          ) : (
+            <>
+              <p className="dropzone-title">Selected image preview</p>
+              <p className="dropzone-subtitle">Click to replace with another file</p>
+              <NextImage
+                src={sourceUrl}
+                alt="Source preview"
+                className="tool-preview"
+                width={sourceInfo?.width ?? 1200}
+                height={sourceInfo?.height ?? 800}
+                unoptimized
+              />
+              {file ? (
+                <div className="image-meta">
+                  <span>{file.name}</span>
+                  <span>{(file.size / 1024).toFixed(1)} KB</span>
+                  <span>
+                    {sourceInfo ? `${sourceInfo.width} x ${sourceInfo.height}` : "Loading dimensions..."}
+                  </span>
+                </div>
+              ) : null}
+            </>
+          )}
           <input
             ref={fileInputRef}
             type="file"
@@ -181,31 +208,6 @@ export default function ImageToolsPanel() {
               void applyFile(event.target.files?.[0] ?? null);
             }}
           />
-        </div>
-
-        <div className="editor-card image-source-card">
-          <p>Source image</p>
-          {sourceUrl ? (
-            <NextImage
-              src={sourceUrl}
-              alt="Source preview"
-              className="tool-preview"
-              width={sourceInfo?.width ?? 1200}
-              height={sourceInfo?.height ?? 800}
-              unoptimized
-            />
-          ) : (
-            <p className="hint">No image selected yet</p>
-          )}
-          {file ? (
-            <div className="image-meta">
-              <span>{file.name}</span>
-              <span>{(file.size / 1024).toFixed(1)} KB</span>
-              <span>
-                {sourceInfo ? `${sourceInfo.width} x ${sourceInfo.height}` : "Loading dimensions..."}
-              </span>
-            </div>
-          ) : null}
         </div>
       </div>
 
@@ -228,14 +230,23 @@ export default function ImageToolsPanel() {
       </div>
 
       <label className="field">
-        <span>Compress quality (0.1 - 1.0)</span>
+          <span>Compress quality (0.1 - 1.0)</span>
         <input value={quality} onChange={(event) => setQuality(event.target.value)} />
       </label>
 
-      <div className="control-row">
-        <button className="btn primary" onClick={() => processImage("compress")}>Compress Image</button>
-        <button className="btn" onClick={() => processImage("resize")}>Resize Image</button>
-        <button className="btn" onClick={() => processImage("convert")}>Convert PNG/JPG</button>
+      <div className="action-grid compact">
+        <button className="mode-btn is-active" onClick={() => processImage("compress")} type="button">
+          <span>Compress Image</span>
+          <small>Reduce file size while keeping visual quality</small>
+        </button>
+        <button className="mode-btn" onClick={() => processImage("resize")} type="button">
+          <span>Resize Image</span>
+          <small>Apply custom output dimensions</small>
+        </button>
+        <button className="mode-btn" onClick={() => processImage("convert")} type="button">
+          <span>Convert PNG/JPG</span>
+          <small>Change format for compatibility needs</small>
+        </button>
       </div>
 
       {resultUrl ? (

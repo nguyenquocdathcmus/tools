@@ -1081,6 +1081,10 @@ h1 {
   margin-bottom: 12px;
 }
 
+.image-upload-stage {
+  margin-bottom: 12px;
+}
+
 .dropzone {
   border: 1px dashed #9ab4e6;
   border-radius: 16px;
@@ -1093,6 +1097,15 @@ h1 {
   min-height: 220px;
   cursor: pointer;
   transition: border-color 170ms ease, box-shadow 170ms ease, transform 170ms ease;
+}
+
+.dropzone.is-empty {
+  justify-items: center;
+  text-align: center;
+}
+
+.dropzone.is-empty .dropzone-subtitle {
+  max-width: 38ch;
 }
 
 .dropzone:hover,
@@ -2107,6 +2120,66 @@ textarea {
   font-weight: 700;
 }
 
+.panel-subtext {
+  margin: 8px 0 0;
+  color: #557096;
+  max-width: 62ch;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.action-grid.compact {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mode-btn {
+  border: 1px solid #cfddf2;
+  border-radius: 12px;
+  background: linear-gradient(160deg, #ffffff 0%, #f5f9ff 100%);
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+  display: grid;
+  gap: 4px;
+  color: #21436c;
+  transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
+}
+
+.mode-btn:hover {
+  transform: translateY(-2px);
+  border-color: #a9c3eb;
+  box-shadow: 0 12px 22px rgba(20, 58, 128, 0.13);
+}
+
+.mode-btn.is-active {
+  border-color: #6e9fec;
+  background: linear-gradient(160deg, #eff5ff 0%, #dfecff 100%);
+}
+
+.mode-btn span {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.mode-btn small {
+  color: #5a7093;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.result-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .formatter-hero-stats {
   margin-top: 16px;
   display: grid;
@@ -2182,6 +2255,11 @@ textarea {
   .related-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .action-grid,
+  .action-grid.compact {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 640px) {
@@ -2193,5 +2271,14 @@ textarea {
   .formatter-hero-stats,
   .related-grid {
     grid-template-columns: 1fr;
+  }
+
+  .action-grid,
+  .action-grid.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .result-actions {
+    justify-content: flex-start;
   }
 }

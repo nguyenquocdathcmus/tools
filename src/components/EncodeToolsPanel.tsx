@@ -2,6 +2,23 @@
 
 import { useState } from "react";
 
+type EncodeAction =
+  | "base64Encode"
+  | "base64Decode"
+  | "urlEncode"
+  | "urlDecode"
+  | "htmlEncode"
+  | "htmlDecode";
+
+const ENCODE_ACTIONS: Array<{ id: EncodeAction; label: string; helper: string }> = [
+  { id: "base64Encode", label: "Base64 Encoder", helper: "Convert plain text to Base64" },
+  { id: "base64Decode", label: "Base64 Decoder", helper: "Decode Base64 into readable text" },
+  { id: "urlEncode", label: "URL Encoder", helper: "Escape characters for URLs" },
+  { id: "urlDecode", label: "URL Decoder", helper: "Decode URL-encoded values" },
+  { id: "htmlEncode", label: "HTML Encode", helper: "Escape text for safe HTML output" },
+  { id: "htmlDecode", label: "HTML Decode", helper: "Decode HTML entities to plain text" },
+];
+
 function htmlEncode(input: string): string {
   return input
     .replaceAll("&", "&amp;")
@@ -23,9 +40,11 @@ function htmlDecode(input: string): string {
 export default function EncodeToolsPanel() {
   const [input, setInput] = useState("Hello <world> & dev");
   const [output, setOutput] = useState("");
+  const [selectedAction, setSelectedAction] = useState<EncodeAction>("base64Encode");
   const [error, setError] = useState("");
 
-  function run(action: "base64Encode" | "base64Decode" | "urlEncode" | "urlDecode" | "htmlEncode" | "htmlDecode") {
+  function run(action: EncodeAction) {
+    setSelectedAction(action);
     setError("");
     try {
       if (action === "base64Encode") {
@@ -60,32 +79,56 @@ export default function EncodeToolsPanel() {
     }
   }
 
+  async function copyOutput() {
+    if (!output) {
+      return;
+    }
+
+    await navigator.clipboard.writeText(output);
+  }
+
   return (
-    <section className="tool-shell">
+    <section className="tool-shell utility-shell">
       <div className="panel-head">
         <div>
           <p className="eyebrow">Encode tools</p>
           <h2>Base64, URL, HTML Encode</h2>
+          <p className="panel-subtext">Encode and decode text quickly for APIs, links, and frontend HTML payloads.</p>
         </div>
       </div>
 
-      <div className="control-row">
-        <button className="btn primary" onClick={() => run("base64Encode")}>Base64 Encoder</button>
-        <button className="btn" onClick={() => run("base64Decode")}>Base64 Decoder</button>
-        <button className="btn" onClick={() => run("urlEncode")}>URL Encoder</button>
-        <button className="btn" onClick={() => run("urlDecode")}>URL Decoder</button>
-        <button className="btn" onClick={() => run("htmlEncode")}>HTML Encode</button>
-        <button className="btn" onClick={() => run("htmlDecode")}>HTML Decode</button>
+      <div className="action-grid">
+        {ENCODE_ACTIONS.map((action) => (
+          <button
+            key={action.id}
+            className={`mode-btn ${selectedAction === action.id ? "is-active" : ""}`}
+            onClick={() => run(action.id)}
+            type="button"
+          >
+            <span>{action.label}</span>
+            <small>{action.helper}</small>
+          </button>
+        ))}
       </div>
 
       <div className="editor-grid">
         <div className="editor-card">
           <p>Input</p>
-          <textarea value={input} onChange={(event) => setInput(event.target.value)} spellCheck={false} />
+          <textarea
+            value={input}
+            onChange={(event) => setInput(event.target.value)}
+            spellCheck={false}
+            placeholder="Paste your text to encode or decode"
+          />
         </div>
         <div className="editor-card">
           <p>Output</p>
-          <textarea value={output} readOnly spellCheck={false} />
+          <textarea value={output} readOnly spellCheck={false} placeholder="Result will appear here" />
+          <div className="result-actions">
+            <button className="btn" type="button" onClick={copyOutput} disabled={!output}>
+              Copy output
+            </button>
+          </div>
         </div>
       </div>
 

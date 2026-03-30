@@ -16,9 +16,11 @@ export default function TimestampToolsPanel() {
   const [sourceTimezone, setSourceTimezone] = useState("UTC");
   const [targetTimezone, setTargetTimezone] = useState("Asia/Ho_Chi_Minh");
   const [output, setOutput] = useState("");
+  const [selectedAction, setSelectedAction] = useState<"unixToDate" | "dateToUnix" | "timezoneConvert">("unixToDate");
   const [error, setError] = useState("");
 
   function unixToDate() {
+    setSelectedAction("unixToDate");
     setError("");
     const numeric = Number.parseInt(unixValue, 10);
     if (Number.isNaN(numeric)) {
@@ -29,6 +31,7 @@ export default function TimestampToolsPanel() {
   }
 
   function dateToUnix() {
+    setSelectedAction("dateToUnix");
     setError("");
     const ms = Date.parse(dateValue);
     if (Number.isNaN(ms)) {
@@ -61,15 +64,17 @@ export default function TimestampToolsPanel() {
   }, [dateValue, sourceTimezone, targetTimezone]);
 
   function timezoneConvert() {
+    setSelectedAction("timezoneConvert");
     setOutput(timezonePreview);
   }
 
   return (
-    <section className="tool-shell">
+    <section className="tool-shell utility-shell">
       <div className="panel-head">
         <div>
           <p className="eyebrow">Timestamp converter</p>
           <h2>Unix to Date, Date to Unix, Timezone Convert</h2>
+          <p className="panel-subtext">Convert Unix values and timezone outputs quickly without leaving your workflow.</p>
         </div>
       </div>
 
@@ -103,15 +108,24 @@ export default function TimestampToolsPanel() {
         </label>
       </div>
 
-      <div className="control-row">
-        <button className="btn primary" onClick={unixToDate}>Unix to Date</button>
-        <button className="btn" onClick={dateToUnix}>Date to Unix</button>
-        <button className="btn" onClick={timezoneConvert}>Timezone Convert</button>
+      <div className="action-grid compact">
+        <button className={`mode-btn ${selectedAction === "unixToDate" ? "is-active" : ""}`} onClick={unixToDate} type="button">
+          <span>Unix to Date</span>
+          <small>Convert Unix seconds into ISO date</small>
+        </button>
+        <button className={`mode-btn ${selectedAction === "dateToUnix" ? "is-active" : ""}`} onClick={dateToUnix} type="button">
+          <span>Date to Unix</span>
+          <small>Convert date input into Unix seconds</small>
+        </button>
+        <button className={`mode-btn ${selectedAction === "timezoneConvert" ? "is-active" : ""}`} onClick={timezoneConvert} type="button">
+          <span>Timezone Convert</span>
+          <small>Preview source and target timezone output</small>
+        </button>
       </div>
 
       <div className="editor-card">
         <p>Result</p>
-        <textarea value={output} readOnly spellCheck={false} />
+        <textarea value={output} readOnly spellCheck={false} placeholder="Run a conversion action to view output" />
       </div>
 
       {error ? <p className="error">{error}</p> : null}
