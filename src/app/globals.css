@@ -2185,6 +2185,117 @@ textarea {
 }
 
 @media (max-width: 640px) {
+  .page-wrap {
+    width: 100%;
+    padding: 0 12px 40px;
+  }
+
+  .site-header {
+    width: calc(100% - 24px);
+    margin: 12px 12px 0;
+  }
+
+  .home-shell .hero {
+    padding: 16px;
+  }
+
+  .home-shell .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .home-shell .hero-copy {
+    gap: 10px;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+    align-items: stretch;
+  }
+
+  .home-shell h1 {
+    max-width: none;
+    width: 100%;
+    font-size: clamp(1.5rem, 6.9vw, 2rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+  }
+
+  .home-shell .lead {
+    width: 100%;
+    max-width: none;
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .hero-command {
+    font-size: 0.78rem;
+    padding: 6px 9px;
+  }
+
+  .typing-banner {
+    display: none;
+  }
+
+  .hero-actions {
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 0;
+  }
+
+  .home-console {
+    gap: 8px;
+  }
+
+  .console-window {
+    display: none;
+  }
+
+  .home-shell .hero-metrics {
+    gap: 8px;
+  }
+
+  .hero-search-shell {
+    padding: 10px;
+    gap: 8px;
+    width: 100%;
+    max-width: none;
+    justify-self: stretch;
+  }
+
+  .hero-search-input-wrap {
+    min-height: 44px;
+    width: 100%;
+  }
+
+  .hero-search input {
+    min-height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .home-shell .hero-metrics article {
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .home-shell .hero-metrics p {
+    margin-bottom: 3px;
+    font-size: 0.76rem;
+  }
+
+  .home-shell .hero-metrics strong {
+    font-size: 1.05rem;
+  }
+
+  .home-shell .hero-metrics span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.78rem;
+    line-height: 1.35;
+  }
+
   .site-header {
     width: min(100%, 92vw);
     padding: 12px;
@@ -2228,6 +2339,14 @@ textarea {
 
   .hero-search {
     grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .hero-search-btn,
+  .hero-search-meta,
+  .hero-search-pills,
+  .hero-search-pills button {
+    width: 100%;
   }
 
   .hero-search-btn {
@@ -2239,8 +2358,74 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    padding: 20px;
+  .home-console,
+  .hero-command,
+  .typing-banner {
+    display: none;
+  }
+
+  .home-shell .hero-metrics {
+    display: none;
+  }
+
+  .hero-copy,
+  .hero-actions,
+  .home-shell .hero-search-shell {
+    width: 100%;
+  }
+
+  .hero-copy {
+    justify-items: stretch;
+    text-align: left;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .home-shell .hero-search-shell {
+    margin-top: 0;
+  }
+
+  .hero-search {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-search-meta {
+    display: none;
+  }
+
+  .hero-search-pills {
+    justify-content: center;
+  }
+
+  .hero-search-results {
+    margin-top: 4px;
+  }
+
+  .category-board,
+  .popular-grid,
+  .featured-grid,
+  .seo-copy,
+  .premium {
+    display: grid;
+  }
+
+  .hero-metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .category-board,
+  .popular-grid,
+  .featured-grid,
+  .seo-copy,
+  .premium {
+    margin-top: 6px;
   }
 
   .category-board {
