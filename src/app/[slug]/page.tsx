@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FormatterClient from "@/components/FormatterClient";
-import JsonToolsPanel from "@/components/JsonToolsPanel";
+import JsonToolsPanelWrapper from "@/components/JsonToolsPanelWrapper";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { FORMATTERS, FORMATTER_BY_SLUG } from "@/lib/formatters";
@@ -114,7 +114,7 @@ export default async function FormatterPage({ params }: PageProps) {
       <SiteHeader compact />
 
       {formatter.id === "json" ? (
-        <JsonToolsPanel />
+        <JsonToolsPanelWrapper />
       ) : (
         <FormatterClient
           formatter={formatter.id}

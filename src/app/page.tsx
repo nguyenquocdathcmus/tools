@@ -7,11 +7,43 @@ import SiteHeader from "@/components/SiteHeader";
 
 export default function HomePage() {
   const spotlight = FORMATTERS.slice(0, 8);
-  const searchItems = FORMATTERS.map((formatter) => ({
-    id: formatter.id,
-    name: formatter.name,
-    slug: formatter.slug,
-  }));
+  const searchItems = [
+    ...FORMATTERS.map((formatter) => ({
+      id: formatter.id,
+      name: formatter.name,
+      slug: formatter.slug,
+    })),
+    {
+      id: "text-count",
+      name: "Text Count",
+      slug: "tools/text-count",
+    },
+    {
+      id: "encode",
+      name: "Encode & Decode",
+      slug: "tools/encode",
+    },
+    {
+      id: "timestamp",
+      name: "Unix Timestamp",
+      slug: "tools/timestamp",
+    },
+    {
+      id: "image",
+      name: "Image Processing",
+      slug: "tools/image",
+    },
+    {
+      id: "pdf",
+      name: "PDF Tools",
+      slug: "tools/pdf",
+    },
+    {
+      id: "qrcode",
+      name: "QR Code Generator",
+      slug: "tools/qrcode",
+    }
+  ];
 
   const homeCategories = [
     {
@@ -125,23 +157,55 @@ export default function HomePage() {
   };
 
   return (
-    <main className="page-wrap">
+    <main className="page-wrap home-shell">
       <SiteHeader />
 
-      <section className="hero">
-        <p className="badge">Developer toolkit</p>
-        <div className="hero-layout">
+      <section className="hero home-hero">
+        <div className="hero-layout home-hero-layout">
           <div className="hero-copy">
-            <h1>Format, Validate, and Minify in Seconds</h1>
+            <p className="badge home-badge">developer toolkit</p>
+            <p className="hero-command">$ npm run dev</p>
+            <div className="typing-banner" aria-hidden="true">
+              <span className="typing-banner-label">coding mode active</span>
+              <span className="typing-line typing-line-one">npm run dev</span>
+              <span className="typing-line typing-line-two">format | encode | count | inspect</span>
+            </div>
+            <h1>Build, inspect, and ship text tools like a real dev console.</h1>
             <p className="lead">
-              MyTools giup ban xu ly JSON, XML, HTML, JavaScript, TypeScript va nhieu dinh dang khac ngay tren
-              trinh duyet. Nhanh, de dung va khong can cai dat.
+              MyTools cho ban format, validate, minify va count text ngay tren trinh duyet theo mot phong cach
+              quen thuoc cua lap trinh vien: gon, nhanh, ro rang.
             </p>
+
+            <div className="hero-actions">
+              <Link href="/tools/format" className="btn primary">
+                Open Format
+              </Link>
+              <Link href="/tools/text-count" className="btn">
+                Try Text Count
+              </Link>
+            </div>
 
             <HomeToolSearch items={searchItems} />
           </div>
 
-          <aside className="hero-metrics" aria-label="MyTools highlights">
+          <aside className="hero-metrics home-console" aria-label="MyTools highlights">
+            <div className="console-window">
+              <div className="console-topbar" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+              </div>
+              <pre>{`const tools = [
+  "format",
+  "encode",
+  "count",
+  "timestamp",
+  "pdf",
+];
+
+tools.forEach(openTool);`}</pre>
+            </div>
+
             {heroMetrics.map((metric) => (
               <article key={metric.label}>
                 <p>{metric.label}</p>
@@ -153,26 +217,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="category-strip" aria-label="Tool categories">
-        {homeCategories.map((category) => (
-          <Link key={category.title} href={category.href} className={`category-tile ${category.tone}`}>
-            <span className="category-glow" aria-hidden="true" />
-            <div className="category-top">
-              <span className="category-icon" aria-hidden="true">
-                <category.Icon size={20} strokeWidth={2} />
-              </span>
-              <div>
-                <p className="category-note">{category.note}</p>
-                <h2>{category.title}</h2>
+      <section className="category-board" aria-labelledby="category-board-title">
+        <div className="section-head category-head">
+          <div>
+            <p className="section-kicker">Tool matrix</p>
+            <h2 id="category-board-title">Browse by stack</h2>
+            <p>Quick jumps into the areas you use most: formatting, encode, web, and backend tools.</p>
+          </div>
+          <p className="category-head-command">$ open /tools</p>
+        </div>
+
+        <div className="category-board-grid">
+          {homeCategories.map((category, index) => (
+            <Link key={category.title} href={category.href} className={`category-tile ${category.tone}`}>
+              <span className="category-index">0{index + 1}</span>
+              <span className="category-glow" aria-hidden="true" />
+              <div className="category-top">
+                <span className="category-icon" aria-hidden="true">
+                  <category.Icon size={20} strokeWidth={2} />
+                </span>
+                <div>
+                  <p className="category-note">{category.note}</p>
+                  <h3>{category.title}</h3>
+                </div>
               </div>
-            </div>
-            <p className="category-desc">{category.desc}</p>
-            <div className="category-cta" aria-hidden="true">
-              <span>View tools</span>
-              <span className="category-arrow">-&gt;</span>
-            </div>
-          </Link>
-        ))}
+              <p className="category-desc">{category.desc}</p>
+              <div className="category-cta" aria-hidden="true">
+                <span>View tools</span>
+                <span className="category-arrow">-&gt;</span>
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
 
       <section className="popular-grid" id="popular" aria-labelledby="popular-title">
@@ -196,11 +272,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="featured-grid" aria-labelledby="featured-title">
-        <div className="section-head">
-          <p className="section-kicker">Curated stack</p>
-          <h2 id="featured-title">Featured Tools</h2>
-          <p>Curated picks with high usage and fast output quality.</p>
+      <section className="featured-grid featured-board" aria-labelledby="featured-title">
+        <div className="section-head featured-head">
+          <div>
+            <p className="section-kicker">Curated stack</p>
+            <h2 id="featured-title">Featured Tools</h2>
+            <p>Curated picks with high usage and fast output quality.</p>
+          </div>
+          <p className="featured-head-command">$ open featured</p>
         </div>
         <div className="featured-cards">
           {featuredTools.map((tool, index) => (

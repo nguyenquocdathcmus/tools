@@ -379,7 +379,7 @@ export default function QrCodeToolsPanel() {
     <section className="tool-shell utility-shell qr-shell">
       <div className="panel-head">
         <div>
-          <p className="eyebrow">Bitly QR Code Generator</p>
+          <p className="eyebrow">QR Code Generator</p>
           <h2>Create your QR code for free</h2>
           <p className="panel-subtext">Your QR code is generated automatically as you update content.</p>
         </div>

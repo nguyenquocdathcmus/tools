@@ -14,7 +14,7 @@ export default function QrCodeToolsPage() {
       <SiteHeader compact />
       <section className="hero">
         <p className="badge">QR toolkit</p>
-        <h1>Bitly QR Code Generator</h1>
+        <h1>QR Code Generator</h1>
         <p className="lead">Generate branded QR codes for links, text, contact cards, files, and app distribution.</p>
       </section>
       <QrCodeToolsPanel />

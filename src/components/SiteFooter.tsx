@@ -5,6 +5,14 @@ export default function SiteFooter() {
 
   const footerSections = [
     {
+      title: "Shell",
+      links: [
+        { href: "/", label: "Home" },
+        { href: "/request-feature", label: "Request feature" },
+        { href: "/#popular", label: "Popular" },
+      ],
+    },
+    {
       title: "Core Tools",
       links: [
         { href: "/json-formatter", label: "JSON Formatter" },
@@ -25,6 +33,7 @@ export default function SiteFooter() {
       title: "Resources",
       links: [
         { href: "/", label: "Homepage" },
+        { href: "/request-feature", label: "Request Feature" },
         { href: "/sitemap.xml", label: "Sitemap" },
         { href: "/robots.txt", label: "Robots" },
       ],
@@ -33,6 +42,13 @@ export default function SiteFooter() {
 
   return (
     <footer className="site-footer">
+      <div className="footer-console" aria-hidden="true">
+        <span className="footer-console-label">release notes</span>
+        <pre>{`MyTools v1
+format() → validate() → ship()
+dev-friendly tools for daily work`}</pre>
+      </div>
+
       <div className="footer-grid">
         <section className="footer-intro">
           <div className="footer-brand-row">
@@ -41,7 +57,7 @@ export default function SiteFooter() {
             </span>
             <p className="footer-brand">MyTools</p>
           </div>
-          <p className="footer-copy">A focused toolkit for formatting, encoding, and converting developer data in seconds.</p>
+          <p className="footer-copy">A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.</p>
           <div className="footer-quick-links">
             <Link href="/#premium">Premium</Link>
             <Link href="/#popular">Popular</Link>
@@ -63,7 +79,7 @@ export default function SiteFooter() {
       </div>
 
       <div className="footer-meta">
-        <p>© {year} MyTools. Built for developers and technical teams.</p>
+        <p>© {year} MyTools. Built for developers, technical teams, and fast workflows.</p>
         <div className="footer-meta-links">
           <Link href="/#premium">Premium</Link>
           <Link href="/#popular">Popular</Link>

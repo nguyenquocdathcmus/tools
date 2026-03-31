@@ -30,12 +30,16 @@ export default function HomeToolSearch({ items }: HomeToolSearchProps) {
       timestamp: "/tools/timestamp",
       image: "/tools/image",
       pdf: "/tools/pdf",
+      qrcode: "/tools/qrcode",
+      textcount: "/tools/text-count",
+      text: "/tools/text-count",
+      wordcount: "/tools/text-count",
       all: "/tools/all",
     }),
     [],
   );
 
-  const quickTags = ["JSON", "XML", "TypeScript", "GraphQL", "PDF", "Encode"];
+  const quickTags = ["JSON", "XML", "TypeScript", "Text Count", "PDF", "Encode"];
 
   const liveSuggestions = useMemo(() => {
     const normalized = normalize(query);
