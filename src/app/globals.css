@@ -3201,6 +3201,160 @@ textarea {
   font-size: 0.98rem;
 }
 
+.jwt-stats,
+.diff-summary {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.jwt-stat,
+.diff-stat {
+  border: 1px solid rgba(120, 145, 208, 0.18);
+  border-radius: 14px;
+  padding: 12px;
+  background: rgba(10, 16, 31, 0.9);
+}
+
+.jwt-stat p,
+.diff-stat p {
+  margin: 0;
+  color: #8fb4ff;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.jwt-stat strong,
+.diff-stat strong {
+  display: block;
+  margin-top: 4px;
+  color: #f6f9ff;
+  font-size: 1rem;
+}
+
+.jwt-grid,
+.diff-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  margin-top: 14px;
+}
+
+.jwt-output-stack {
+  display: grid;
+  gap: 14px;
+}
+
+.jwt-json,
+.jwt-signature {
+  margin: 0;
+  border: 1px solid rgba(132, 160, 220, 0.18);
+  border-radius: 12px;
+  padding: 12px;
+  background: rgba(7, 12, 24, 0.82);
+  color: #edf4ff;
+  font-family: var(--font-mono);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.jwt-claim-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.jwt-claim-grid article {
+  border: 1px solid rgba(132, 160, 220, 0.18);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(7, 12, 24, 0.82);
+}
+
+.jwt-claim-grid span {
+  display: block;
+  color: #8fb4ff;
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+}
+
+.jwt-claim-grid strong {
+  display: block;
+  margin-top: 4px;
+  color: #edf4ff;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.diff-output-card {
+  margin-top: 14px;
+}
+
+.diff-view {
+  display: grid;
+  gap: 8px;
+}
+
+.diff-row {
+  display: grid;
+  grid-template-columns: 24px 42px minmax(0, 1fr) 42px;
+  gap: 10px;
+  align-items: start;
+  border: 1px solid rgba(132, 160, 220, 0.18);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(7, 12, 24, 0.82);
+  font-family: var(--font-mono);
+}
+
+.diff-row.is-equal {
+  border-left: 3px solid rgba(74, 222, 128, 0.55);
+}
+
+.diff-row.is-insert {
+  border-left: 3px solid rgba(36, 209, 141, 0.72);
+  background: rgba(8, 20, 17, 0.86);
+}
+
+.diff-row.is-delete {
+  border-left: 3px solid rgba(239, 68, 68, 0.72);
+  background: rgba(28, 12, 15, 0.86);
+}
+
+.diff-marker,
+.diff-line-no {
+  color: #8fb4ff;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.diff-line-no.right {
+  text-align: right;
+}
+
+.diff-line-text {
+  color: #edf4ff;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.diff-empty {
+  display: grid;
+  gap: 4px;
+  padding: 8px 2px 2px;
+  color: #a7b7d5;
+}
+
+.diff-empty strong {
+  color: #f6f9ff;
+}
+
 .related-grid {
   list-style: none;
   margin: 10px 0 0;
@@ -3243,8 +3397,19 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .text-count-stats {
+  .text-count-stats,
+  .jwt-stats,
+  .diff-summary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .jwt-grid,
+  .diff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jwt-claim-grid {
+    grid-template-columns: 1fr;
   }
 
   .related-grid {
@@ -3271,13 +3436,25 @@ textarea {
     grid-template-columns: 1fr;
   }
 
-  .text-count-stats {
+  .text-count-stats,
+  .jwt-stats,
+  .diff-summary {
     grid-template-columns: 1fr;
   }
 
   .formatter-hero-stats,
   .related-grid {
     grid-template-columns: 1fr;
+  }
+
+  .jwt-grid,
+  .diff-grid,
+  .jwt-claim-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diff-row {
+    grid-template-columns: 20px 36px minmax(0, 1fr) 36px;
   }
 
   .action-grid,

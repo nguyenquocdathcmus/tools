@@ -21,6 +21,8 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
     { href: "/tools/image", label: "Image" },
     { href: "/tools/pdf", label: "PDF" },
     { href: "/tools/qrcode", label: "QR Code" },
+    { href: "/tools/jwt-decoder", label: "JWT Decoder" },
+    { href: "/tools/diff-checker", label: "Diff Checker" },
   ];
 
   function closeMenu() {

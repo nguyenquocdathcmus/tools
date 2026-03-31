@@ -31,6 +31,13 @@ export default function HomeToolSearch({ items }: HomeToolSearchProps) {
       image: "/tools/image",
       pdf: "/tools/pdf",
       qrcode: "/tools/qrcode",
+      jwt: "/tools/jwt-decoder",
+      jwtdecoder: "/tools/jwt-decoder",
+      token: "/tools/jwt-decoder",
+      auth: "/tools/jwt-decoder",
+      diff: "/tools/diff-checker",
+      diffchecker: "/tools/diff-checker",
+      compare: "/tools/diff-checker",
       textcount: "/tools/text-count",
       text: "/tools/text-count",
       wordcount: "/tools/text-count",
@@ -39,7 +46,7 @@ export default function HomeToolSearch({ items }: HomeToolSearchProps) {
     [],
   );
 
-  const quickTags = ["JSON", "XML", "TypeScript", "Text Count", "PDF", "Encode"];
+  const quickTags = ["JSON", "XML", "JWT", "Diff", "Text Count", "PDF", "Encode"];
 
   const liveSuggestions = useMemo(() => {
     const normalized = normalize(query);

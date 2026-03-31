@@ -42,6 +42,16 @@ export default function HomePage() {
       id: "qrcode",
       name: "QR Code Generator",
       slug: "tools/qrcode",
+    },
+    {
+      id: "jwt-decoder",
+      name: "JWT Decoder",
+      slug: "tools/jwt-decoder",
+    },
+    {
+      id: "diff-checker",
+      name: "Diff Checker",
+      slug: "tools/diff-checker",
     }
   ];
 
@@ -78,6 +88,22 @@ export default function HomePage() {
       note: "Backend ready",
       tone: "tone-code",
     },
+    {
+      title: "JWT Decoder",
+      desc: "Decode header, payload, claims",
+      href: "/tools/jwt-decoder",
+      Icon: Code2,
+      note: "Auth toolkit",
+      tone: "tone-format",
+    },
+    {
+      title: "Diff Checker",
+      desc: "Compare text, config, and code",
+      href: "/tools/diff-checker",
+      Icon: Braces,
+      note: "Compare toolkit",
+      tone: "tone-web",
+    },
   ];
 
   const featuredTools = [
@@ -112,6 +138,22 @@ export default function HomePage() {
       desc: "Normalize GraphQL query and schema files instantly.",
       href: "/graphql-formatter",
       tone: "featured-tone-graphql",
+    },
+    {
+      icon: "JW",
+      pill: "Auth",
+      title: "JWT Decoder",
+      desc: "Decode JWT header, payload, and claims locally in the browser.",
+      href: "/tools/jwt-decoder",
+      tone: "featured-tone-ts",
+    },
+    {
+      icon: "DF",
+      pill: "Compare",
+      title: "Diff Checker",
+      desc: "Compare two versions of text with a fast line-by-line diff.",
+      href: "/tools/diff-checker",
+      tone: "featured-tone-json",
     },
   ];
 
