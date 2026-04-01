@@ -1,4 +1,4 @@
-# MyTools
+# Daxnoria
 
 Bo cong cu web xay dung bang Next.js de xu ly cac tac vu nhu format du lieu, encode/decode, xu ly image, PDF, timestamp, v.v.
 

@@ -44,10 +44,15 @@ export default function SiteFooter() {
       <div className="footer-grid">
         <section className="footer-intro">
           <div className="footer-brand-row">
-            <span className="footer-mark" aria-hidden="true">
-              M
-            </span>
-            <p className="footer-brand">MyTools</p>
+            <img
+              src="/icon.svg"
+              alt="Daxnoria Logo"
+              width={30}
+              height={30}
+              className="footer-mark"
+              style={{ background: "transparent", boxShadow: "none" }}
+            />
+            <p className="footer-brand">Daxnoria</p>
           </div>
           <p className="footer-copy">A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.</p>
         </section>
@@ -67,7 +72,7 @@ export default function SiteFooter() {
       </div>
 
       <div className="footer-meta">
-        <p>© {year} MyTools. Built for developers, technical teams, and fast workflows.</p>
+        <p>© {year} Daxnoria. Built for developers, technical teams, and fast workflows.</p>
       </div>
     </footer>
   );

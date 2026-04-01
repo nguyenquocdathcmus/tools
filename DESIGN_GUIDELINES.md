@@ -1,7 +1,7 @@
-# MyTools Design Guidelines
+# Daxnoria Design Guidelines
 
 ## Objective
-Create a clean, trustworthy, and fast-feeling developer interface across all MyTools screens.
+Create a clean, trustworthy, and fast-feeling developer interface across all Daxnoria screens.
 
 ## Design Direction
 - Tone: professional, technical, focused.

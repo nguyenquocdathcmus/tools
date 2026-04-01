@@ -252,7 +252,7 @@ export default function HomePage() {
         <div className="hero-layout home-hero-layout">
           <div className="hero-copy">
             <p className="badge home-badge">web-based toolkit</p>
-            <p className="hero-command">$ open mytools.dev</p>
+            <p className="hero-command">$ open daxnoria.dev</p>
             <div className="typing-banner" aria-hidden="true">
               <span className="typing-banner-label">developer mode active</span>
               <span className="typing-line typing-line-one">init workflow</span>
@@ -276,7 +276,7 @@ export default function HomePage() {
             <HomeToolSearch items={searchItems} />
           </div>
 
-          <aside className="hero-metrics home-console" aria-label="MyTools highlights">
+          <aside className="hero-metrics home-console" aria-label="Daxnoria highlights">
             <div className="console-window">
               <div className="console-topbar" aria-hidden="true">
                 <span />

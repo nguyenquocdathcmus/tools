@@ -6,7 +6,7 @@ export default function RequestFeaturePanel() {
   const [content, setContent] = useState("");
 
   const handleSendEmail = () => {
-    const subject = encodeURIComponent("Feature Request for MyTools");
+    const subject = encodeURIComponent("Feature Request for Daxnoria");
     const body = encodeURIComponent(content);
     window.location.href = `mailto:nguyenquocdat.public@gmail.com?subject=${subject}&body=${body}`;
   };

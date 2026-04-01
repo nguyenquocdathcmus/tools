@@ -45,7 +45,7 @@ export const FORMATTERS: FormatterDefinition[] = [
     parser: "json",
     seoDescription: "Format, minify, and validate JSON online with precise line-level error details.",
     landingIntro: "Optimize API responses, config files, and payloads with a fast and reliable JSON Formatter.",
-    sampleInput: '{"name":"MyTools","version":1,"features":["format","validate"]}',
+    sampleInput: '{"name":"Daxnoria","version":1,"features":["format","validate"]}',
   },
   {
     id: "json5",

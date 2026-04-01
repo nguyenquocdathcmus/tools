@@ -41,7 +41,7 @@ const actionMeta: Record<JsonAction, { title: string; desc: string }> = {
   stringify: { title: "JSON Stringify Online", desc: "Convert text to escaped JSON string" },
 };
 
-const defaultJson = '{\n  "name": "MyTools",\n  "version": 2,\n  "features": ["formatter", "seo", "validator"]\n}';
+const defaultJson = '{\n  "name": "Daxnoria",\n  "version": 2,\n  "features": ["formatter", "seo", "validator"]\n}';
 
 function escapeHtml(value: string): string {
   return value

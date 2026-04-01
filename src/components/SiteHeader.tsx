@@ -42,9 +42,16 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
       <div className="header-main">
         <div className="header-row">
           <Link href="/" className="brand" onClick={closeMenu}>
-            <span className="brand-mark">M</span>
+            <img 
+              src="/icon.svg" 
+              alt="Daxnoria Logo" 
+              width={42} 
+              height={42} 
+              className="brand-mark" 
+              style={{ background: "transparent", boxShadow: "none", padding: 0 }} 
+            />
             <span className="brand-text-wrap">
-              <span className="brand-text">MyTools</span>
+              <span className="brand-text">Daxnoria</span>
               <span className="brand-subtitle">Code tools for fast workflows</span>
             </span>
           </Link>

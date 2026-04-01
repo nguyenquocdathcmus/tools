@@ -4,7 +4,7 @@ export const runtime = "edge";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const name = searchParams.get("name") || "MyTools Formatter";
+  const name = searchParams.get("name") || "Daxnoria Formatter";
 
   return new ImageResponse(
     (
@@ -22,12 +22,12 @@ export async function GET(request: Request) {
         }}
       >
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-          <div style={{ fontSize: 28, opacity: 0.88 }}>MyTools Formatter Hub</div>
+          <div style={{ fontSize: 28, opacity: 0.88 }}>Daxnoria Formatter Hub</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 740 }}>
             <div style={{ fontSize: 68, fontWeight: 700, lineHeight: 1.05 }}>{name}</div>
             <div style={{ fontSize: 30, opacity: 0.9 }}>Format, Minify, Validate with line-aware errors</div>
           </div>
-          <div style={{ fontSize: 24, opacity: 0.85 }}>mytools.local</div>
+          <div style={{ fontSize: 24, opacity: 0.85 }}>daxnoria.local</div>
         </div>
       </div>
     ),

@@ -114,7 +114,7 @@ export async function generateMetadata({ params }: GroupPageProps): Promise<Meta
     };
   }
 
-  const title = `${config.title} | MyTools`;
+  const title = `${config.title} | Daxnoria`;
   const description = config.description;
 
   return {

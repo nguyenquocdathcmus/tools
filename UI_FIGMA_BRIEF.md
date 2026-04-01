@@ -1,7 +1,7 @@
-# UI Brief cho Figma AI - MyTools
+# UI Brief cho Figma AI - Daxnoria
 
 ## 1) Muc tieu san pham
-MyTools la web app utility cho developer, giup format/validate/minify text va xu ly nhanh Encode, Timestamp, Image, PDF ngay tren trinh duyet.
+Daxnoria la web app utility cho developer, giup format/validate/minify text va xu ly nhanh Encode, Timestamp, Image, PDF ngay tren trinh duyet.
 
 Muc tieu UI:
 - Nhanh, ro rang, toi uu thao tac 1-2 buoc.
@@ -21,7 +21,7 @@ Can thiet ke cac man hinh sau:
 
 ## 3) Header va navigation
 Header hien tai can UI theo dung logic:
-- Brand: MyTools
+- Brand: Daxnoria
 - Main nav items: Home, Format, Encode, Timestamp, Image, PDF
 - Khong co subtitle
 - Khong co trust text
@@ -155,4 +155,4 @@ Yeu cau Figma AI tra ve:
 ## 10) Prompt mau de gui cho Figma AI
 Ban co the copy prompt nay:
 
-"Design a complete UI system for a web app named MyTools. The app includes: Home, group pages (All, Format, Web, Code), formatter tool page template, Encode tools, Timestamp tools, Image tools, and PDF tools. Header nav must contain: Home, Format, Encode, Timestamp, Image, PDF. Exclude subtitle, trust text, sign in, and upgrade actions. Build a reusable component system for hero, tool shell, input/output editors, control rows, form fields, dropzone, error alerts, and download cards. Include full interaction states (default, hover, focus, loading, success, error, empty, disabled). Provide responsive layouts for desktop/tablet/mobile and use modern clean developer-tool visual style with strong readability."
+"Design a complete UI system for a web app named Daxnoria. The app includes: Home, group pages (All, Format, Web, Code), formatter tool page template, Encode tools, Timestamp tools, Image tools, and PDF tools. Header nav must contain: Home, Format, Encode, Timestamp, Image, PDF. Exclude subtitle, trust text, sign in, and upgrade actions. Build a reusable component system for hero, tool shell, input/output editors, control rows, form fields, dropzone, error alerts, and download cards. Include full interaction states (default, hover, focus, loading, success, error, empty, disabled). Provide responsive layouts for desktop/tablet/mobile and use modern clean developer-tool visual style with strong readability."

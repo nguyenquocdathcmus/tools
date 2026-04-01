@@ -100,16 +100,16 @@ export default function QrCodeToolsPanel() {
   const [error, setError] = useState("");
 
   const [inputValue, setInputValue] = useState("https://example.com");
-  const [textValue, setTextValue] = useState("Hello from MyTools QR");
+  const [textValue, setTextValue] = useState("Hello from Daxnoria QR");
 
-  const [vcardName, setVcardName] = useState("MyTools Team");
+  const [vcardName, setVcardName] = useState("Daxnoria Team");
   const [vcardPhone, setVcardPhone] = useState("+84 900 000 000");
-  const [vcardEmail, setVcardEmail] = useState("team@mytools.dev");
-  const [vcardCompany, setVcardCompany] = useState("MyTools");
+  const [vcardEmail, setVcardEmail] = useState("team@daxnoria.dev");
+  const [vcardCompany, setVcardCompany] = useState("Daxnoria");
 
   const [emailTo, setEmailTo] = useState("hello@example.com");
   const [emailSubject, setEmailSubject] = useState("Quick note");
-  const [emailBody, setEmailBody] = useState("Hello from MyTools.");
+  const [emailBody, setEmailBody] = useState("Hello from Daxnoria.");
 
   const [smsPhone, setSmsPhone] = useState("+84900000000");
   const [smsBody, setSmsBody] = useState("Hi there");
