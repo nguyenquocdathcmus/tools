@@ -6,7 +6,46 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 
 export default function HomePage() {
-  const spotlight = FORMATTERS.slice(0, 8);
+  const spotlight = [
+    FORMATTERS.find((f) => f.id === "json")!,
+    FORMATTERS.find((f) => f.id === "xml")!,
+    {
+      id: "text-count",
+      name: "Text Count",
+      slug: "tools/text-count",
+      seoDescription: "Count characters, words, lines, and bytes instantly with real-time text analysis.",
+    },
+    {
+      id: "jwt-decoder",
+      name: "JWT Decoder",
+      slug: "tools/jwt-decoder",
+      seoDescription: "Decode JWT header, payload, and claims locally right in the browser securely.",
+    },
+    {
+      id: "timestamp",
+      name: "Unix Timestamp",
+      slug: "tools/timestamp",
+      seoDescription: "Convert Unix timestamps to human-readable dates and vice versa with precision.",
+    },
+    {
+      id: "diff-checker",
+      name: "Diff Checker",
+      slug: "tools/diff-checker",
+      seoDescription: "Compare text, config, and code files side-by-side with line-by-line diff tracking.",
+    },
+    {
+      id: "encode",
+      name: "Encode & Decode",
+      slug: "tools/encode",
+      seoDescription: "Base64, URL, and HTML encode/decode strings instantly without server calls.",
+    },
+    {
+      id: "qrcode",
+      name: "QR Code Generator",
+      slug: "tools/qrcode",
+      seoDescription: "Generate QR codes for URLs, text, and contact info directly in the browser.",
+    },
+  ];
   const searchItems = [
     ...FORMATTERS.map((formatter) => ({
       id: formatter.id,
@@ -159,19 +198,26 @@ export default function HomePage() {
 
   const heroMetrics = [
     {
-      label: "Supported formats",
-      value: `${FORMATTERS.length}+`,
-      detail: "JSON, XML, HTML, TS, GraphQL, PHP and more",
+      label: "Tools",
+      value: "100+",
+      detail: (
+        <>
+          JSON, XML, HTML, TS, GraphQL, PHP and{" "}
+          <Link href="/tools/all" style={{ color: "#8fb4ff", textDecoration: "underline" }}>
+            more
+          </Link>
+        </>
+      ),
     },
     {
-      label: "Setup",
-      value: "0 install",
-      detail: "Works instantly in browser",
+      label: "Environment",
+      value: "Zero install",
+      detail: "Runs instantly directly in your browser",
     },
     {
       label: "Workflow",
-      value: "Fast",
-      detail: "Format, validate and minify in one place",
+      value: "All-in-one",
+      detail: "Format, validate, encode, and diff seamlessly",
     },
   ];
 
@@ -205,17 +251,17 @@ export default function HomePage() {
       <section className="hero home-hero">
         <div className="hero-layout home-hero-layout">
           <div className="hero-copy">
-            <p className="badge home-badge">developer toolkit</p>
-            <p className="hero-command">$ npm run dev</p>
+            <p className="badge home-badge">web-based toolkit</p>
+            <p className="hero-command">$ open mytools.dev</p>
             <div className="typing-banner" aria-hidden="true">
-              <span className="typing-banner-label">coding mode active</span>
-              <span className="typing-line typing-line-one">npm run dev</span>
-              <span className="typing-line typing-line-two">format | encode | count | inspect</span>
+              <span className="typing-banner-label">developer mode active</span>
+              <span className="typing-line typing-line-one">init workflow</span>
+              <span className="typing-line typing-line-two">format | encode | diff | inspect</span>
             </div>
-            <h1>Build, inspect, and ship text tools like a real dev console.</h1>
+            <h1>The ultimate online tools for your daily developer tasks.</h1>
             <p className="lead">
-              MyTools cho ban format, validate, minify va count text ngay tren trinh duyet theo mot phong cach
-              quen thuoc cua lap trinh vien: gon, nhanh, ro rang.
+              An online toolkit to format, validate, encode, and manipulate data right in your browser.
+              Everything is designed with a minimalist approach, instant processing speed, and tailored for developers.
             </p>
 
             <div className="hero-actions">
@@ -301,14 +347,16 @@ tools.forEach(openTool);`}</pre>
         </div>
 
         <div className="tool-cards">
-          {spotlight.map((formatter) => (
-            <Link key={formatter.id} href={`/${formatter.slug}`} className="tool-card">
+          {spotlight.map((tool) => (
+            <Link key={tool.id} href={`/${tool.slug}`} className="tool-card">
               <span className="card-icon" aria-hidden="true">
-                {formatter.id.slice(0, 2).toUpperCase()}
+                {tool.id.slice(0, 2).toUpperCase()}
               </span>
-              <p className="tool-tag">Formatter</p>
-              <h3>{formatter.name}</h3>
-              <span>{formatter.seoDescription}</span>
+              <p className="tool-tag">
+                {["json", "xml"].includes(tool.id) ? "Formatter" : "Tool"}
+              </p>
+              <h3>{tool.name}</h3>
+              <span>{tool.seoDescription}</span>
             </Link>
           ))}
         </div>
@@ -353,14 +401,13 @@ tools.forEach(openTool);`}</pre>
         <div className="seo-head">
           <div>
             <p className="section-kicker">Tool index</p>
-            <h2 id="why-title">All formatter pages</h2>
+            <h2 id="why-title">All tools directory</h2>
             <p>
-              Mỗi công cụ có landing page riêng để tăng organic traffic cho long-tail keyword, đồng thời giữ
-              trải nghiệm người dùng tập trung đúng use case.
+              Each tool features a dedicated page to maintain a focused user experience for specific workflows and use cases.
             </p>
           </div>
-          <div className="seo-stat" aria-label="Total formatter pages">
-            <strong>{FORMATTERS.length}</strong>
+          <div className="seo-stat" aria-label="Total tools">
+            <strong>100+</strong>
             <span>Total tools</span>
           </div>
         </div>
@@ -380,15 +427,12 @@ tools.forEach(openTool);`}</pre>
             </li>
           ))}
         </ul>
-      </section>
 
-      <section className="premium" id="premium" aria-labelledby="premium-title">
-        <p className="section-kicker">Premium plan</p>
-        <h2 id="premium-title">Get more with Premium</h2>
-        <p>Ad-free experience, unlimited usage and faster processing for heavy workflows.</p>
-        <button type="button" className="btn primary">
-          Upgrade now
-        </button>
+        <div style={{ marginTop: "2.5rem", display: "flex", justifyContent: "center" }}>
+          <Link href="/tools/all" className="btn">
+            View more tools
+          </Link>
+        </div>
       </section>
 
       <SiteFooter />

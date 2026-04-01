@@ -9,7 +9,6 @@ export default function SiteFooter() {
       links: [
         { href: "/", label: "Home" },
         { href: "/request-feature", label: "Request feature" },
-        { href: "/#popular", label: "Popular" },
       ],
     },
     {
@@ -42,13 +41,6 @@ export default function SiteFooter() {
 
   return (
     <footer className="site-footer">
-      <div className="footer-console" aria-hidden="true">
-        <span className="footer-console-label">release notes</span>
-        <pre>{`MyTools v1
-format() → validate() → ship()
-dev-friendly tools for daily work`}</pre>
-      </div>
-
       <div className="footer-grid">
         <section className="footer-intro">
           <div className="footer-brand-row">
@@ -58,10 +50,6 @@ dev-friendly tools for daily work`}</pre>
             <p className="footer-brand">MyTools</p>
           </div>
           <p className="footer-copy">A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.</p>
-          <div className="footer-quick-links">
-            <Link href="/#premium">Premium</Link>
-            <Link href="/#popular">Popular</Link>
-          </div>
         </section>
 
         {footerSections.map((section) => (
@@ -80,10 +68,6 @@ dev-friendly tools for daily work`}</pre>
 
       <div className="footer-meta">
         <p>© {year} MyTools. Built for developers, technical teams, and fast workflows.</p>
-        <div className="footer-meta-links">
-          <Link href="/#premium">Premium</Link>
-          <Link href="/#popular">Popular</Link>
-        </div>
       </div>
     </footer>
   );

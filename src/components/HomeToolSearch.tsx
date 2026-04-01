@@ -175,14 +175,8 @@ export default function HomeToolSearch({ items }: HomeToolSearchProps) {
             aria-label="Search tools"
             placeholder="Tim cong cu: JSON, XML, PDF, Encode..."
             autoComplete="off"
-            list="tool-search-suggestions"
           />
         </label>
-        <datalist id="tool-search-suggestions">
-          {items.slice(0, 30).map((item) => (
-            <option key={item.id} value={item.name} />
-          ))}
-        </datalist>
         <button type="submit" className="btn primary hero-search-btn">
           <Search size={16} strokeWidth={2.4} aria-hidden="true" />
           <span>Search</span>

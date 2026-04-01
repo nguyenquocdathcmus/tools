@@ -151,7 +151,7 @@ body {
 
 .typing-line-one {
   animation:
-    typingLineOne 1600ms steps(12, end) 180ms forwards,
+    typingLineOne 1600ms steps(13, end) 180ms forwards,
     caretBlink 850ms step-end infinite;
 }
 
@@ -2587,7 +2587,7 @@ textarea {
   }
 
   to {
-    width: 12ch;
+    width: 14ch;
   }
 }
 
