@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "Encode Tools | Base64, URL, HTML Encode & Decode",
   description: "Free online encode tools for Base64, URL, and HTML encode/decode workflows. Fast, secure, and browser-based.",
   alternates: {
-    canonical: "/tools/encode",
+    canonical: "/encode",
   },
   openGraph: {
     title: "Encode Tools | Base64, URL, HTML Encode & Decode",
     description: "Free online encode tools for Base64, URL, and HTML encode/decode workflows. Fast, secure, and browser-based.",
-    url: `${SITE_URL}/tools/encode`,
+    url: `${SITE_URL}/encode`,
     images: [{ url: `${SITE_URL}/og?name=Encode%20Tools`, width: 1200, height: 630, alt: "Encode Tools" }],
   },
   twitter: {
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function EncodeToolsPage() {
   const relatedTools = [
-    { href: "/tools/text-count", name: "Text Counter" },
-    { href: "/tools/timestamp", name: "Timestamp Converter" },
-    { href: "/tools/jwt-decoder", name: "JWT Decoder" },
-    { href: "/tools/diff-checker", name: "Diff Checker" },
+    { href: "/text-count", name: "Text Counter" },
+    { href: "/timestamp", name: "Timestamp Converter" },
+    { href: "/jwt-decoder", name: "JWT Decoder" },
+    { href: "/diff-checker", name: "Diff Checker" },
   ];
 
   const faqSchema = {
@@ -72,7 +72,7 @@ export default function EncodeToolsPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools/all` },
-      { "@type": "ListItem", position: 3, name: "Encode Tools", item: `${SITE_URL}/tools/encode` },
+      { "@type": "ListItem", position: 3, name: "Encode Tools", item: `${SITE_URL}/encode` },
     ],
   };
 

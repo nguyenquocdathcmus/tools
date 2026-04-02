@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "QR Code Generator",
   description: "Create QR codes for URL, vCard, text, email, SMS, Wifi, Bitcoin, app stores, and files.",
   alternates: {
-    canonical: "/tools/qrcode",
+    canonical: "/qrcode",
   },
   openGraph: {
     title: "QR Code Generator",
     description: "Create QR codes for URL, vCard, text, email, SMS, Wifi, Bitcoin, app stores, and files.",
-    url: `${SITE_URL}/tools/qrcode`,
+    url: `${SITE_URL}/qrcode`,
     images: [{ url: `${SITE_URL}/og?name=QR%20Code%20Generator`, width: 1200, height: 630, alt: "QR Code Generator" }],
   },
   twitter: {
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function QrCodeToolsPage() {
   const relatedTools = [
-    { href: "/tools/image", name: "Image Tools" },
-    { href: "/tools/pdf", name: "PDF Tools" },
-    { href: "/tools/encode", name: "Encode Tools" },
-    { href: "/tools/jwt-decoder", name: "JWT Decoder" },
+    { href: "/image", name: "Image Tools" },
+    { href: "/pdf", name: "PDF Tools" },
+    { href: "/encode", name: "Encode Tools" },
+    { href: "/jwt-decoder", name: "JWT Decoder" },
   ];
 
   const faqSchema = {
@@ -72,7 +72,7 @@ export default function QrCodeToolsPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools/all` },
-      { "@type": "ListItem", position: 3, name: "QR Code Generator", item: `${SITE_URL}/tools/qrcode` },
+      { "@type": "ListItem", position: 3, name: "QR Code Generator", item: `${SITE_URL}/qrcode` },
     ],
   };
 

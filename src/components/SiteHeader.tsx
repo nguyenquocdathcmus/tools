@@ -15,14 +15,14 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/tools/format", label: "Format" },
-    { href: "/tools/encode", label: "Encode" },
-    { href: "/tools/text-count", label: "Text Count" },
-    { href: "/tools/timestamp", label: "Timestamp" },
-    { href: "/tools/image", label: "Image" },
-    { href: "/tools/pdf", label: "PDF" },
-    { href: "/tools/qrcode", label: "QR Code" },
-    { href: "/tools/jwt-decoder", label: "JWT Decoder" },
-    { href: "/tools/diff-checker", label: "Diff Checker" },
+    { href: "/encode", label: "Encode" },
+    { href: "/text-count", label: "Text Count" },
+    { href: "/timestamp", label: "Timestamp" },
+    { href: "/image", label: "Image" },
+    { href: "/pdf", label: "PDF" },
+    { href: "/qrcode", label: "QR Code" },
+    { href: "/jwt-decoder", label: "JWT Decoder" },
+    { href: "/diff-checker", label: "Diff Checker" },
   ];
 
   function closeMenu() {

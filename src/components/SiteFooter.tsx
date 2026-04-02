@@ -16,16 +16,16 @@ export default function SiteFooter() {
       links: [
         { href: "/json-formatter", label: "JSON Formatter" },
         { href: "/xml-formatter", label: "XML Formatter" },
-        { href: "/tools/timestamp", label: "Timestamp Converter" },
+        { href: "/timestamp", label: "Timestamp Converter" },
       ],
     },
     {
       title: "Utilities",
       links: [
-        { href: "/tools/encode", label: "Encode Tools" },
-        { href: "/tools/image", label: "Image Tools" },
-        { href: "/tools/pdf", label: "PDF Tools" },
-        { href: "/tools/qrcode", label: "QR Code Tools" },
+        { href: "/encode", label: "Encode Tools" },
+        { href: "/image", label: "Image Tools" },
+        { href: "/pdf", label: "PDF Tools" },
+        { href: "/qrcode", label: "QR Code Tools" },
       ],
     },
     {

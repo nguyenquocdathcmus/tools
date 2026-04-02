@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "Text & Word Counter Tool",
   description: "Count words, characters, lines, and paragraphs instantly in your browser.",
   alternates: {
-    canonical: "/tools/text-count",
+    canonical: "/text-count",
   },
   openGraph: {
     title: "Text & Word Counter Tool",
     description: "Count words, characters, lines, and paragraphs instantly in your browser.",
-    url: `${SITE_URL}/tools/text-count`,
+    url: `${SITE_URL}/text-count`,
     images: [{ url: `${SITE_URL}/og?name=Text%20Counter`, width: 1200, height: 630, alt: "Text Counter" }],
   },
   twitter: {
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function TextCountPage() {
   const relatedTools = [
-    { href: "/tools/encode", name: "Encode Tools" },
-    { href: "/tools/diff-checker", name: "Diff Checker" },
-    { href: "/tools/jwt-decoder", name: "JWT Decoder" },
-    { href: "/tools/timestamp", name: "Timestamp Converter" },
+    { href: "/encode", name: "Encode Tools" },
+    { href: "/diff-checker", name: "Diff Checker" },
+    { href: "/jwt-decoder", name: "JWT Decoder" },
+    { href: "/timestamp", name: "Timestamp Converter" },
   ];
 
   const faqSchema = {
@@ -72,7 +72,7 @@ export default function TextCountPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools/all` },
-      { "@type": "ListItem", position: 3, name: "Text Counter", item: `${SITE_URL}/tools/text-count` },
+      { "@type": "ListItem", position: 3, name: "Text Counter", item: `${SITE_URL}/text-count` },
     ],
   };
 

@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "JWT Decoder",
   description: "Decode JWT header, payload, signature, and claims locally in the browser.",
   alternates: {
-    canonical: "/tools/jwt-decoder",
+    canonical: "/jwt-decoder",
   },
   openGraph: {
     title: "JWT Decoder",
     description: "Decode JWT header, payload, signature, and claims locally in the browser.",
-    url: `${SITE_URL}/tools/jwt-decoder`,
+    url: `${SITE_URL}/jwt-decoder`,
     images: [{ url: `${SITE_URL}/og?name=JWT%20Decoder`, width: 1200, height: 630, alt: "JWT Decoder" }],
   },
   twitter: {
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function JwtDecoderPage() {
   const relatedTools = [
-    { href: "/tools/encode", name: "Encode Tools" },
-    { href: "/tools/timestamp", name: "Timestamp Converter" },
-    { href: "/tools/diff-checker", name: "Diff Checker" },
-    { href: "/tools/text-count", name: "Text Counter" },
+    { href: "/encode", name: "Encode Tools" },
+    { href: "/timestamp", name: "Timestamp Converter" },
+    { href: "/diff-checker", name: "Diff Checker" },
+    { href: "/text-count", name: "Text Counter" },
   ];
 
   const faqSchema = {
@@ -72,7 +72,7 @@ export default function JwtDecoderPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools/all` },
-      { "@type": "ListItem", position: 3, name: "JWT Decoder", item: `${SITE_URL}/tools/jwt-decoder` },
+      { "@type": "ListItem", position: 3, name: "JWT Decoder", item: `${SITE_URL}/jwt-decoder` },
     ],
   };
 

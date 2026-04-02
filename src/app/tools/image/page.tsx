@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "Image Tools",
   description: "Compress Image, Resize Image, and Convert PNG/JPG online.",
   alternates: {
-    canonical: "/tools/image",
+    canonical: "/image",
   },
   openGraph: {
     title: "Image Tools",
     description: "Compress Image, Resize Image, and Convert PNG/JPG online.",
-    url: `${SITE_URL}/tools/image`,
+    url: `${SITE_URL}/image`,
     images: [{ url: `${SITE_URL}/og?name=Image%20Tools`, width: 1200, height: 630, alt: "Image Tools" }],
   },
   twitter: {
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function ImageToolsPage() {
   const relatedTools = [
-    { href: "/tools/pdf", name: "PDF Tools" },
-    { href: "/tools/qrcode", name: "QR Code Generator" },
-    { href: "/tools/encode", name: "Encode Tools" },
-    { href: "/tools/diff-checker", name: "Diff Checker" },
+    { href: "/pdf", name: "PDF Tools" },
+    { href: "/qrcode", name: "QR Code Generator" },
+    { href: "/encode", name: "Encode Tools" },
+    { href: "/diff-checker", name: "Diff Checker" },
   ];
 
   const faqSchema = {
@@ -72,7 +72,7 @@ export default function ImageToolsPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools/all` },
-      { "@type": "ListItem", position: 3, name: "Image Tools", item: `${SITE_URL}/tools/image` },
+      { "@type": "ListItem", position: 3, name: "Image Tools", item: `${SITE_URL}/image` },
     ],
   };
 

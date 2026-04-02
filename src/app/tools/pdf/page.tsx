@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "PDF Tools",
   description: "Merge PDF, Split PDF, and PDF to Image online tools.",
   alternates: {
-    canonical: "/tools/pdf",
+    canonical: "/pdf",
   },
   openGraph: {
     title: "PDF Tools",
     description: "Merge PDF, Split PDF, and PDF to Image online tools.",
-    url: `${SITE_URL}/tools/pdf`,
+    url: `${SITE_URL}/pdf`,
     images: [{ url: `${SITE_URL}/og?name=PDF%20Tools`, width: 1200, height: 630, alt: "PDF Tools" }],
   },
   twitter: {
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function PdfToolsPage() {
   const relatedTools = [
-    { href: "/tools/image", name: "Image Tools" },
-    { href: "/tools/qrcode", name: "QR Code Generator" },
-    { href: "/tools/encode", name: "Encode Tools" },
-    { href: "/tools/diff-checker", name: "Diff Checker" },
+    { href: "/image", name: "Image Tools" },
+    { href: "/qrcode", name: "QR Code Generator" },
+    { href: "/encode", name: "Encode Tools" },
+    { href: "/diff-checker", name: "Diff Checker" },
   ];
 
   const faqSchema = {
@@ -72,7 +72,7 @@ export default function PdfToolsPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools/all` },
-      { "@type": "ListItem", position: 3, name: "PDF Tools", item: `${SITE_URL}/tools/pdf` },
+      { "@type": "ListItem", position: 3, name: "PDF Tools", item: `${SITE_URL}/pdf` },
     ],
   };
 

@@ -130,7 +130,7 @@ export default function HomePage() {
     {
       title: "JWT Decoder",
       desc: "Decode header, payload, claims",
-      href: "/tools/jwt-decoder",
+      href: "/jwt-decoder",
       Icon: Code2,
       note: "Auth toolkit",
       tone: "tone-format",
@@ -138,7 +138,7 @@ export default function HomePage() {
     {
       title: "Diff Checker",
       desc: "Compare text, config, and code",
-      href: "/tools/diff-checker",
+      href: "/diff-checker",
       Icon: Braces,
       note: "Compare toolkit",
       tone: "tone-web",
@@ -183,7 +183,7 @@ export default function HomePage() {
       pill: "Auth",
       title: "JWT Decoder",
       desc: "Decode JWT header, payload, and claims locally in the browser.",
-      href: "/tools/jwt-decoder",
+      href: "/jwt-decoder",
       tone: "featured-tone-ts",
     },
     {
@@ -191,7 +191,7 @@ export default function HomePage() {
       pill: "Compare",
       title: "Diff Checker",
       desc: "Compare two versions of text with a fast line-by-line diff.",
-      href: "/tools/diff-checker",
+      href: "/diff-checker",
       tone: "featured-tone-json",
     },
   ];
@@ -268,7 +268,7 @@ export default function HomePage() {
               <Link href="/tools/format" className="btn primary">
                 Open Format
               </Link>
-              <Link href="/tools/text-count" className="btn">
+              <Link href="/text-count" className="btn">
                 Try Text Count
               </Link>
             </div>

@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "Timestamp Converter Tools",
   description: "Unix to Date, Date to Unix, and Timezone Convert online tools.",
   alternates: {
-    canonical: "/tools/timestamp",
+    canonical: "/timestamp",
   },
   openGraph: {
     title: "Timestamp Converter Tools",
     description: "Unix to Date, Date to Unix, and Timezone Convert online tools.",
-    url: `${SITE_URL}/tools/timestamp`,
+    url: `${SITE_URL}/timestamp`,
     images: [{ url: `${SITE_URL}/og?name=Timestamp%20Converter`, width: 1200, height: 630, alt: "Timestamp Converter" }],
   },
   twitter: {
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function TimestampToolsPage() {
   const relatedTools = [
-    { href: "/tools/encode", name: "Encode Tools" },
-    { href: "/tools/jwt-decoder", name: "JWT Decoder" },
-    { href: "/tools/text-count", name: "Text Counter" },
-    { href: "/tools/diff-checker", name: "Diff Checker" },
+    { href: "/encode", name: "Encode Tools" },
+    { href: "/jwt-decoder", name: "JWT Decoder" },
+    { href: "/text-count", name: "Text Counter" },
+    { href: "/diff-checker", name: "Diff Checker" },
   ];
 
   const faqSchema = {
@@ -72,7 +72,7 @@ export default function TimestampToolsPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools/all` },
-      { "@type": "ListItem", position: 3, name: "Timestamp Tools", item: `${SITE_URL}/tools/timestamp` },
+      { "@type": "ListItem", position: 3, name: "Timestamp Tools", item: `${SITE_URL}/timestamp` },
     ],
   };
 

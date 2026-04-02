@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   title: "Diff Checker",
   description: "Compare two text blocks line by line with a fast diff checker.",
   alternates: {
-    canonical: "/tools/diff-checker",
+    canonical: "/diff-checker",
   },
   openGraph: {
     title: "Diff Checker",
     description: "Compare two text blocks line by line with a fast diff checker.",
-    url: `${SITE_URL}/tools/diff-checker`,
+    url: `${SITE_URL}/diff-checker`,
     images: [{ url: `${SITE_URL}/og?name=Diff%20Checker`, width: 1200, height: 630, alt: "Diff Checker" }],
   },
   twitter: {
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
 
 export default function DiffCheckerPage() {
   const relatedTools = [
-    { href: "/tools/text-count", name: "Text Counter" },
-    { href: "/tools/jwt-decoder", name: "JWT Decoder" },
-    { href: "/tools/encode", name: "Encode Tools" },
-    { href: "/tools/timestamp", name: "Timestamp Converter" },
+    { href: "/text-count", name: "Text Counter" },
+    { href: "/jwt-decoder", name: "JWT Decoder" },
+    { href: "/encode", name: "Encode Tools" },
+    { href: "/timestamp", name: "Timestamp Converter" },
   ];
 
   const faqSchema = {
@@ -72,7 +72,7 @@ export default function DiffCheckerPage() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
       { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools/all` },
-      { "@type": "ListItem", position: 3, name: "Diff Checker", item: `${SITE_URL}/tools/diff-checker` },
+      { "@type": "ListItem", position: 3, name: "Diff Checker", item: `${SITE_URL}/diff-checker` },
     ],
   };
 
