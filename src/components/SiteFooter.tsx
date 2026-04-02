@@ -5,13 +5,6 @@ export default function SiteFooter() {
 
   const footerSections = [
     {
-      title: "Shell",
-      links: [
-        { href: "/", label: "Home" },
-        { href: "/request-feature", label: "Request feature" },
-      ],
-    },
-    {
       title: "Core Tools",
       links: [
         { href: "/json-formatter", label: "JSON Formatter" },
@@ -55,6 +48,12 @@ export default function SiteFooter() {
             <p className="footer-brand">Daxnoria</p>
           </div>
           <p className="footer-copy">A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.</p>
+          <p className="footer-copy">
+            Contact: <a href="mailto:daxnoria@gmail.com">daxnoria@gmail.com</a>
+          </p>
+          <p className="footer-copy">
+            Facebook: <a href="https://web.facebook.com/people/Daxnoria/61575367715805/" target="_blank" rel="noopener noreferrer">Daxnoria</a>
+          </p>
         </section>
 
         {footerSections.map((section) => (
