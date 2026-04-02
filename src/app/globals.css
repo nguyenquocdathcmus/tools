@@ -13,6 +13,9 @@
   --code-bg: #101422;
   --code-ink: #edf2ff;
   --error: #be123c;
+  --color-surface-sunken: rgba(7, 12, 24, 0.82);
+  --color-border: rgba(132, 160, 220, 0.22);
+  --color-text-subtle: #a7b7d5;
 }
 
 * {
