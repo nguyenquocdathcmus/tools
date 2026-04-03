@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import BlogFunnelLinks from "@/components/BlogFunnelLinks";
 import DiffCheckerPanel from "@/components/DiffCheckerPanel";
 import AdSlot from "@/components/AdSlot";
 import { SITE_URL } from "@/lib/site";
@@ -134,6 +135,8 @@ export default function DiffCheckerPage() {
           ))}
         </ul>
       </section>
+
+      <BlogFunnelLinks />
 
       <SiteFooter />
 

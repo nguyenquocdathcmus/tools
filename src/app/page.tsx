@@ -1,9 +1,20 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Braces, Code2, Globe, LayoutGrid } from "lucide-react";
 import { FORMATTERS } from "@/lib/formatters";
+import { SITE_URL } from "@/lib/site";
 import HomeToolSearch from "@/components/HomeToolSearch";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+
+export const metadata: Metadata = {
+  title: "Online Developer Tools",
+  description:
+    "Keyword-driven online developer tools for JSON formatting, timestamp conversion, JWT decoding, XML formatting, and payload validation.",
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function HomePage() {
   const spotlight = [
@@ -244,6 +255,20 @@ export default function HomePage() {
     ],
   };
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: spotlight.slice(0, 6).map((tool, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "SoftwareApplication",
+        name: tool.name,
+        url: `${SITE_URL}/${tool.slug}`,
+      },
+    })),
+  };
+
   return (
     <main className="page-wrap home-shell">
       <SiteHeader />
@@ -435,12 +460,62 @@ tools.forEach(openTool);`}</pre>
         </div>
       </section>
 
+      <section className="seo-copy" aria-labelledby="keyword-hub-title">
+        <div className="section-head">
+          <p className="section-kicker">Keyword hub</p>
+          <h2 id="keyword-hub-title">Guides for long-tail developer queries</h2>
+          <p>
+            Explore in-depth pages targeting practical searches such as AI tools for developers, JSON formatter
+            workflows, and Unix timestamp converter use cases.
+          </p>
+        </div>
+
+        <ul className="related-grid">
+          <li>
+            <Link href="/developer-tools-online">
+              <span>Developer Tools Online</span>
+              <small>Landing page -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/api-debugging-tools">
+              <span>API Debugging Tools</span>
+              <small>Landing page -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/ai-tools-for-developers">
+              <span>AI Tools For Developers</span>
+              <small>Workflow guide -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/json-formatter-best-practices">
+              <span>JSON Formatter Best Practices</span>
+              <small>Validation strategy -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/unix-timestamp-converter-use-cases">
+              <span>Unix Timestamp Converter Use Cases</span>
+              <small>Real-world debugging -&gt;</small>
+            </Link>
+          </li>
+        </ul>
+      </section>
+
       <SiteFooter />
 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(itemListSchema),
         }}
       />
     </main>

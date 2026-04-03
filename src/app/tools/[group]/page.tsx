@@ -31,11 +31,11 @@ const GROUPS: Record<GroupKey, GroupConfig> = {
     formatterIds: new Set<FormatterId>(["json", "json5", "yaml", "xml", "soap", "wsdl"]),
   },
   data: {
-    title: "Format",
-    description: "JSON, YAML, XML, SOAP and WSDL formatters for API payloads and integrations.",
-    tag: "Format",
+    title: "Data Tools",
+    description: "JSON, JSON5, YAML, Markdown, and MDX tools for data payloads, docs, and structured content workflows.",
+    tag: "Data",
     tone: "format",
-    formatterIds: new Set<FormatterId>(["json", "json5", "yaml", "xml", "soap", "wsdl"]),
+    formatterIds: new Set<FormatterId>(["json", "json5", "yaml", "markdown", "mdx"]),
   },
   web: {
     title: "Web Tools",

@@ -100,6 +100,7 @@ function decodeJwt(token: string): DecodedJwt {
 
 export default function JwtDecoderPanel() {
   const [token, setToken] = useState(SAMPLE_JWT);
+  const [decodedAt, setDecodedAt] = useState(() => Date.now());
 
   const decoded = useMemo(() => decodeJwt(token), [token]);
 
@@ -110,7 +111,7 @@ export default function JwtDecoderPanel() {
   const issuer = readableClaim(payload.iss);
   const issuedAt = readableClaim(payload.iat);
   const expiresAt = readableClaim(payload.exp);
-  const isExpired = typeof payload.exp === "number" ? payload.exp * 1000 < Date.now() : false;
+  const isExpired = typeof payload.exp === "number" ? payload.exp * 1000 < decodedAt : false;
   const status = decoded.error
     ? "Invalid"
     : isExpired
@@ -129,10 +130,17 @@ export default function JwtDecoderPanel() {
 
   function loadSample() {
     setToken(SAMPLE_JWT);
+    setDecodedAt(Date.now());
   }
 
   function clearToken() {
     setToken("");
+    setDecodedAt(Date.now());
+  }
+
+  function handleTokenChange(value: string) {
+    setToken(value);
+    setDecodedAt(Date.now());
   }
 
   return (
@@ -183,7 +191,7 @@ export default function JwtDecoderPanel() {
           <p>JWT Input</p>
           <textarea
             value={token}
-            onChange={(event) => setToken(event.target.value)}
+            onChange={(event) => handleTokenChange(event.target.value)}
             spellCheck={false}
             placeholder="Paste a JWT token here"
           />

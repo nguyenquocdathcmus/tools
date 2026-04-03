@@ -91,3 +91,40 @@ npm run test:e2e:ui
 ## Ghi chu
 
 Neu co cau hinh bien moi truong trong tuong lai, tao file .env.local tai thu muc goc du an va bo sung bien can thiet.
+
+## SEO Sitelinks Checklist
+
+Sau khi deploy, thuc hien checklist nay de tang co hoi co Sitelinks tren Google:
+
+1. Submit lai sitemap trong Google Search Console:
+
+```bash
+https://daxnoria.com/sitemap.xml
+```
+
+2. Request indexing cho cac URL tru cot theo thu tu:
+
+- /
+- /tools
+- /blog
+- /developer-tools-online
+- /api-debugging-tools
+- /json-formatter
+- /timestamp-converter
+- /jwt-decoder
+
+3. Kiem tra route search box:
+
+- /search?q=json
+
+4. Theo doi query brand trong Search Console:
+
+- daxnoria
+- daxnoria tools
+- json formatter daxnoria
+
+Tai lieu chi tiet: docs/SEO_SITELINKS_PLAYBOOK.md
+
+Bao cao hang tuan: docs/SEO_WEEKLY_REPORT_TEMPLATE.md
+
+Ke hoach 10 bai long-tail: docs/BLOG_TOPIC_CLUSTER_PLAN.md

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 type SiteHeaderProps = {
@@ -14,6 +15,7 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
 
   const navItems = [
     { href: "/", label: "Home" },
+    { href: "/tools", label: "Tools" },
     { href: "/tools/format", label: "Format" },
     { href: "/encode", label: "Encode" },
     { href: "/text-count", label: "Text Count" },
@@ -23,6 +25,7 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
     { href: "/qrcode", label: "QR Code" },
     { href: "/jwt-decoder", label: "JWT Decoder" },
     { href: "/diff-checker", label: "Diff Checker" },
+    { href: "/blog", label: "Blog" },
   ];
 
   function closeMenu() {
@@ -42,13 +45,13 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
       <div className="header-main">
         <div className="header-row">
           <Link href="/" className="brand" onClick={closeMenu}>
-            <img 
-              src="/icon.svg" 
-              alt="Daxnoria Logo" 
-              width={42} 
-              height={42} 
-              className="brand-mark" 
-              style={{ background: "transparent", boxShadow: "none", padding: 0 }} 
+            <Image
+              src="/icon.svg"
+              alt="Daxnoria Logo"
+              width={42}
+              height={42}
+              className="brand-mark"
+              style={{ background: "transparent", boxShadow: "none", padding: 0 }}
             />
             <span className="brand-text-wrap">
               <span className="brand-text">Daxnoria</span>

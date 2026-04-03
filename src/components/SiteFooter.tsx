@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function SiteFooter() {
   const year = new Date().getFullYear();
@@ -25,6 +26,10 @@ export default function SiteFooter() {
       title: "Resources",
       links: [
         { href: "/", label: "Homepage" },
+        { href: "/tools", label: "Tools Directory" },
+        { href: "/blog", label: "Developer Blog" },
+        { href: "/developer-tools-online", label: "Developer Tools Online" },
+        { href: "/api-debugging-tools", label: "API Debugging Tools" },
         { href: "/request-feature", label: "Request Feature" },
         { href: "/sitemap.xml", label: "Sitemap" },
         { href: "/robots.txt", label: "Robots" },
@@ -37,7 +42,7 @@ export default function SiteFooter() {
       <div className="footer-grid">
         <section className="footer-intro">
           <div className="footer-brand-row">
-            <img
+            <Image
               src="/icon.svg"
               alt="Daxnoria Logo"
               width={30}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import Script from "next/script";
 import "./globals.css";
 import { SITE_URL } from "@/lib/site";
 
@@ -26,6 +27,14 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: "/",
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: ["/favicon.ico"],
+    apple: [{ url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" }],
   },
   openGraph: {
     title: "Daxnoria Formatter Hub",
@@ -60,10 +69,60 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Daxnoria Formatter Hub",
+    url: SITE_URL,
+    inLanguage: "en",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
+  const navigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: [
+      { "@type": "SiteNavigationElement", name: "Home", url: `${SITE_URL}/` },
+      { "@type": "SiteNavigationElement", name: "Tools", url: `${SITE_URL}/tools` },
+      { "@type": "SiteNavigationElement", name: "Format", url: `${SITE_URL}/tools/format` },
+      { "@type": "SiteNavigationElement", name: "Encode", url: `${SITE_URL}/encode` },
+      { "@type": "SiteNavigationElement", name: "Timestamp", url: `${SITE_URL}/timestamp` },
+      { "@type": "SiteNavigationElement", name: "Blog", url: `${SITE_URL}/blog` },
+    ],
+  };
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Daxnoria",
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon.svg`,
+    sameAs: ["https://web.facebook.com/people/Daxnoria/61575367715805/"],
+  };
+
   return (
     <html lang="vi">
       <body>
         {children}
+        <Script
+          id="schema-website"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <Script
+          id="schema-organization"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <Script
+          id="schema-navigation"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(navigationSchema) }}
+        />
         <Analytics />
         <SpeedInsights />
       </body>

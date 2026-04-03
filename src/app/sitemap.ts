@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { BLOG_POSTS } from "@/lib/blog";
 import { FORMATTERS } from "@/lib/formatters";
 import { SITE_URL } from "@/lib/site";
 
@@ -25,10 +26,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/timestamp-converter", priority: 0.8 },
     { path: "/unix-time-to-date", priority: 0.8 },
     { path: "/tools/all", priority: 0.7 },
+    { path: "/tools", priority: 0.85 },
     { path: "/tools/format", priority: 0.7 },
     { path: "/tools/data", priority: 0.7 },
     { path: "/tools/web", priority: 0.7 },
     { path: "/tools/code", priority: 0.7 },
+    { path: "/blog", priority: 0.75 },
+    { path: "/developer-tools-online", priority: 0.85 },
+    { path: "/api-debugging-tools", priority: 0.85 },
+    { path: "/search", priority: 0.6 },
   ];
 
   const base = staticPages.map((page) => ({
@@ -45,5 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
-  return [...base, ...formatterPages];
+  const blogPages = BLOG_POSTS.map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
+  return [...base, ...formatterPages, ...blogPages];
 }
