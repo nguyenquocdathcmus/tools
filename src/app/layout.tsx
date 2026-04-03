@@ -7,7 +7,6 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  manifest: "/site.webmanifest",
   title: {
     default: "Daxnoria Formatter Hub | JSON, XML, HTML, YAML, JS, TS, Java, C#",
     template: "%s | Daxnoria Formatter Hub",
