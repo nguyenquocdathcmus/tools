@@ -7,6 +7,7 @@ import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  manifest: "/site.webmanifest",
   title: {
     default: "Daxnoria Formatter Hub | JSON, XML, HTML, YAML, JS, TS, Java, C#",
     template: "%s | Daxnoria Formatter Hub",
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
       { url: "/icon.svg", type: "image/svg+xml" },
     ],
     shortcut: ["/favicon.ico"],
-    apple: [{ url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" }],
+    apple: [{ url: "/favicon.ico" }],
   },
   openGraph: {
     title: "Daxnoria Formatter Hub",
@@ -106,6 +107,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 
   return (
     <html lang="vi">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="shortcut icon" href="/favicon.ico" />
+      </head>
       <body>
         {children}
         <Script
