@@ -42,6 +42,38 @@ export default function DeveloperToolsOnlinePage() {
     ],
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Developer Tools Online", item: `${SITE_URL}/developer-tools-online` },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Which online developer tools should I use first?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "A practical starter stack is JSON Formatter, JWT Decoder, Timestamp Converter, and Diff Checker for daily API and backend troubleshooting.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Are these tools suitable for production debugging?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Yes. They are designed for fast validation workflows such as payload normalization, claim inspection, and pre-release diff checks.",
+        },
+      },
+    ],
+  };
+
   return (
     <main className="page-wrap app-shell">
       <SiteHeader compact />
@@ -107,6 +139,16 @@ export default function DeveloperToolsOnlinePage() {
         id="schema-dev-tools-itemlist"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <Script
+        id="schema-dev-tools-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="schema-dev-tools-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </main>
   );

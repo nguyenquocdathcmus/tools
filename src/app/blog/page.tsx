@@ -40,6 +40,38 @@ export default function BlogIndexPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What topics does the Daxnoria blog cover?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "The blog covers JSON formatting, API payload validation, JWT debugging, Unix timestamp conversion, and practical developer workflow optimization.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How does this blog help with tool workflows?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Each article maps a real debugging use case and links to related tools, creating a repeatable hub-to-tool workflow for faster incident resolution.",
+        },
+      },
+    ],
+  };
+
   return (
     <main className="page-wrap app-shell">
       <SiteHeader compact />
@@ -50,6 +82,10 @@ export default function BlogIndexPage() {
         <p>
           This blog is built as a content funnel for long-tail developer queries like JSON formatter best practices,
           Unix timestamp converter workflows, and JWT debugging playbooks.
+        </p>
+        <p>
+          Instead of generic theory, each guide focuses on production-style workflows: validate payloads, decode auth
+          claims, compare diffs, and verify time-sensitive events before release.
         </p>
       </section>
 
@@ -73,6 +109,16 @@ export default function BlogIndexPage() {
         id="schema-blog-itemlist"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <Script
+        id="schema-blog-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="schema-blog-faq"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
     </main>
   );

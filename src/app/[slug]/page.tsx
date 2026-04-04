@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const ogImageUrl = `${SITE_URL}/og?name=${encodeURIComponent(formatter.name)}`;
 
   return {
-    title: `${formatter.name} Online`,
+    title: `${formatter.name} Formatter Online | Beautify, Validate, and Debug`,
     description: formatter.seoDescription,
     keywords: [
       formatter.name.toLowerCase(),
@@ -118,6 +118,11 @@ export default async function FormatterPage({ params }: PageProps) {
   return (
     <main className="page-wrap app-shell">
       <SiteHeader compact />
+
+      <section className="seo-copy" aria-labelledby="formatter-title" style={{ marginBottom: "1.5rem" }}>
+        <h1 id="formatter-title">{formatter.name} Formatter Online</h1>
+        <p>{formatter.seoDescription}</p>
+      </section>
 
       {formatter.id === "json" ? (
         <JsonToolsPanelWrapper />

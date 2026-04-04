@@ -54,6 +54,15 @@ export default function ApiDebuggingToolsPage() {
     ],
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "API Debugging Tools", item: `${SITE_URL}/api-debugging-tools` },
+    ],
+  };
+
   return (
     <main className="page-wrap app-shell">
       <SiteHeader compact />
@@ -118,6 +127,11 @@ export default function ApiDebuggingToolsPage() {
         id="schema-api-debug-faq"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <Script
+        id="schema-api-debug-breadcrumb"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
     </main>
   );

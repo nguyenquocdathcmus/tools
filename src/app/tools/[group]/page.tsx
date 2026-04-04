@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { FORMATTERS, type FormatterId } from "@/lib/formatters";
@@ -149,6 +150,39 @@ export default async function GroupToolsPage({ params }: GroupPageProps) {
   const tools = getGroupTools(groupKey);
   const groupTheme = `group-hero tone-${config.tone}`;
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Tools", item: `${SITE_URL}/tools` },
+      { "@type": "ListItem", position: 3, name: config.title, item: `${SITE_URL}/tools/${groupKey}` },
+    ],
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: `What does the ${config.title} group include?`,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: `${config.title} includes ${tools.length} tools focused on ${config.description.toLowerCase()}`,
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How should I use these tools in a workflow?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Pick the relevant formatter first, validate the output, then compare and ship changes with a repeatable review flow.",
+        },
+      },
+    ],
+  };
+
   return (
     <main className="page-wrap app-shell">
       <SiteHeader compact />
@@ -196,7 +230,30 @@ export default async function GroupToolsPage({ params }: GroupPageProps) {
         </div>
       </section>
 
+      <section className="seo-copy" aria-labelledby="group-workflow-title">
+        <h2 id="group-workflow-title">How to use {config.title.toLowerCase()} tools effectively</h2>
+        <p>
+          This group is organized for practical debugging and formatting workflows. Start with one focused tool,
+          validate the result, and move to the next step only when output is stable.
+        </p>
+        <p>
+          For broader discovery, use <Link href="/tools">Tools Directory</Link>, then deepen context with{" "}
+          <Link href="/blog">Developer Blog</Link>. This hub-to-guide flow improves both usability and topical SEO.
+        </p>
+      </section>
+
       <SiteFooter />
+
+      <Script
+        id="schema-breadcrumb-tools-group"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <Script
+        id="schema-faq-tools-group"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
     </main>
   );
 }

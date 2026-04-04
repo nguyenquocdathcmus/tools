@@ -8,9 +8,9 @@ import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Online Developer Tools",
+  title: "Online Developer Tools: JSON Formatter, Base64 Encoder, Timestamp Converter",
   description:
-    "Keyword-driven online developer tools for JSON formatting, timestamp conversion, JWT decoding, XML formatting, and payload validation.",
+    "Free online developer tools for JSON formatting, Base64 encoding, Unix timestamp conversion, JWT decoding, XML formatting, and payload validation workflows.",
   alternates: {
     canonical: "/",
   },
@@ -283,10 +283,11 @@ export default function HomePage() {
               <span className="typing-line typing-line-one">init workflow</span>
               <span className="typing-line typing-line-two">format | encode | diff | inspect</span>
             </div>
-            <h1>The ultimate online tools for your daily developer tasks.</h1>
+            <h1>Online Developer Tools for JSON Formatting, Encoding, and Timestamp Debugging</h1>
             <p className="lead">
-              An online toolkit to format, validate, encode, and manipulate data right in your browser.
-              Everything is designed with a minimalist approach, instant processing speed, and tailored for developers.
+              Daxnoria is a browser-based toolkit built for real developer workflows: format and validate JSON,
+              decode JWT claims, convert Unix timestamps, compare payload diffs, and run encode or decode operations
+              without installation. Every tool runs client-side for speed, privacy, and reliable debugging.
             </p>
 
             <div className="hero-actions">
@@ -502,6 +503,40 @@ tools.forEach(openTool);`}</pre>
             </Link>
           </li>
         </ul>
+      </section>
+
+      <section className="seo-copy" aria-labelledby="workflow-title">
+        <div className="section-head">
+          <p className="section-kicker">Workflow SEO</p>
+          <h2 id="workflow-title">How developers use these tools in real debugging workflows</h2>
+          <p>
+            Tool pages only rank sustainably when they also explain practical use cases. This section maps common
+            debugging flows that teams run every day so search engines and users can both understand intent.
+          </p>
+        </div>
+
+        <h3>API payload validation workflow</h3>
+        <p>
+          Start with <Link href="/json-validator">JSON Validator</Link> to catch syntax issues, then move to{" "}
+          <Link href="/json-formatter">JSON Formatter</Link> for readable structure. If request payloads are encoded,
+          continue with <Link href="/base64-decode">Base64 Decode</Link> or <Link href="/url-decode">URL Decode</Link>.
+          This sequence cuts incident triage time because each step isolates one class of errors.
+        </p>
+
+        <h3>Authentication debugging workflow</h3>
+        <p>
+          Authentication failures often come from invalid claims or expired sessions. Decode token data in{" "}
+          <Link href="/jwt-decoder">JWT Decoder</Link>, then verify claim timestamps in{" "}
+          <Link href="/timestamp-converter">Unix Timestamp Converter</Link>. This helps teams verify exp, iat, and nbf
+          values quickly during on-call incidents.
+        </p>
+
+        <h3>Config and response regression workflow</h3>
+        <p>
+          Before deployment, compare old and new responses in <Link href="/diff-checker">Diff Checker</Link> to detect
+          hidden changes. For XML and SOAP payloads, normalize structures first with <Link href="/xml-formatter">XML Formatter</Link>.
+          These repeatable steps improve review quality and reduce production regressions.
+        </p>
       </section>
 
       <SiteFooter />

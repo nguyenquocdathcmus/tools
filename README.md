@@ -128,3 +128,60 @@ Tai lieu chi tiet: docs/SEO_SITELINKS_PLAYBOOK.md
 Bao cao hang tuan: docs/SEO_WEEKLY_REPORT_TEMPLATE.md
 
 Ke hoach 10 bai long-tail: docs/BLOG_TOPIC_CLUSTER_PLAN.md
+
+## Danh sach URL cua he thong (Full Links)
+
+**1. Trang chu & Menu chieu doc (Hubs):**
+- https://daxnoria.com/
+- https://daxnoria.com/tools
+- https://daxnoria.com/tools/format
+- https://daxnoria.com/tools/data
+- https://daxnoria.com/search
+- https://daxnoria.com/blog
+- https://daxnoria.com/blog/ai-tools-for-developers
+- https://daxnoria.com/blog/json-formatter-best-practices
+- https://daxnoria.com/blog/unix-timestamp-converter-use-cases
+- https://daxnoria.com/developer-tools-online
+- https://daxnoria.com/api-debugging-tools
+
+**2. Nhom cong cu JSON & API:**
+- https://daxnoria.com/json-formatter
+- https://daxnoria.com/json-validator
+- https://daxnoria.com/json-minify
+- https://daxnoria.com/xml-formatter
+- https://daxnoria.com/jwt-decoder
+
+**3. Nhom cong cu Ma hoa (Encode/Decode):**
+- https://daxnoria.com/encode
+- https://daxnoria.com/base64-encode
+- https://daxnoria.com/base64-decode
+- https://daxnoria.com/url-encode
+- https://daxnoria.com/url-decode
+
+**4. Nhom cong cu Van ban & Kiem tra loi (Text & Diff):**
+- https://daxnoria.com/diff-checker
+- https://daxnoria.com/text-count
+
+**5. Nhom cong cu Thoi gian (Time & Date):**
+- https://daxnoria.com/timestamp
+- https://daxnoria.com/timestamp-converter
+- https://daxnoria.com/unix-time-to-date
+
+**6. Nhom cong cu Da phuong tien (Media & File):**
+- https://daxnoria.com/image
+- https://daxnoria.com/pdf
+- https://daxnoria.com/qrcode
+
+**7. Nhom tuong tac bo sung:**
+- https://daxnoria.com/request-feature
+
+## Danh sach Task da hoan thanh
+
+- [x] Khoi tao du an Next.js App Router (Turbopack)
+- [x] Phat trien cac tinh nang cong cu chu chot (JSON, Encode, Time, Media...)
+- [x] Toi uu kien truc SEO Sitelinks (Structured Data: WebSite, Organization, FAQ, Navigation)
+- [x] Xay dung Category/Blog Funnel keo traffic (/blog, /blog/[slug]) de cham diem content
+- [x] Toi uu favicon, Web manifest va tao Sitemap dong
+- [x] Refactor fix loi React strict mode (truong hop component JwtDecoderPanel hien timestamp)
+- [x] Dam bao vuot qua hoan toan quy trinh `npm run lint` & `npm run build`
+- [x] Tao tai lieu workflow cho viec van hanh SEO (Playbook, Report template, Topic Cluster plan)

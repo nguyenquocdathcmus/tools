@@ -9,21 +9,24 @@ import { SITE_URL } from "@/lib/site";
 import TimestampToolsPanelWrapper from "@/components/TimestampToolsPanelWrapper";
 
 export const metadata: Metadata = {
-  title: "Unix Timestamp Converter | Epoch to Date | Daxnoria",
-  description: "Convert Unix timestamps to readable dates, and readable dates to Unix epochs instantly. Timezone support included.",
+  title: "Unix Timestamp Converter Online | Convert Epoch to Date",
+  description:
+    "Convert Unix timestamp to date and date to epoch instantly. Free online timestamp converter with UTC and timezone-aware debugging support.",
   alternates: {
     canonical: "/timestamp-converter",
   },
   openGraph: {
-    title: "Unix Timestamp Converter | Epoch to Date | Daxnoria",
-    description: "Convert Unix timestamps to readable dates, and readable dates to Unix epochs instantly. Timezone support included.",
+    title: "Unix Timestamp Converter Online | Convert Epoch to Date",
+    description:
+      "Convert Unix timestamp to date and date to epoch instantly. Free online timestamp converter with UTC and timezone-aware debugging support.",
     url: `${SITE_URL}/timestamp-converter`,
     images: [{ url: `${SITE_URL}/og?name=Unix%20Timestamp%20Converter`, width: 1200, height: 630, alt: "Unix Timestamp Converter" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Unix Timestamp Converter | Epoch to Date | Daxnoria",
-    description: "Convert Unix timestamps to readable dates, and readable dates to Unix epochs instantly. Timezone support included.",
+    title: "Unix Timestamp Converter Online | Convert Epoch to Date",
+    description:
+      "Convert Unix timestamp to date and date to epoch instantly with UTC and timezone-aware outputs.",
     images: [`${SITE_URL}/og?name=Unix%20Timestamp%20Converter`],
   },
 };
@@ -58,9 +61,10 @@ export default function Page() {
       <AdSlot variant="top-banner" />
 
       <header className="seo-copy" style={{ textAlign: "center", marginBottom: "32px" }}>
-        <h1 style={{ fontSize: "2.5rem", marginBottom: "8px" }}>Unix Timestamp Converter</h1>
+        <h1 style={{ fontSize: "2.5rem", marginBottom: "8px" }}>Unix Timestamp Converter Online</h1>
         <p style={{ fontSize: "1.2rem", color: "var(--color-text-subtle)" }}>
-          Convert Unix timestamps to readable dates, and readable dates to Unix epochs instantly. Timezone support included.
+          Convert epoch to date and date to epoch instantly. Built for log analysis, JWT claim checks, and
+          timezone-aware incident debugging.
         </p>
       </header>
 
@@ -72,6 +76,24 @@ export default function Page() {
 
         <h2 id="what-is">What is Unix Timestamp?</h2>
         <p dangerouslySetInnerHTML={{ __html: `A <strong>Unix Timestamp (or Epoch Time)</strong> is a system for describing a point in time. It is the number of seconds that have elapsed since the Unix epoch, minus leap seconds; the Unix epoch is 00:00:00 UTC on 1 January 1970.` }} />
+
+        <h2 id="real-use-cases">Real use cases in production systems</h2>
+        <p>
+          Dev teams rely on timestamp conversion when mapping alerts to deployment windows, correlating API logs,
+          validating analytics event order, and checking whether authentication sessions expired too early.
+        </p>
+
+        <h2 id="jwt-workflow">JWT expiration debugging workflow</h2>
+        <p>
+          Decode claims in <Link href="/jwt-decoder">JWT Decoder</Link>, then convert exp, iat, and nbf values on this
+          page to confirm validity windows. This is one of the fastest ways to diagnose token-related login failures.
+        </p>
+
+        <h2 id="timezone-workflow">Timezone and UTC consistency checks</h2>
+        <p>
+          In distributed systems, one service may log UTC while clients show local time. Converting both views side by
+          side helps identify clock drift and ordering mistakes that can trigger false alerts or broken reports.
+        </p>
 
         {/* TODO(ad-slot): slot kept via AdSlot component; enable with NEXT_PUBLIC_ENABLE_ADS=true */}
         <AdSlot variant="in-article" />
@@ -109,15 +131,21 @@ export default function Page() {
             </Link>
           </li>
           <li>
-            <Link href="/base64-encode">
-              <span>Base64 Encoder</span>
+            <Link href="/timestamp">
+              <span>Unix Timestamp Now</span>
               <small>Open tool -&gt;</small>
             </Link>
           </li>
           <li>
-            <Link href="/url-encode">
-              <span>URL Encoder</span>
+            <Link href="/jwt-decoder">
+              <span>JWT Decoder</span>
               <small>Open tool -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog/unix-timestamp-converter-use-cases">
+              <span>Unix Timestamp Converter Use Cases</span>
+              <small>Read guide -&gt;</small>
             </Link>
           </li>
         </ul>
