@@ -70,7 +70,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
       name: "Daxnoria",
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_URL}/icon.svg`,
+        url: `${SITE_URL}/favicon-48x48.png`,
       },
     },
     mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,

@@ -46,7 +46,7 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
         <div className="header-row">
           <Link href="/" className="brand" onClick={closeMenu}>
             <Image
-              src="/icon.svg"
+              src="/favicon-48x48.png"
               alt="Daxnoria Logo"
               width={42}
               height={42}

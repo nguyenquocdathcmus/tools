@@ -238,18 +238,18 @@ export default function HomePage() {
     mainEntity: [
       {
         "@type": "Question",
-        name: "Website này hỗ trợ format những loại nào?",
+        name: "Which formats does the website support?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Trang hỗ trợ 24 formatter gồm JSON, XML, HTML, YAML, JavaScript, TypeScript, Java, C#, GraphQL, Markdown, PHP và nhiều định dạng khác.",
+          text: "The site supports 24 formatters including JSON, XML, HTML, YAML, JavaScript, TypeScript, Java, C#, GraphQL, Markdown, PHP, and more.",
         },
       },
       {
         "@type": "Question",
-        name: "Có cần cài đặt gì để dùng công cụ không?",
+        name: "Do I need to install anything to use the tools?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Không cần cài đặt thêm. Bạn chỉ cần dán nội dung, chọn formatter và bấm Format now.",
+          text: "No installation is required. Just paste your content, choose a formatter, and click Format now.",
         },
       },
     ],

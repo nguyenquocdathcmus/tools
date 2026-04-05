@@ -43,7 +43,7 @@ export default function SiteFooter() {
         <section className="footer-intro">
           <div className="footer-brand-row">
             <Image
-              src="/icon.svg"
+              src="/favicon-48x48.png"
               alt="Daxnoria Logo"
               width={30}
               height={30}

@@ -97,7 +97,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@type": "Organization",
     name: "Daxnoria",
     url: SITE_URL,
-    logo: `${SITE_URL}/icon.svg`,
+    logo: `${SITE_URL}/favicon-48x48.png`,
     sameAs: ["https://web.facebook.com/people/Daxnoria/61575367715805/"],
   };
 
