@@ -34,7 +34,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/blog", priority: 0.75 },
     { path: "/developer-tools-online", priority: 0.85 },
     { path: "/api-debugging-tools", priority: 0.85 },
-    { path: "/search", priority: 0.6 },
   ];
 
   const base = staticPages.map((page) => ({

@@ -25,9 +25,6 @@ export const metadata: Metadata = {
     "graphql formatter",
     "php formatter",
   ],
-  alternates: {
-    canonical: "/",
-  },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
