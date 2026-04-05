@@ -50,6 +50,7 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
               alt="Daxnoria Logo"
               width={42}
               height={42}
+              priority
               className="brand-mark"
               style={{ background: "transparent", boxShadow: "none", padding: 0 }}
             />
