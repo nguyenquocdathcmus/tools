@@ -10,7 +10,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Developer Blog",
   description:
-    "Keyword-driven guides for developers on JSON formatting, timestamp conversion, JWT decoding, and practical debugging workflows.",
+    "Keyword-driven guides for developers on JSON formatting, timestamp conversion, JWT decoding, encoding workflows, and practical debugging workflows.",
   alternates: {
     canonical: "/blog",
   },
@@ -25,6 +25,36 @@ export const metadata: Metadata = {
 };
 
 export default function BlogIndexPage() {
+  const latestPosts = [...BLOG_POSTS].reverse().slice(0, 12);
+  const featuredSlugs = [
+    "json-formatter-best-practices",
+    "base64-encode-decode-workflow",
+    "timestamp-converter-for-productivity",
+    "diff-checker-review-workflow",
+    "xml-formatter-clean-xml-workflow",
+    "pdf-tool-workflow-for-large-documents",
+  ];
+
+  const featuredPosts = featuredSlugs
+    .map((slug) => BLOG_POSTS.find((post) => post.slug === slug))
+    .filter((post): post is (typeof BLOG_POSTS)[number] => Boolean(post));
+
+  const topicGroups = Array.from(
+    BLOG_POSTS.reduce((groups, post) => {
+      const bucket = groups.get(post.category) ?? [];
+      bucket.push(post);
+      groups.set(post.category, bucket);
+      return groups;
+    }, new Map<string, (typeof BLOG_POSTS)[number][]>())
+  ).map(([category, posts]) => ({
+    category,
+    posts,
+    sample: posts.slice(0, 4),
+  }));
+
+  const totalGuides = BLOG_POSTS.length;
+  const categoryCount = topicGroups.length;
+
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -77,27 +107,111 @@ export default function BlogIndexPage() {
     <main className="page-wrap app-shell">
       <SiteHeader compact />
 
-      <section className="seo-copy" aria-labelledby="blog-title">
-        <p className="section-kicker">Content hub</p>
-        <h1 id="blog-title">Developer SEO Guides</h1>
-        <p>
-          This blog is built as a content funnel for long-tail developer queries like JSON formatter best practices,
-          Unix timestamp converter workflows, and JWT debugging playbooks.
-        </p>
-        <p>
-          Instead of generic theory, each guide focuses on production-style workflows: validate payloads, decode auth
-          claims, compare diffs, and verify time-sensitive events before release.
-        </p>
+      <section className="blog-hero" aria-labelledby="blog-title">
+        <div className="blog-hero-grid">
+          <div className="blog-hero-copy">
+            <p className="section-kicker">Content hub</p>
+            <h1 id="blog-title">Developer SEO Guides</h1>
+            <p>
+              This blog is built as a content funnel for long-tail developer queries like JSON formatter best
+              practices, Base64 workflows, timestamp conversion, and debugging playbooks.
+            </p>
+            <p>
+              Instead of generic theory, each guide focuses on production-style workflows: validate payloads, decode
+              auth claims, compare diffs, inspect encoded strings, and verify time-sensitive events before release.
+            </p>
+          </div>
+
+          <div className="blog-hero-stats" aria-label="Blog metrics">
+            <article>
+              <p>Articles</p>
+              <strong>{totalGuides}</strong>
+              <span>Long-tail guides and support posts</span>
+            </article>
+            <article>
+              <p>Topics</p>
+              <strong>{categoryCount}</strong>
+              <span>Content clusters with clear intent</span>
+            </article>
+            <article>
+              <p>Workflow</p>
+              <strong>Browser-first</strong>
+              <span>Built to support fast, local utility flows</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="blog-featured" aria-labelledby="featured-articles-title">
+        <div className="section-head">
+          <div>
+            <p className="section-kicker">Start here</p>
+            <h2 id="featured-articles-title">Featured Articles</h2>
+          </div>
+          <p>These are the strongest hub pages for search intent and internal linking.</p>
+        </div>
+
+        <ul className="blog-featured-grid">
+          {featuredPosts.map((post) => (
+            <li key={post.slug}>
+              <Link href={`/blog/${post.slug}`} className="blog-featured-card">
+                <p className="blog-featured-category">{post.category}</p>
+                <span>{post.title}</span>
+                <small>{post.description}</small>
+                <strong>{post.readMinutes} min read -&gt;</strong>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="blog-topics" aria-labelledby="topic-library-title">
+        <div className="section-head">
+          <div>
+            <p className="section-kicker">Browse by topic</p>
+            <h2 id="topic-library-title">Topic Library</h2>
+          </div>
+          <p>Grouped by intent so readers can move from a general workflow into a narrower guide.</p>
+        </div>
+
+        <div className="blog-topic-grid">
+          {topicGroups.map((group) => (
+            <article key={group.category} className="blog-topic-card">
+              <div className="blog-topic-head">
+                <h3>{group.category}</h3>
+                <span>{group.posts.length} articles</span>
+              </div>
+              <ul className="blog-topic-list">
+                {group.sample.map((post) => (
+                  <li key={post.slug}>
+                    <Link href={`/blog/${post.slug}`}>
+                      <span>{post.title}</span>
+                      <small>{post.readMinutes} min read</small>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section className="supported" aria-labelledby="blog-list-title">
-        <h2 id="blog-list-title">Latest Articles</h2>
-        <ul className="related-grid">
-          {BLOG_POSTS.map((post) => (
+        <div className="section-head">
+          <div>
+            <p className="section-kicker">All posts</p>
+            <h2 id="blog-list-title">Latest Articles</h2>
+          </div>
+          <p>The newest additions appear first, so the hub stays useful as the content library grows.</p>
+        </div>
+        <ul className="blog-latest-grid">
+          {latestPosts.map((post) => (
             <li key={post.slug}>
-              <Link href={`/blog/${post.slug}`}>
+              <Link href={`/blog/${post.slug}`} className="blog-latest-card">
                 <span>{post.title}</span>
-                <small>{post.readMinutes} min read -&gt;</small>
+                <small>
+                  {post.category} · {post.readMinutes} min read -&gt;
+                </small>
               </Link>
             </li>
           ))}

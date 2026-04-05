@@ -58,6 +58,66 @@ export default function BlogFunnelLinks({ title = "Developer Guides" }: BlogFunn
           </Link>
         </li>
         <li>
+          <Link href="/blog/base64-encode-decode-workflow">
+            <span>Base64 Encode And Decode Workflow</span>
+            <small>Encoding guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/url-encoding-guide-for-webworkflows">
+            <span>URL Encoding Guide</span>
+            <small>Query string guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/text-counting-guide-for-writers-and-seo">
+            <span>Text Counting Guide</span>
+            <small>Copy length guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/timestamp-converter-for-productivity">
+            <span>Timestamp Converter Use Cases</span>
+            <small>Time workflow guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/qrcode-link-sharing-guide">
+            <span>QR Code Sharing Guide</span>
+            <small>Sharing guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/url-decode-practical-guide">
+            <span>URL Decode Practical Guide</span>
+            <small>Decoding guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/base64-decode-inspection-guide">
+            <span>Base64 Decode Inspection Guide</span>
+            <small>Inspection guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/diff-checker-review-workflow">
+            <span>Diff Checker Review Workflow</span>
+            <small>Review guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/xml-formatter-clean-xml-workflow">
+            <span>XML Formatter Clean XML Workflow</span>
+            <small>Legacy XML guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/pdf-tool-workflow-for-large-documents">
+            <span>PDF Tool Workflow For Large Documents</span>
+            <small>Document guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
           <Link href="/json-tools">
             <span>JSON Tools Hub</span>
             <small>Cluster page -&gt;</small>
