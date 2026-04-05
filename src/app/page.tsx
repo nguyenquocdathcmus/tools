@@ -216,7 +216,7 @@ export default function HomePage() {
         <>
           JSON, XML, HTML, TS, GraphQL, PHP and{" "}
           <Link href="/tools/all" style={{ color: "#8fb4ff", textDecoration: "underline" }}>
-            more
+            view all tools
           </Link>
         </>
       ),
