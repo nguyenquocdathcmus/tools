@@ -93,6 +93,12 @@ export default function ApiDebuggingToolsPage() {
         <h2 id="api-related-title">Core API Tools</h2>
         <ul className="related-grid">
           <li>
+            <Link href="/json-tools">
+              <span>JSON Tools Hub</span>
+              <small>Open cluster -&gt;</small>
+            </Link>
+          </li>
+          <li>
             <Link href="/json-validator">
               <span>JSON Validator</span>
               <small>Open tool -&gt;</small>

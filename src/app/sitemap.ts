@@ -17,6 +17,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/diff-checker", priority: 0.8 },
     { path: "/json-validator", priority: 0.8 },
     { path: "/json-minify", priority: 0.8 },
+    { path: "/json-tools", priority: 0.82 },
+    { path: "/json-to-csv", priority: 0.75 },
     { path: "/base64-encode", priority: 0.8 },
     { path: "/base64-decode", priority: 0.8 },
     { path: "/url-encode", priority: 0.8 },

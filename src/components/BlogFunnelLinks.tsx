@@ -22,6 +22,24 @@ export default function BlogFunnelLinks({ title = "Developer Guides" }: BlogFunn
           </Link>
         </li>
         <li>
+          <Link href="/blog/json-format-guide">
+            <span>JSON Format Guide</span>
+            <small>Structure guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/fix-invalid-json">
+            <span>Fix Invalid JSON</span>
+            <small>Repair guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/common-json-errors">
+            <span>Common JSON Errors</span>
+            <small>Error checklist -&gt;</small>
+          </Link>
+        </li>
+        <li>
           <Link href="/blog/xml-validator-best-practices">
             <span>XML Validator Best Practices</span>
             <small>SOAP guide -&gt;</small>
@@ -37,6 +55,12 @@ export default function BlogFunnelLinks({ title = "Developer Guides" }: BlogFunn
           <Link href="/blog/unix-timestamp-converter-use-cases">
             <span>Unix Timestamp Converter Use Cases</span>
             <small>Debugging guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/json-tools">
+            <span>JSON Tools Hub</span>
+            <small>Cluster page -&gt;</small>
           </Link>
         </li>
       </ul>

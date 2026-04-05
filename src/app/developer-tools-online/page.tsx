@@ -105,6 +105,12 @@ export default function DeveloperToolsOnlinePage() {
         <h2 id="tool-list-title">Recommended Tools</h2>
         <ul className="related-grid">
           <li>
+            <Link href="/json-tools">
+              <span>JSON Tools Hub</span>
+              <small>Open cluster -&gt;</small>
+            </Link>
+          </li>
+          <li>
             <Link href="/json-formatter">
               <span>JSON Formatter</span>
               <small>Open tool -&gt;</small>
@@ -126,6 +132,12 @@ export default function DeveloperToolsOnlinePage() {
             <Link href="/diff-checker">
               <span>Diff Checker</span>
               <small>Open tool -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/json-to-csv">
+              <span>JSON to CSV Guide</span>
+              <small>Export workflow -&gt;</small>
             </Link>
           </li>
         </ul>

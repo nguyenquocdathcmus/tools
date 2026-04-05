@@ -74,6 +74,13 @@ export default function ToolsDirectoryPage() {
           engineering tasks instead of generic categories.
         </p>
 
+        <h3>JSON authority cluster</h3>
+        <p>
+          Start with <Link href="/json-tools">JSON Tools Hub</Link>, then move into <Link href="/json-formatter">JSON Formatter</Link>,
+          <Link href="/json-validator">JSON Validator</Link>, and <Link href="/json-minify">JSON Minify</Link>. For long-tail learning,
+          read <Link href="/blog/json-format-guide">JSON Format Guide</Link> and <Link href="/blog/fix-invalid-json">Fix Invalid JSON</Link>.
+        </p>
+
         <h3>Data and API debugging</h3>
         <p>
           Use <Link href="/json-formatter">JSON Formatter</Link>, <Link href="/json-validator">JSON Validator</Link>, and{" "}
@@ -113,6 +120,12 @@ export default function ToolsDirectoryPage() {
             <Link href="/blog/ai-tools-for-developers">
               <span>AI Tools For Developers</span>
               <small>Open guide -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/json-tools">
+              <span>JSON Tools Hub</span>
+              <small>Open hub -&gt;</small>
             </Link>
           </li>
         </ul>

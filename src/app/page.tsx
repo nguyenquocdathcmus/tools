@@ -503,6 +503,18 @@ tools.forEach(openTool);`}</pre>
               <small>Real-world debugging -&gt;</small>
             </Link>
           </li>
+          <li>
+            <Link href="/json-tools">
+              <span>JSON Tools Hub</span>
+              <small>Cluster page -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/json-to-csv">
+              <span>JSON to CSV Guide</span>
+              <small>Export workflow -&gt;</small>
+            </Link>
+          </li>
         </ul>
       </section>
 
