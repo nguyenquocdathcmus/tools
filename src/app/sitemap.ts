@@ -4,10 +4,6 @@ import { FORMATTERS } from "@/lib/formatters";
 import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Use a stable date for static structural pages
-  // to prevent Googlebot ignoring lastModified.
-  const siteLastDeployed = new Date("2026-04-05T00:00:00.000Z");
-
   const staticPages = [
     { path: "", priority: 1 },
     { path: "/request-feature", priority: 0.7 },
@@ -40,14 +36,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const base = staticPages.map((page) => ({
     url: `${SITE_URL}${page.path}`,
-    lastModified: siteLastDeployed,
     changeFrequency: "weekly" as const,
     priority: page.priority,
   }));
 
   const formatterPages = FORMATTERS.map((formatter) => ({
     url: `${SITE_URL}/${formatter.slug}`,
-    lastModified: siteLastDeployed,
     changeFrequency: "weekly" as const,
     priority: 0.9,
   }));
