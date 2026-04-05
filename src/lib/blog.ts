@@ -285,6 +285,126 @@ export const BLOG_POSTS: BlogPost[] = [
       },
     ],
   },
+  {
+    slug: "xml-validator-best-practices",
+    title: "XML Validator Best Practices For SOAP, APIs, And Legacy Feeds",
+    description:
+      "Learn XML validator best practices for SOAP payloads, namespaces, malformed tags, and legacy integrations. A practical workflow for debugging XML fast.",
+    keywords: [
+      "xml validator best practices",
+      "xml validator online",
+      "validate xml payload",
+      "soap xml debugging",
+      "xml schema errors",
+      "malformed xml tags",
+      "xml formatter validator",
+      "legacy xml feeds",
+    ],
+    publishedAt: "2026-04-04",
+    updatedAt: "2026-04-04",
+    readMinutes: 10,
+    category: "XML Workflow",
+    sections: [
+      {
+        heading: "Why XML Validation Still Matters",
+        paragraphs: [
+          "XML may not dominate modern frontend APIs, but it remains critical in SOAP services, enterprise integrations, banking feeds, and older internal systems. In those environments, a single missing closing tag or namespace mismatch can break an entire batch job or integration pipeline.",
+          "That is why a strict XML validator is still essential. It catches well-formedness issues before they reach downstream services and helps teams avoid hard-to-diagnose production failures.",
+        ],
+      },
+      {
+        heading: "What a Good XML Validator Should Catch",
+        paragraphs: [
+          "A useful XML validator should do more than simply say 'invalid'. It should identify unclosed tags, broken nesting, malformed attributes, encoding issues, and namespace problems with enough detail to fix the source quickly.",
+          "When paired with an XML formatter, validation becomes even more effective because formatted output exposes the tree structure and makes structural mistakes easier to see at a glance.",
+        ],
+      },
+      {
+        heading: "A Practical SOAP and Legacy Feed Workflow",
+        paragraphs: [
+          "Start by pasting the raw payload into an XML formatter to normalize indentation. Next, run validation against the formatted tree and inspect the exact line where the parser stops. If the payload comes from a SOAP service, verify the envelope, body, and namespace declarations before anything else.",
+          "For recurring partner feed issues, teams should standardize this workflow: format, validate, compare against a known-good sample, and only then push the fixed payload into the integration layer.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What does an XML validator check first?",
+        answer:
+          "It first checks whether the document is well-formed: closing tags must match, nesting must be valid, and attributes must follow XML syntax rules.",
+      },
+      {
+        question: "Why use an XML formatter before validation?",
+        answer:
+          "Formatting makes the element hierarchy visible, which helps you find missing tags and broken nesting much faster than scanning compressed XML by eye.",
+      },
+      {
+        question: "When is XML still common in production?",
+        answer:
+          "XML remains common in SOAP APIs, enterprise vendor integrations, financial messaging, and legacy data feeds that have not migrated to JSON.",
+      },
+    ],
+  },
+  {
+    slug: "jwt-debugging-workflow",
+    title: "JWT Debugging Workflow For Expired Tokens, Claims, And Auth Failures",
+    description:
+      "Debug JWT auth issues with a structured workflow for decoding claims, checking exp and iat values, and spotting clock drift or bad signing flows.",
+    keywords: [
+      "jwt debugging",
+      "jwt debugging workflow",
+      "expired jwt token",
+      "jwt claims inspection",
+      "jwt exp iat nbf",
+      "auth debugging",
+      "jwt decoder online",
+      "timestamp converter for jwt",
+    ],
+    publishedAt: "2026-04-04",
+    updatedAt: "2026-04-04",
+    readMinutes: 11,
+    category: "Authentication",
+    sections: [
+      {
+        heading: "Why JWT Issues Are Hard to Diagnose",
+        paragraphs: [
+          "JWT failures often look like generic authentication errors, but the root cause can be very different: an expired token, a bad issuer claim, a mismatched audience, a signing algorithm mismatch, or even clock drift between services.",
+          "Because the token is compact and encoded, teams need a fast way to decode the header and payload without sending secrets to external tooling. A browser-based JWT decoder keeps the workflow private and immediate.",
+        ],
+      },
+      {
+        heading: "Inspect Header, Payload, and Signature Separately",
+        paragraphs: [
+          "Start with the header to confirm the signing algorithm. Then inspect the payload for the claims your application expects. Finally, verify whether the authentication layer is signing and verifying the token with the same assumptions.",
+          "A structured JWT debugging workflow prevents you from guessing. Instead of treating every auth failure as the same bug, you isolate the exact token segment responsible for the issue.",
+        ],
+      },
+      {
+        heading: "Use a Timestamp Converter to Confirm Expiration Windows",
+        paragraphs: [
+          "Claims like exp, iat, and nbf are stored as Unix timestamps. Converting them into human-readable dates makes it easy to see whether the token is genuinely expired, not yet valid, or minted at the wrong time.",
+          "If you see repeated auth failures after deployment, compare the token timestamps with your server logs. In many cases, the bug is caused by clock drift or a token lifetime that is too aggressive for the user session.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        question: "What is the fastest way to debug a JWT problem?",
+        answer:
+          "Decode the token locally, inspect the claims, and check exp, iat, and nbf against a timestamp converter before changing any backend code.",
+      },
+      {
+        question: "Can clock drift break JWT authentication?",
+        answer:
+          "Yes. If the server clock and client or identity provider clock are not aligned, a token can appear expired or not yet valid even when it should work.",
+      },
+      {
+        question: "Should JWTs be debugged in external online tools?",
+        answer:
+          "Only if the tool processes data locally. For sensitive environments, browser-side decoding is safer because token content does not need to leave your machine.",
+      },
+    ],
+  },
 ];
 
 export const BLOG_BY_SLUG = Object.fromEntries(BLOG_POSTS.map((post) => [post.slug, post])) as Record<

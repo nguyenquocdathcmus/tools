@@ -1,9 +1,9 @@
 "use client";
 
 import NextImage from "next/image";
-import { PDFDocument } from "pdf-lib";
 import { useEffect, useState } from "react";
 
+type PdfLibModule = typeof import("pdf-lib");
 type PdfjsModule = typeof import("pdfjs-dist");
 
 function pdfBytesToBlob(bytes: Uint8Array): Blob {
@@ -49,6 +49,8 @@ export default function PdfToolsPanel() {
     }
 
     try {
+      const pdfLib = (await import("pdf-lib")) as PdfLibModule;
+      const { PDFDocument } = pdfLib;
       const merged = await PDFDocument.create();
       for (const file of files) {
         const bytes = await file.arrayBuffer();
@@ -76,6 +78,8 @@ export default function PdfToolsPanel() {
     }
 
     try {
+      const pdfLib = (await import("pdf-lib")) as PdfLibModule;
+      const { PDFDocument } = pdfLib;
       const [startRaw, endRaw] = splitRange.split("-");
       const start = Math.max(1, Number.parseInt(startRaw, 10) || 1);
       const end = Math.max(start, Number.parseInt(endRaw, 10) || start);

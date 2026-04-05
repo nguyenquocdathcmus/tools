@@ -4,6 +4,7 @@ import Script from "next/script";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import AdSlot from "@/components/AdSlot";
+import BlogFunnelLinks from "@/components/BlogFunnelLinks";
 import { FORMATTERS } from "@/lib/formatters";
 import { SITE_URL } from "@/lib/site";
 import FormatterClientWrapper from "@/components/FormatterClientWrapper";
@@ -122,6 +123,8 @@ export default function Page() {
           </li>
         </ul>
       </section>
+
+      <BlogFunnelLinks title="XML Learning Hub" />
 
       <SiteFooter />
 

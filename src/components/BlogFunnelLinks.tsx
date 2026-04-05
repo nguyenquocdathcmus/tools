@@ -22,6 +22,18 @@ export default function BlogFunnelLinks({ title = "Developer Guides" }: BlogFunn
           </Link>
         </li>
         <li>
+          <Link href="/blog/xml-validator-best-practices">
+            <span>XML Validator Best Practices</span>
+            <small>SOAP guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
+          <Link href="/blog/jwt-debugging-workflow">
+            <span>JWT Debugging Workflow</span>
+            <small>Auth guide -&gt;</small>
+          </Link>
+        </li>
+        <li>
           <Link href="/blog/unix-timestamp-converter-use-cases">
             <span>Unix Timestamp Converter Use Cases</span>
             <small>Debugging guide -&gt;</small>

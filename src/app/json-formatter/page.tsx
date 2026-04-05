@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import JsonToolsPanelWrapper from "@/components/JsonToolsPanelWrapper";
+import BlogFunnelLinks from "@/components/BlogFunnelLinks";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import AdSlot from "@/components/AdSlot";
@@ -179,6 +180,8 @@ export default function JsonFormatterPage() {
           </li>
         </ul>
       </section>
+
+      <BlogFunnelLinks title="JSON Learning Hub" />
 
       <SiteFooter />
 

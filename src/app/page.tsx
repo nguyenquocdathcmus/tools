@@ -4,6 +4,7 @@ import { Braces, Code2, Globe, LayoutGrid } from "lucide-react";
 import { FORMATTERS } from "@/lib/formatters";
 import { SITE_URL } from "@/lib/site";
 import HomeToolSearch from "@/components/HomeToolSearch";
+import BlogFunnelLinks from "@/components/BlogFunnelLinks";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 
@@ -538,6 +539,8 @@ tools.forEach(openTool);`}</pre>
           These repeatable steps improve review quality and reduce production regressions.
         </p>
       </section>
+
+      <BlogFunnelLinks title="Deep-Dive Guides" />
 
       <SiteFooter />
 

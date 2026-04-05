@@ -3,6 +3,7 @@ import Link from "next/link";
 import Script from "next/script";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
+import BlogFunnelLinks from "@/components/BlogFunnelLinks";
 import AdSlot from "@/components/AdSlot";
 import { FORMATTERS } from "@/lib/formatters";
 import { SITE_URL } from "@/lib/site";
@@ -150,6 +151,8 @@ export default function Page() {
           </li>
         </ul>
       </section>
+
+      <BlogFunnelLinks title="Timestamp Learning Hub" />
 
       <SiteFooter />
 
