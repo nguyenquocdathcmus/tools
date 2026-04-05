@@ -47,7 +47,7 @@ export const metadata: Metadata = {
       },
     ],
     siteName: "Daxnoria Formatter Hub",
-    locale: "vi_VN",
+    locale: "en_US",
     type: "website",
   },
   twitter: {
@@ -102,7 +102,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
 
   return (
-    <html lang="vi">
+    <html lang="en">
       <body>
         {children}
         <Script
