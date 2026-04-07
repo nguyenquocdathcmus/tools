@@ -148,7 +148,7 @@ export default function BlogIndexPage() {
             <p className="section-kicker">Start here</p>
             <h2 id="featured-articles-title">Featured Articles</h2>
           </div>
-          <p>These are the strongest hub pages for search intent and internal linking.</p>
+          <p>Best starting points for the main workflows and topic clusters.</p>
         </div>
 
         <ul className="blog-featured-grid">

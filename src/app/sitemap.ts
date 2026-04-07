@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/image", priority: 0.8 },
     { path: "/pdf", priority: 0.8 },
     { path: "/qrcode", priority: 0.8 },
+    { path: "/favicon-generator", priority: 0.8 },
     { path: "/jwt-decoder", priority: 0.8 },
     { path: "/diff-checker", priority: 0.8 },
     { path: "/json-validator", priority: 0.8 },

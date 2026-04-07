@@ -95,6 +95,12 @@ export default function ToolsDirectoryPage() {
           <Link href="/url-decode">URL Decode</Link>. This prevents character corruption and malformed requests.
         </p>
 
+        <h3>Brand and launch assets</h3>
+        <p>
+          Build browser-ready icons with <Link href="/favicon-generator">Favicon Generator</Link>, then use{" "}
+          <Link href="/image">Image Tools</Link> when you need to resize or convert the source logo before export.
+        </p>
+
         <h3>Auth and time-sensitive incident triage</h3>
         <p>
           Pair <Link href="/jwt-decoder">JWT Decoder</Link> with <Link href="/timestamp-converter">Timestamp Converter</Link>

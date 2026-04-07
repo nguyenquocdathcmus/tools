@@ -1,0 +1,696 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Daxnoria Logo Daxnoria Code tools for fast workflows" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Daxnoria Logo" [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e9]: Daxnoria
+          - generic [ref=e10]: Code tools for fast workflows
+      - link "Request feature" [ref=e12] [cursor=pointer]:
+        - /url: /request-feature
+    - navigation "Main navigation" [ref=e13]:
+      - link "Home" [ref=e14] [cursor=pointer]:
+        - /url: /
+      - link "Tools" [ref=e15] [cursor=pointer]:
+        - /url: /tools
+      - link "Format" [ref=e16] [cursor=pointer]:
+        - /url: /tools/format
+      - link "Encode" [ref=e17] [cursor=pointer]:
+        - /url: /encode
+      - link "Text Count" [ref=e18] [cursor=pointer]:
+        - /url: /text-count
+      - link "Timestamp" [ref=e19] [cursor=pointer]:
+        - /url: /timestamp
+      - link "Image" [ref=e20] [cursor=pointer]:
+        - /url: /image
+      - link "PDF" [ref=e21] [cursor=pointer]:
+        - /url: /pdf
+      - link "QR Code" [ref=e22] [cursor=pointer]:
+        - /url: /qrcode
+      - link "JWT Decoder" [ref=e23] [cursor=pointer]:
+        - /url: /jwt-decoder
+      - link "Diff Checker" [ref=e24] [cursor=pointer]:
+        - /url: /diff-checker
+      - link "Blog" [ref=e25] [cursor=pointer]:
+        - /url: /blog
+  - generic [ref=e27]:
+    - generic [ref=e28]:
+      - paragraph [ref=e29]: web-based toolkit
+      - paragraph [ref=e30]: $ open daxnoria.dev
+      - generic [ref=e31]:
+        - generic [ref=e32]: developer mode active
+        - generic [ref=e33]: init workflow
+        - generic [ref=e34]: "> format | encode | diff | inspect"
+      - heading "Online Developer Tools for JSON Formatting, Encoding, and Timestamp Debugging" [level=1] [ref=e35]
+      - paragraph [ref=e36]: "Daxnoria is a browser-based toolkit built for real developer workflows: format and validate JSON, decode JWT claims, convert Unix timestamps, compare payload diffs, and run encode or decode operations without installation. Every tool runs client-side for speed, privacy, and reliable debugging."
+      - generic [ref=e37]:
+        - link "Open Format" [ref=e38] [cursor=pointer]:
+          - /url: /tools/format
+        - link "Try Text Count" [ref=e39] [cursor=pointer]:
+          - /url: /text-count
+      - region "Tool search panel" [ref=e40]:
+        - search "Tool search" [ref=e41]:
+          - generic [ref=e42]:
+            - img [ref=e43]
+            - textbox "Search tools" [ref=e46]:
+              - /placeholder: "Tim cong cu: JSON, XML, PDF, Encode..."
+          - button "Search" [ref=e47] [cursor=pointer]:
+            - img [ref=e48]
+            - generic [ref=e51]: Search
+        - generic "Quick suggestions" [ref=e52]:
+          - generic [ref=e53]:
+            - button "JSON" [ref=e54] [cursor=pointer]
+            - button "XML" [ref=e55] [cursor=pointer]
+            - button "JWT" [ref=e56] [cursor=pointer]
+            - button "Diff" [ref=e57] [cursor=pointer]
+            - button "Text Count" [ref=e58] [cursor=pointer]
+            - button "PDF" [ref=e59] [cursor=pointer]
+            - button "Encode" [ref=e60] [cursor=pointer]
+            - button "Favicon" [ref=e61] [cursor=pointer]
+    - complementary "Daxnoria highlights" [ref=e62]:
+      - generic [ref=e68]: const tools = [ "format", "encode", "count", "timestamp", "pdf", ]; tools.forEach(openTool);
+      - article [ref=e69]:
+        - paragraph [ref=e70]: Tools
+        - strong [ref=e71]: 100+
+        - generic [ref=e72]:
+          - text: JSON, XML, HTML, TS, GraphQL, PHP and
+          - link "view all tools" [ref=e73] [cursor=pointer]:
+            - /url: /tools/all
+      - article [ref=e74]:
+        - paragraph [ref=e75]: Environment
+        - strong [ref=e76]: Zero install
+        - generic [ref=e77]: Runs instantly directly in your browser
+      - article [ref=e78]:
+        - paragraph [ref=e79]: Workflow
+        - strong [ref=e80]: All-in-one
+        - generic [ref=e81]: Format, validate, encode, and diff seamlessly
+  - region "Browse by stack" [ref=e82]:
+    - generic [ref=e83]:
+      - generic [ref=e84]:
+        - paragraph [ref=e85]: Tool matrix
+        - heading "Browse by stack" [level=2] [ref=e86]
+        - paragraph [ref=e87]: "Quick jumps into the areas you use most: formatting, encode, web, and backend tools."
+      - paragraph [ref=e88]: $ open /tools
+    - generic [ref=e89]:
+      - link "01 All in one All Tools Everything in one place" [ref=e90] [cursor=pointer]:
+        - /url: /tools/all
+        - generic [ref=e91]: "01"
+        - generic [ref=e92]:
+          - img [ref=e94]
+          - generic [ref=e99]:
+            - paragraph [ref=e100]: All in one
+            - heading "All Tools" [level=3] [ref=e101]
+        - paragraph [ref=e102]: Everything in one place
+        - generic [ref=e103]:
+          - generic [ref=e104]: View tools
+          - generic [ref=e105]: "->"
+      - link "02 Structured data Format JSON, YAML, XML, SOAP" [ref=e106] [cursor=pointer]:
+        - /url: /tools/format
+        - generic [ref=e107]: "02"
+        - generic [ref=e108]:
+          - img [ref=e110]
+          - generic [ref=e113]:
+            - paragraph [ref=e114]: Structured data
+            - heading "Format" [level=3] [ref=e115]
+        - paragraph [ref=e116]: JSON, YAML, XML, SOAP
+        - generic [ref=e117]:
+          - generic [ref=e118]: View tools
+          - generic [ref=e119]: "->"
+      - link "03 Frontend stack Web Tools HTML, CSS, JS, TS" [ref=e120] [cursor=pointer]:
+        - /url: /tools/web
+        - generic [ref=e121]: "03"
+        - generic [ref=e122]:
+          - img [ref=e124]
+          - generic [ref=e127]:
+            - paragraph [ref=e128]: Frontend stack
+            - heading "Web Tools" [level=3] [ref=e129]
+        - paragraph [ref=e130]: HTML, CSS, JS, TS
+        - generic [ref=e131]:
+          - generic [ref=e132]: View tools
+          - generic [ref=e133]: "->"
+      - link "04 Backend ready Code Tools Java, C#, PHP, GraphQL" [ref=e134] [cursor=pointer]:
+        - /url: /tools/code
+        - generic [ref=e135]: "04"
+        - generic [ref=e136]:
+          - img [ref=e138]
+          - generic [ref=e142]:
+            - paragraph [ref=e143]: Backend ready
+            - heading "Code Tools" [level=3] [ref=e144]
+        - paragraph [ref=e145]: Java, C#, PHP, GraphQL
+        - generic [ref=e146]:
+          - generic [ref=e147]: View tools
+          - generic [ref=e148]: "->"
+      - link "05 Auth toolkit JWT Decoder Decode header, payload, claims" [ref=e149] [cursor=pointer]:
+        - /url: /jwt-decoder
+        - generic [ref=e150]: "05"
+        - generic [ref=e151]:
+          - img [ref=e153]
+          - generic [ref=e157]:
+            - paragraph [ref=e158]: Auth toolkit
+            - heading "JWT Decoder" [level=3] [ref=e159]
+        - paragraph [ref=e160]: Decode header, payload, claims
+        - generic [ref=e161]:
+          - generic [ref=e162]: View tools
+          - generic [ref=e163]: "->"
+      - link "06 Compare toolkit Diff Checker Compare text, config, and code" [ref=e164] [cursor=pointer]:
+        - /url: /diff-checker
+        - generic [ref=e165]: "06"
+        - generic [ref=e166]:
+          - img [ref=e168]
+          - generic [ref=e171]:
+            - paragraph [ref=e172]: Compare toolkit
+            - heading "Diff Checker" [level=3] [ref=e173]
+        - paragraph [ref=e174]: Compare text, config, and code
+        - generic [ref=e175]:
+          - generic [ref=e176]: View tools
+          - generic [ref=e177]: "->"
+  - region "Our Most Popular Tools" [ref=e178]:
+    - generic [ref=e179]:
+      - paragraph [ref=e180]: Top picks
+      - heading "Our Most Popular Tools" [level=2] [ref=e181]
+      - paragraph [ref=e182]: Best picks for daily formatting and validation workflow.
+    - generic [ref=e183]:
+      - link "Formatter JSON Formatter Format, minify, and validate JSON online with precise line-level error details." [ref=e184] [cursor=pointer]:
+        - /url: /json-formatter
+        - generic [ref=e185]: JS
+        - paragraph [ref=e186]: Formatter
+        - heading "JSON Formatter" [level=3] [ref=e187]
+        - text: Format, minify, and validate JSON online with precise line-level error details.
+      - link "Tool Favicon Generator Create favicon SVG, PNG, ICO, and manifest assets from a logo or monogram in your browser." [ref=e188] [cursor=pointer]:
+        - /url: /favicon-generator
+        - generic [ref=e189]: FA
+        - paragraph [ref=e190]: Tool
+        - heading "Favicon Generator" [level=3] [ref=e191]
+        - text: Create favicon SVG, PNG, ICO, and manifest assets from a logo or monogram in your browser.
+      - link "Formatter XML Formatter Online XML Formatter for enterprise data structures with line-by-line syntax validation." [ref=e192] [cursor=pointer]:
+        - /url: /xml-formatter
+        - generic [ref=e193]: XM
+        - paragraph [ref=e194]: Formatter
+        - heading "XML Formatter" [level=3] [ref=e195]
+        - text: Online XML Formatter for enterprise data structures with line-by-line syntax validation.
+      - link "Tool Text Count Count characters, words, lines, and bytes instantly with real-time text analysis." [ref=e196] [cursor=pointer]:
+        - /url: /tools/text-count
+        - generic [ref=e197]: TE
+        - paragraph [ref=e198]: Tool
+        - heading "Text Count" [level=3] [ref=e199]
+        - text: Count characters, words, lines, and bytes instantly with real-time text analysis.
+      - link "Tool JWT Decoder Decode JWT header, payload, and claims locally right in the browser securely." [ref=e200] [cursor=pointer]:
+        - /url: /tools/jwt-decoder
+        - generic [ref=e201]: JW
+        - paragraph [ref=e202]: Tool
+        - heading "JWT Decoder" [level=3] [ref=e203]
+        - text: Decode JWT header, payload, and claims locally right in the browser securely.
+      - link "Tool Unix Timestamp Convert Unix timestamps to human-readable dates and vice versa with precision." [ref=e204] [cursor=pointer]:
+        - /url: /tools/timestamp
+        - generic [ref=e205]: TI
+        - paragraph [ref=e206]: Tool
+        - heading "Unix Timestamp" [level=3] [ref=e207]
+        - text: Convert Unix timestamps to human-readable dates and vice versa with precision.
+      - link "Tool Diff Checker Compare text, config, and code files side-by-side with line-by-line diff tracking." [ref=e208] [cursor=pointer]:
+        - /url: /tools/diff-checker
+        - generic [ref=e209]: DI
+        - paragraph [ref=e210]: Tool
+        - heading "Diff Checker" [level=3] [ref=e211]
+        - text: Compare text, config, and code files side-by-side with line-by-line diff tracking.
+      - link "Tool Encode & Decode Base64, URL, and HTML encode/decode strings instantly without server calls." [ref=e212] [cursor=pointer]:
+        - /url: /tools/encode
+        - generic [ref=e213]: EN
+        - paragraph [ref=e214]: Tool
+        - heading "Encode & Decode" [level=3] [ref=e215]
+        - text: Base64, URL, and HTML encode/decode strings instantly without server calls.
+      - link "Tool QR Code Generator Generate QR codes for URLs, text, and contact info directly in the browser." [ref=e216] [cursor=pointer]:
+        - /url: /tools/qrcode
+        - generic [ref=e217]: QR
+        - paragraph [ref=e218]: Tool
+        - heading "QR Code Generator" [level=3] [ref=e219]
+        - text: Generate QR codes for URLs, text, and contact info directly in the browser.
+      - link "Tool Favicon Generator Create favicon SVG, PNG, ICO, and manifest assets from a logo or monogram in your browser." [ref=e220] [cursor=pointer]:
+        - /url: /favicon-generator
+        - generic [ref=e221]: FA
+        - paragraph [ref=e222]: Tool
+        - heading "Favicon Generator" [level=3] [ref=e223]
+        - text: Create favicon SVG, PNG, ICO, and manifest assets from a logo or monogram in your browser.
+  - region "Featured Tools" [ref=e224]:
+    - generic [ref=e225]:
+      - generic [ref=e226]:
+        - paragraph [ref=e227]: Curated stack
+        - heading "Featured Tools" [level=2] [ref=e228]
+        - paragraph [ref=e229]: Curated picks with high usage and fast output quality.
+      - paragraph [ref=e230]: $ open featured
+    - generic [ref=e231]:
+      - link "Most used JSON Formatter Format, validate and inspect JSON with grouped viewer." [ref=e232] [cursor=pointer]:
+        - /url: /json-formatter
+        - generic [ref=e233]:
+          - generic [ref=e234]: Most used
+          - generic [ref=e235]: "->"
+        - generic [ref=e237]: "{}"
+        - generic [ref=e238]:
+          - heading "JSON Formatter" [level=3] [ref=e239]
+          - paragraph [ref=e240]: Format, validate and inspect JSON with grouped viewer.
+      - link "API ready XML Formatter Clean and align XML, SOAP and WSDL structures quickly." [ref=e241] [cursor=pointer]:
+        - /url: /xml-formatter
+        - generic [ref=e242]:
+          - generic [ref=e243]: API ready
+          - generic [ref=e244]: "->"
+        - generic [ref=e246]: </>
+        - generic [ref=e247]:
+          - heading "XML Formatter" [level=3] [ref=e248]
+          - paragraph [ref=e249]: Clean and align XML, SOAP and WSDL structures quickly.
+      - link "Frontend TypeScript Formatter Auto format TypeScript code to readable team style." [ref=e250] [cursor=pointer]:
+        - /url: /typescript-formatter
+        - generic [ref=e251]:
+          - generic [ref=e252]: Frontend
+          - generic [ref=e253]: "->"
+        - generic [ref=e255]: TS
+        - generic [ref=e256]:
+          - heading "TypeScript Formatter" [level=3] [ref=e257]
+          - paragraph [ref=e258]: Auto format TypeScript code to readable team style.
+      - link "Schema GraphQL Formatter Normalize GraphQL query and schema files instantly." [ref=e259] [cursor=pointer]:
+        - /url: /graphql-formatter
+        - generic [ref=e260]:
+          - generic [ref=e261]: Schema
+          - generic [ref=e262]: "->"
+        - generic [ref=e264]: GQ
+        - generic [ref=e265]:
+          - heading "GraphQL Formatter" [level=3] [ref=e266]
+          - paragraph [ref=e267]: Normalize GraphQL query and schema files instantly.
+      - link "Auth JWT Decoder Decode JWT header, payload, and claims locally in the browser." [ref=e268] [cursor=pointer]:
+        - /url: /jwt-decoder
+        - generic [ref=e269]:
+          - generic [ref=e270]: Auth
+          - generic [ref=e271]: "->"
+        - generic [ref=e273]: JW
+        - generic [ref=e274]:
+          - heading "JWT Decoder" [level=3] [ref=e275]
+          - paragraph [ref=e276]: Decode JWT header, payload, and claims locally in the browser.
+      - link "Compare Diff Checker Compare two versions of text with a fast line-by-line diff." [ref=e277] [cursor=pointer]:
+        - /url: /diff-checker
+        - generic [ref=e278]:
+          - generic [ref=e279]: Compare
+          - generic [ref=e280]: "->"
+        - generic [ref=e282]: DF
+        - generic [ref=e283]:
+          - heading "Diff Checker" [level=3] [ref=e284]
+          - paragraph [ref=e285]: Compare two versions of text with a fast line-by-line diff.
+      - link "Launch Favicon Generator Create SVG, PNG, ICO, and manifest assets for browser and mobile icons." [ref=e286] [cursor=pointer]:
+        - /url: /favicon-generator
+        - generic [ref=e287]:
+          - generic [ref=e288]: Launch
+          - generic [ref=e289]: "->"
+        - generic [ref=e291]: FC
+        - generic [ref=e292]:
+          - heading "Favicon Generator" [level=3] [ref=e293]
+          - paragraph [ref=e294]: Create SVG, PNG, ICO, and manifest assets for browser and mobile icons.
+  - region "All tools directory" [ref=e295]:
+    - generic [ref=e296]:
+      - generic [ref=e297]:
+        - paragraph [ref=e298]: Tool index
+        - heading "All tools directory" [level=2] [ref=e299]
+        - paragraph [ref=e300]: Each tool features a dedicated page to maintain a focused user experience for specific workflows and use cases.
+      - generic "Total tools" [ref=e301]:
+        - strong [ref=e302]: 100+
+        - text: Total tools
+    - list [ref=e303]:
+      - listitem [ref=e304]:
+        - link "JSON Formatter" [ref=e305] [cursor=pointer]:
+          - /url: /json-formatter
+          - generic [ref=e306]: J
+          - generic [ref=e307]: JSON Formatter
+          - generic [ref=e308]: "->"
+      - listitem [ref=e309]:
+        - link "JSON5 Formatter" [ref=e310] [cursor=pointer]:
+          - /url: /json5-formatter
+          - generic [ref=e311]: J
+          - generic [ref=e312]: JSON5 Formatter
+          - generic [ref=e313]: "->"
+      - listitem [ref=e314]:
+        - link "XML Formatter" [ref=e315] [cursor=pointer]:
+          - /url: /xml-formatter
+          - generic [ref=e316]: X
+          - generic [ref=e317]: XML Formatter
+          - generic [ref=e318]: "->"
+      - listitem [ref=e319]:
+        - link "HTML Formatter" [ref=e320] [cursor=pointer]:
+          - /url: /html-formatter
+          - generic [ref=e321]: H
+          - generic [ref=e322]: HTML Formatter
+          - generic [ref=e323]: "->"
+      - listitem [ref=e324]:
+        - link "YAML Formatter" [ref=e325] [cursor=pointer]:
+          - /url: /yaml-formatter
+          - generic [ref=e326]: "Y"
+          - generic [ref=e327]: YAML Formatter
+          - generic [ref=e328]: "->"
+      - listitem [ref=e329]:
+        - link "JavaScript Formatter" [ref=e330] [cursor=pointer]:
+          - /url: /javascript-formatter
+          - generic [ref=e331]: J
+          - generic [ref=e332]: JavaScript Formatter
+          - generic [ref=e333]: "->"
+      - listitem [ref=e334]:
+        - link "CSS Formatter" [ref=e335] [cursor=pointer]:
+          - /url: /css-formatter
+          - generic [ref=e336]: C
+          - generic [ref=e337]: CSS Formatter
+          - generic [ref=e338]: "->"
+      - listitem [ref=e339]:
+        - link "C# Formatter" [ref=e340] [cursor=pointer]:
+          - /url: /csharp-formatter
+          - generic [ref=e341]: C
+          - generic [ref=e342]: C# Formatter
+          - generic [ref=e343]: "->"
+      - listitem [ref=e344]:
+        - link "Java Formatter" [ref=e345] [cursor=pointer]:
+          - /url: /java-formatter
+          - generic [ref=e346]: J
+          - generic [ref=e347]: Java Formatter
+          - generic [ref=e348]: "->"
+      - listitem [ref=e349]:
+        - link "GraphQL Formatter" [ref=e350] [cursor=pointer]:
+          - /url: /graphql-formatter
+          - generic [ref=e351]: G
+          - generic [ref=e352]: GraphQL Formatter
+          - generic [ref=e353]: "->"
+      - listitem [ref=e354]:
+        - link "Angular Formatter" [ref=e355] [cursor=pointer]:
+          - /url: /angular-formatter
+          - generic [ref=e356]: A
+          - generic [ref=e357]: Angular Formatter
+          - generic [ref=e358]: "->"
+      - listitem [ref=e359]:
+        - link "Vue JS Formatter" [ref=e360] [cursor=pointer]:
+          - /url: /vuejs-formatter
+          - generic [ref=e361]: V
+          - generic [ref=e362]: Vue JS Formatter
+          - generic [ref=e363]: "->"
+      - listitem [ref=e364]:
+        - link "LESS Formatter" [ref=e365] [cursor=pointer]:
+          - /url: /less-formatter
+          - generic [ref=e366]: L
+          - generic [ref=e367]: LESS Formatter
+          - generic [ref=e368]: "->"
+      - listitem [ref=e369]:
+        - link "SCSS Formatter" [ref=e370] [cursor=pointer]:
+          - /url: /scss-formatter
+          - generic [ref=e371]: S
+          - generic [ref=e372]: SCSS Formatter
+          - generic [ref=e373]: "->"
+      - listitem [ref=e374]:
+        - link "TypeScript Formatter" [ref=e375] [cursor=pointer]:
+          - /url: /typescript-formatter
+          - generic [ref=e376]: T
+          - generic [ref=e377]: TypeScript Formatter
+          - generic [ref=e378]: "->"
+      - listitem [ref=e379]:
+        - link "Babel Formatter" [ref=e380] [cursor=pointer]:
+          - /url: /babel-formatter
+          - generic [ref=e381]: B
+          - generic [ref=e382]: Babel Formatter
+          - generic [ref=e383]: "->"
+      - listitem [ref=e384]:
+        - link "Markdown Formatter" [ref=e385] [cursor=pointer]:
+          - /url: /markdown-formatter
+          - generic [ref=e386]: M
+          - generic [ref=e387]: Markdown Formatter
+          - generic [ref=e388]: "->"
+      - listitem [ref=e389]:
+        - link "MDX Formatter" [ref=e390] [cursor=pointer]:
+          - /url: /mdx-formatter
+          - generic [ref=e391]: M
+          - generic [ref=e392]: MDX Formatter
+          - generic [ref=e393]: "->"
+      - listitem [ref=e394]:
+        - link "Glimmer JS Formatter" [ref=e395] [cursor=pointer]:
+          - /url: /glimmerjs-formatter
+          - generic [ref=e396]: G
+          - generic [ref=e397]: Glimmer JS Formatter
+          - generic [ref=e398]: "->"
+      - listitem [ref=e399]:
+        - link "LWC Formatter" [ref=e400] [cursor=pointer]:
+          - /url: /lwc-formatter
+          - generic [ref=e401]: L
+          - generic [ref=e402]: LWC Formatter
+          - generic [ref=e403]: "->"
+      - listitem [ref=e404]:
+        - link "PHP Formatter" [ref=e405] [cursor=pointer]:
+          - /url: /php-formatter
+          - generic [ref=e406]: P
+          - generic [ref=e407]: PHP Formatter
+          - generic [ref=e408]: "->"
+      - listitem [ref=e409]:
+        - link "WSDL Formatter" [ref=e410] [cursor=pointer]:
+          - /url: /wsdl-formatter
+          - generic [ref=e411]: W
+          - generic [ref=e412]: WSDL Formatter
+          - generic [ref=e413]: "->"
+      - listitem [ref=e414]:
+        - link "SOAP Formatter" [ref=e415] [cursor=pointer]:
+          - /url: /soap-formatter
+          - generic [ref=e416]: S
+          - generic [ref=e417]: SOAP Formatter
+          - generic [ref=e418]: "->"
+      - listitem [ref=e419]:
+        - link "Flow Formatter" [ref=e420] [cursor=pointer]:
+          - /url: /flow-formatter
+          - generic [ref=e421]: F
+          - generic [ref=e422]: Flow Formatter
+          - generic [ref=e423]: "->"
+    - link "View more tools" [ref=e425] [cursor=pointer]:
+      - /url: /tools/all
+  - region "Guides for long-tail developer queries" [ref=e426]:
+    - generic [ref=e427]:
+      - paragraph [ref=e428]: Keyword hub
+      - heading "Guides for long-tail developer queries" [level=2] [ref=e429]
+      - paragraph [ref=e430]: Explore in-depth pages targeting practical searches such as AI tools for developers, JSON formatter workflows, and Unix timestamp converter use cases.
+    - list [ref=e431]:
+      - listitem [ref=e432]:
+        - link "Developer Tools Online Landing page ->" [ref=e433] [cursor=pointer]:
+          - /url: /developer-tools-online
+          - generic [ref=e434]: Developer Tools Online
+          - generic [ref=e435]: Landing page ->
+      - listitem [ref=e436]:
+        - link "API Debugging Tools Landing page ->" [ref=e437] [cursor=pointer]:
+          - /url: /api-debugging-tools
+          - generic [ref=e438]: API Debugging Tools
+          - generic [ref=e439]: Landing page ->
+      - listitem [ref=e440]:
+        - link "AI Tools For Developers Workflow guide ->" [ref=e441] [cursor=pointer]:
+          - /url: /blog/ai-tools-for-developers
+          - generic [ref=e442]: AI Tools For Developers
+          - generic [ref=e443]: Workflow guide ->
+      - listitem [ref=e444]:
+        - link "JSON Formatter Best Practices Validation strategy ->" [ref=e445] [cursor=pointer]:
+          - /url: /blog/json-formatter-best-practices
+          - generic [ref=e446]: JSON Formatter Best Practices
+          - generic [ref=e447]: Validation strategy ->
+      - listitem [ref=e448]:
+        - link "Unix Timestamp Converter Use Cases Real-world debugging ->" [ref=e449] [cursor=pointer]:
+          - /url: /blog/unix-timestamp-converter-use-cases
+          - generic [ref=e450]: Unix Timestamp Converter Use Cases
+          - generic [ref=e451]: Real-world debugging ->
+      - listitem [ref=e452]:
+        - link "JSON Tools Hub Cluster page ->" [ref=e453] [cursor=pointer]:
+          - /url: /json-tools
+          - generic [ref=e454]: JSON Tools Hub
+          - generic [ref=e455]: Cluster page ->
+      - listitem [ref=e456]:
+        - link "JSON to CSV Guide Export workflow ->" [ref=e457] [cursor=pointer]:
+          - /url: /json-to-csv
+          - generic [ref=e458]: JSON to CSV Guide
+          - generic [ref=e459]: Export workflow ->
+  - region "How developers use these tools in real debugging workflows" [ref=e460]:
+    - generic [ref=e461]:
+      - paragraph [ref=e462]: Workflow SEO
+      - heading "How developers use these tools in real debugging workflows" [level=2] [ref=e463]
+      - paragraph [ref=e464]: Tool pages only rank sustainably when they also explain practical use cases. This section maps common debugging flows that teams run every day so search engines and users can both understand intent.
+    - heading "API payload validation workflow" [level=3] [ref=e465]
+    - paragraph [ref=e466]:
+      - text: Start with
+      - link "JSON Validator" [ref=e467] [cursor=pointer]:
+        - /url: /json-validator
+      - text: to catch syntax issues, then move to
+      - link "JSON Formatter" [ref=e468] [cursor=pointer]:
+        - /url: /json-formatter
+      - text: for readable structure. If request payloads are encoded, continue with
+      - link "Base64 Decode" [ref=e469] [cursor=pointer]:
+        - /url: /base64-decode
+      - text: or
+      - link "URL Decode" [ref=e470] [cursor=pointer]:
+        - /url: /url-decode
+      - text: . This sequence cuts incident triage time because each step isolates one class of errors.
+    - heading "Authentication debugging workflow" [level=3] [ref=e471]
+    - paragraph [ref=e472]:
+      - text: Authentication failures often come from invalid claims or expired sessions. Decode token data in
+      - link "JWT Decoder" [ref=e473] [cursor=pointer]:
+        - /url: /jwt-decoder
+      - text: ", then verify claim timestamps in"
+      - link "Unix Timestamp Converter" [ref=e474] [cursor=pointer]:
+        - /url: /timestamp-converter
+      - text: . This helps teams verify exp, iat, and nbf values quickly during on-call incidents.
+    - heading "Config and response regression workflow" [level=3] [ref=e475]
+    - paragraph [ref=e476]:
+      - text: Before deployment, compare old and new responses in
+      - link "Diff Checker" [ref=e477] [cursor=pointer]:
+        - /url: /diff-checker
+      - text: to detect hidden changes. For XML and SOAP payloads, normalize structures first with
+      - link "XML Formatter" [ref=e478] [cursor=pointer]:
+        - /url: /xml-formatter
+      - text: . These repeatable steps improve review quality and reduce production regressions.
+  - region "Deep-Dive Guides" [ref=e479]:
+    - heading "Deep-Dive Guides" [level=2] [ref=e480]
+    - list [ref=e481]:
+      - listitem [ref=e482]:
+        - link "AI Tools For Developers Workflow guide ->" [ref=e483] [cursor=pointer]:
+          - /url: /blog/ai-tools-for-developers
+          - generic [ref=e484]: AI Tools For Developers
+          - generic [ref=e485]: Workflow guide ->
+      - listitem [ref=e486]:
+        - link "JSON Formatter Best Practices Validation guide ->" [ref=e487] [cursor=pointer]:
+          - /url: /blog/json-formatter-best-practices
+          - generic [ref=e488]: JSON Formatter Best Practices
+          - generic [ref=e489]: Validation guide ->
+      - listitem [ref=e490]:
+        - link "JSON Format Guide Structure guide ->" [ref=e491] [cursor=pointer]:
+          - /url: /blog/json-format-guide
+          - generic [ref=e492]: JSON Format Guide
+          - generic [ref=e493]: Structure guide ->
+      - listitem [ref=e494]:
+        - link "Fix Invalid JSON Repair guide ->" [ref=e495] [cursor=pointer]:
+          - /url: /blog/fix-invalid-json
+          - generic [ref=e496]: Fix Invalid JSON
+          - generic [ref=e497]: Repair guide ->
+      - listitem [ref=e498]:
+        - link "Common JSON Errors Error checklist ->" [ref=e499] [cursor=pointer]:
+          - /url: /blog/common-json-errors
+          - generic [ref=e500]: Common JSON Errors
+          - generic [ref=e501]: Error checklist ->
+      - listitem [ref=e502]:
+        - link "XML Validator Best Practices SOAP guide ->" [ref=e503] [cursor=pointer]:
+          - /url: /blog/xml-validator-best-practices
+          - generic [ref=e504]: XML Validator Best Practices
+          - generic [ref=e505]: SOAP guide ->
+      - listitem [ref=e506]:
+        - link "JWT Debugging Workflow Auth guide ->" [ref=e507] [cursor=pointer]:
+          - /url: /blog/jwt-debugging-workflow
+          - generic [ref=e508]: JWT Debugging Workflow
+          - generic [ref=e509]: Auth guide ->
+      - listitem [ref=e510]:
+        - link "Unix Timestamp Converter Use Cases Debugging guide ->" [ref=e511] [cursor=pointer]:
+          - /url: /blog/unix-timestamp-converter-use-cases
+          - generic [ref=e512]: Unix Timestamp Converter Use Cases
+          - generic [ref=e513]: Debugging guide ->
+      - listitem [ref=e514]:
+        - link "Base64 Encode And Decode Workflow Encoding guide ->" [ref=e515] [cursor=pointer]:
+          - /url: /blog/base64-encode-decode-workflow
+          - generic [ref=e516]: Base64 Encode And Decode Workflow
+          - generic [ref=e517]: Encoding guide ->
+      - listitem [ref=e518]:
+        - link "URL Encoding Guide Query string guide ->" [ref=e519] [cursor=pointer]:
+          - /url: /blog/url-encoding-guide-for-webworkflows
+          - generic [ref=e520]: URL Encoding Guide
+          - generic [ref=e521]: Query string guide ->
+      - listitem [ref=e522]:
+        - link "Text Counting Guide Copy length guide ->" [ref=e523] [cursor=pointer]:
+          - /url: /blog/text-counting-guide-for-writers-and-seo
+          - generic [ref=e524]: Text Counting Guide
+          - generic [ref=e525]: Copy length guide ->
+      - listitem [ref=e526]:
+        - link "Timestamp Converter Use Cases Time workflow guide ->" [ref=e527] [cursor=pointer]:
+          - /url: /blog/timestamp-converter-for-productivity
+          - generic [ref=e528]: Timestamp Converter Use Cases
+          - generic [ref=e529]: Time workflow guide ->
+      - listitem [ref=e530]:
+        - link "QR Code Sharing Guide Sharing guide ->" [ref=e531] [cursor=pointer]:
+          - /url: /blog/qrcode-link-sharing-guide
+          - generic [ref=e532]: QR Code Sharing Guide
+          - generic [ref=e533]: Sharing guide ->
+      - listitem [ref=e534]:
+        - link "URL Decode Practical Guide Decoding guide ->" [ref=e535] [cursor=pointer]:
+          - /url: /blog/url-decode-practical-guide
+          - generic [ref=e536]: URL Decode Practical Guide
+          - generic [ref=e537]: Decoding guide ->
+      - listitem [ref=e538]:
+        - link "Base64 Decode Inspection Guide Inspection guide ->" [ref=e539] [cursor=pointer]:
+          - /url: /blog/base64-decode-inspection-guide
+          - generic [ref=e540]: Base64 Decode Inspection Guide
+          - generic [ref=e541]: Inspection guide ->
+      - listitem [ref=e542]:
+        - link "Diff Checker Review Workflow Review guide ->" [ref=e543] [cursor=pointer]:
+          - /url: /blog/diff-checker-review-workflow
+          - generic [ref=e544]: Diff Checker Review Workflow
+          - generic [ref=e545]: Review guide ->
+      - listitem [ref=e546]:
+        - link "XML Formatter Clean XML Workflow Legacy XML guide ->" [ref=e547] [cursor=pointer]:
+          - /url: /blog/xml-formatter-clean-xml-workflow
+          - generic [ref=e548]: XML Formatter Clean XML Workflow
+          - generic [ref=e549]: Legacy XML guide ->
+      - listitem [ref=e550]:
+        - link "PDF Tool Workflow For Large Documents Document guide ->" [ref=e551] [cursor=pointer]:
+          - /url: /blog/pdf-tool-workflow-for-large-documents
+          - generic [ref=e552]: PDF Tool Workflow For Large Documents
+          - generic [ref=e553]: Document guide ->
+      - listitem [ref=e554]:
+        - link "JSON Tools Hub Cluster page ->" [ref=e555] [cursor=pointer]:
+          - /url: /json-tools
+          - generic [ref=e556]: JSON Tools Hub
+          - generic [ref=e557]: Cluster page ->
+  - generic [ref=e558]:
+    - generic [ref=e559]:
+      - generic [ref=e560]:
+        - generic [ref=e561]:
+          - img "Daxnoria Logo" [ref=e562]
+          - paragraph [ref=e563]: Daxnoria
+        - paragraph [ref=e564]: A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.
+        - paragraph [ref=e565]:
+          - text: "Contact:"
+          - link "daxnoria@gmail.com" [ref=e566] [cursor=pointer]:
+            - /url: mailto:daxnoria@gmail.com
+        - paragraph [ref=e567]:
+          - text: "Facebook:"
+          - link "Daxnoria" [ref=e568] [cursor=pointer]:
+            - /url: https://web.facebook.com/people/Daxnoria/61575367715805/
+      - generic [ref=e569]:
+        - paragraph [ref=e570]: Core Tools
+        - generic [ref=e571]:
+          - link "JSON Formatter" [ref=e572] [cursor=pointer]:
+            - /url: /json-formatter
+          - link "XML Formatter" [ref=e573] [cursor=pointer]:
+            - /url: /xml-formatter
+          - link "Timestamp Converter" [ref=e574] [cursor=pointer]:
+            - /url: /timestamp
+      - generic [ref=e575]:
+        - paragraph [ref=e576]: Utilities
+        - generic [ref=e577]:
+          - link "Encode Tools" [ref=e578] [cursor=pointer]:
+            - /url: /encode
+          - link "Image Tools" [ref=e579] [cursor=pointer]:
+            - /url: /image
+          - link "PDF Tools" [ref=e580] [cursor=pointer]:
+            - /url: /pdf
+          - link "QR Code Tools" [ref=e581] [cursor=pointer]:
+            - /url: /qrcode
+      - generic [ref=e582]:
+        - paragraph [ref=e583]: Resources
+        - generic [ref=e584]:
+          - link "Homepage" [ref=e585] [cursor=pointer]:
+            - /url: /
+          - link "Tools Directory" [ref=e586] [cursor=pointer]:
+            - /url: /tools
+          - link "Developer Blog" [ref=e587] [cursor=pointer]:
+            - /url: /blog
+          - link "Developer Tools Online" [ref=e588] [cursor=pointer]:
+            - /url: /developer-tools-online
+          - link "API Debugging Tools" [ref=e589] [cursor=pointer]:
+            - /url: /api-debugging-tools
+          - link "Request Feature" [ref=e590] [cursor=pointer]:
+            - /url: /request-feature
+          - link "Sitemap" [ref=e591] [cursor=pointer]:
+            - /url: /sitemap.xml
+          - link "Robots" [ref=e592] [cursor=pointer]:
+            - /url: /robots.txt
+    - paragraph [ref=e594]: © 2026 Daxnoria. Built for developers, technical teams, and fast workflows.
+```

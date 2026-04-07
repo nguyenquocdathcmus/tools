@@ -30,6 +30,7 @@ export const metadata: Metadata = {
 
 export default function ImageToolsPage() {
   const relatedTools = [
+    { href: "/favicon-generator", name: "Favicon Generator" },
     { href: "/pdf", name: "PDF Tools" },
     { href: "/qrcode", name: "QR Code Generator" },
     { href: "/encode", name: "Encode Tools" },

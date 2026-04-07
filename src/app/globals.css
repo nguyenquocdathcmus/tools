@@ -1636,6 +1636,278 @@ h1 {
   font-size: 0.8rem;
 }
 
+.favicon-tool-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.02fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.favicon-preview-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.favicon-source-preview,
+.favicon-preview-source {
+  width: 100%;
+  max-height: 280px;
+  object-fit: contain;
+}
+
+.favicon-empty-state {
+  min-height: 180px;
+  border: 1px dashed rgba(132, 160, 220, 0.2);
+  border-radius: 14px;
+  background: rgba(10, 16, 31, 0.72);
+  color: #a7b7d5;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 18px;
+}
+
+.favicon-checklist-card {
+  border: 1px solid rgba(120, 145, 208, 0.18);
+  border-radius: 16px;
+  padding: 12px;
+  background: rgba(10, 16, 31, 0.9);
+}
+
+.favicon-checklist-card p {
+  margin: 0 0 10px;
+  color: #8fb4ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.favicon-checklist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.favicon-steps {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  color: #dbe7ff;
+}
+
+.favicon-steps li {
+  line-height: 1.45;
+}
+
+.favicon-checklist li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid rgba(132, 160, 220, 0.18);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(12, 18, 34, 0.92);
+}
+
+.favicon-checklist li.is-ready span {
+  color: #f6f9ff;
+}
+
+.favicon-checklist li.is-pending span,
+.favicon-checklist li small {
+  color: #a7b7d5;
+}
+
+.favicon-results {
+  margin-bottom: 16px;
+}
+
+.favicon-pack-actions {
+  display: flex;
+  align-items: flex-start;
+}
+
+.favicon-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.favicon-preview-card {
+  border: 1px solid rgba(120, 145, 208, 0.18);
+  border-radius: 16px;
+  padding: 12px;
+  background: rgba(10, 16, 31, 0.9);
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  transition: transform 170ms ease, box-shadow 170ms ease;
+}
+
+.favicon-preview-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(2, 6, 17, 0.18);
+}
+
+.favicon-preview-image {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  object-fit: contain;
+  background: rgba(12, 18, 34, 0.94);
+  border: 1px solid rgba(132, 160, 220, 0.18);
+}
+
+.favicon-ico-badge {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  border: 1px solid rgba(132, 160, 220, 0.18);
+  background: linear-gradient(160deg, rgba(12, 18, 34, 0.98) 0%, rgba(20, 30, 55, 0.98) 100%);
+  color: #8fb4ff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.favicon-preview-card strong {
+  display: block;
+  color: #f6f9ff;
+}
+
+.favicon-preview-card p {
+  margin: 2px 0 0;
+  color: #a7b7d5;
+  font-size: 0.8rem;
+}
+
+.favicon-snippet-grid {
+  gap: 12px;
+}
+
+.favicon-snippet-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.favicon-code {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.field-checkbox {
+  gap: 8px;
+}
+
+.checkbox-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #dbe7ff;
+  font-size: 0.9rem;
+}
+
+.checkbox-inline input {
+  accent-color: #5f8df8;
+}
+
+.favicon-checker-shell {
+  border: 1px solid rgba(120, 145, 208, 0.18);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(10, 16, 31, 0.9);
+  margin-bottom: 14px;
+}
+
+.favicon-checker-shell h3 {
+  margin: 0;
+  color: #f6f9ff;
+  font-size: 1.15rem;
+  letter-spacing: 0.01em;
+}
+
+.favicon-checker-shell .panel-subtext {
+  color: #cfddf7;
+}
+
+.favicon-checker-label {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #dbe7ff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.favicon-checker-input-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.favicon-checker-input-row input {
+  width: 100%;
+  border: 1px solid rgba(132, 160, 220, 0.28);
+  border-radius: 12px;
+  padding: 11px 12px;
+  font-family: var(--font-mono);
+  background: rgba(8, 13, 25, 0.92);
+  color: #f3f8ff;
+}
+
+.favicon-checker-input-row input::placeholder {
+  color: #9eb4db;
+}
+
+.favicon-checker-input-row input:focus {
+  outline: 2px solid rgba(95, 141, 248, 0.28);
+  outline-offset: 1px;
+}
+
+.favicon-checker-hint {
+  margin: -3px 0 12px;
+  color: #b2c3e3;
+  font-size: 0.82rem;
+}
+
+.favicon-checker-summary {
+  border: 1px solid rgba(132, 160, 220, 0.18);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: rgba(12, 18, 34, 0.92);
+  margin-bottom: 12px;
+}
+
+.favicon-checker-summary p {
+  margin: 0;
+  color: #dbe7ff;
+  font-size: 0.9rem;
+}
+
+.favicon-checker-summary p + p {
+  margin-top: 6px;
+}
+
+.favicon-preview-image-checker {
+  background-image:
+    linear-gradient(45deg, rgba(255, 255, 255, 0.06) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255, 255, 255, 0.06) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.06) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.06) 75%);
+  background-size: 12px 12px;
+  background-position: 0 0, 0 6px, 6px -6px, -6px 0;
+}
+
 .panel-head {
   display: flex;
   flex-wrap: wrap;
@@ -2141,6 +2413,45 @@ textarea {
   gap: 16px;
 }
 
+.blog-featured .section-head,
+.blog-topics .section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid rgba(120, 145, 208, 0.18);
+  border-radius: 16px;
+  background: rgba(7, 12, 24, 0.82);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.blog-featured .section-head > div,
+.blog-topics .section-head > div {
+  min-width: 0;
+}
+
+.blog-featured .section-head p,
+.blog-topics .section-head p {
+  max-width: 44ch;
+  color: #dbe7ff;
+  opacity: 0.82;
+}
+
+.blog-featured .section-kicker,
+.blog-topics .section-kicker {
+  background: rgba(31, 122, 255, 0.16);
+  border-color: rgba(143, 180, 255, 0.3);
+  color: #eff5ff;
+}
+
+.blog-featured h2,
+.blog-topics h2 {
+  color: #ffffff;
+  font-size: clamp(1.35rem, 2.1vw, 1.65rem);
+  line-height: 1.15;
+}
+
 .blog-featured-grid,
 .blog-topic-grid,
 .blog-latest-grid {
@@ -2588,6 +2899,19 @@ textarea {
     align-items: flex-start;
   }
 
+  .blog-featured .section-head,
+  .blog-topics .section-head {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 12px 14px;
+  }
+
+  .blog-featured .section-head p,
+  .blog-topics .section-head p {
+    max-width: none;
+    margin-top: 0;
+  }
+
   .home-console,
   .hero-command,
   .typing-banner {
@@ -2723,6 +3047,22 @@ textarea {
   .blog-topic-grid,
   .blog-latest-grid {
     gap: 10px;
+  }
+
+  .favicon-tool-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .favicon-checker-input-row {
+    grid-template-columns: 1fr;
+  }
+
+  .favicon-preview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .favicon-steps {
+    padding-left: 16px;
   }
 
   .blog-hero-stats {
@@ -3711,6 +4051,10 @@ textarea {
 
   .action-grid,
   .action-grid.compact {
+    grid-template-columns: 1fr;
+  }
+
+  .favicon-preview-grid {
     grid-template-columns: 1fr;
   }
 

@@ -94,3 +94,92 @@ test("pdf tools merge works", async ({ page }) => {
 
   await expect(page.getByRole("link", { name: "Download PDF" })).toBeVisible();
 });
+
+test("favicon generator text mode generates assets", async ({ page }) => {
+  await page.goto("/tools/favicon-generator");
+
+  // Switch to text logo mode
+  await page.getByRole("button", { name: /Text logo/ }).click();
+
+  // Update brand name
+  await page.getByLabel("Brand name").fill("TestBrand");
+
+  // Update logo text (defaults to 'D', should accept single char)
+  await page.getByLabel("Logo text").fill("T");
+
+  // Wait for favicon generation to complete
+  await expect(page.getByAltText("Favicon source preview")).toBeVisible({ timeout: 5000 });
+
+  // Verify checklist items appear
+  await expect(page.getByText("SVG favicon")).toBeVisible();
+  await expect(page.getByText("ICO pack")).toBeVisible();
+  await expect(page.getByText("PNG sizes")).toBeVisible();
+
+  // Verify download buttons exist
+  const downloadLinks = page.getByRole("link", { name: "Download file" });
+  await expect(downloadLinks.first()).toBeVisible();
+});
+
+test("favicon generator upload mode processes image", async ({ page }) => {
+  await page.goto("/tools/favicon-generator");
+
+  // Should be on upload mode by default
+  await page.locator('input[type="file"]').setInputFiles({
+    name: "test-icon.png",
+    mimeType: "image/png",
+    buffer: tinyPngBuffer(),
+  });
+
+  // Wait for image preview to load
+  await expect(page.getByAltText("Uploaded logo preview")).toBeVisible({ timeout: 5000 });
+
+  // Verify dimensions are displayed
+  await expect(page.getByText(/\d+ x \d+/)).toBeVisible();
+
+  // Wait for favicon generation
+  await expect(page.getByAltText("Favicon source preview")).toBeVisible({ timeout: 5000 });
+
+  // Verify generated assets
+  await expect(page.getByText("SVG favicon")).toBeVisible();
+  await expect(page.getByRole("button", { name: "Download all (ZIP)" })).toBeVisible();
+});
+
+test("favicon generator manifest and snippet generation works", async ({ page }) => {
+  await page.goto("/tools/favicon-generator");
+
+  // Fill brand name
+  await page.getByLabel("Brand name").fill("MyApp");
+
+  // Verify manifest JSON is displayed
+  const manifestCode = page.locator("pre.favicon-code").first();
+  await expect(manifestCode).toContainText("MyApp");
+
+  // Verify copy and download buttons
+  await expect(page.getByRole("button", { name: "Copy manifest" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Download manifest" })).toBeVisible();
+
+  // Verify HTML head snippet exists
+  const snippetCode = page.locator("pre.favicon-code").nth(1);
+  await expect(snippetCode).toContainText("favicon.svg");
+  await expect(snippetCode).toContainText("apple-touch-icon");
+});
+
+test("favicon generator checker validates domain favicons", async ({ page }) => {
+  await page.goto("/tools/favicon-generator");
+
+  // Scroll to checker section
+  await page.locator("input#favicon-checker-url").scrollIntoViewIfNeeded();
+
+  // Enter a test URL
+  await page.locator("input#favicon-checker-url").fill("https://example.com");
+
+  // Click check button
+  await page.getByRole("button", { name: "Check favicon" }).click();
+
+  // Wait for results
+  await expect(page.getByText("Resolved URL:")).toBeVisible({ timeout: 10000 });
+
+  // Verify result structure
+  await expect(page.getByText("Homepage status:")).toBeVisible();
+  await expect(page.getByText("Icons found:")).toBeVisible();
+});

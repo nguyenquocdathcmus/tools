@@ -20,6 +20,12 @@ export const metadata: Metadata = {
 export default function HomePage() {
   const spotlight = [
     FORMATTERS.find((f) => f.id === "json")!,
+    {
+      id: "favicon-generator",
+      name: "Favicon Generator",
+      slug: "favicon-generator",
+      seoDescription: "Create favicon SVG, PNG, ICO, and manifest assets from a logo or monogram in your browser.",
+    },
     FORMATTERS.find((f) => f.id === "xml")!,
     {
       id: "text-count",
@@ -93,6 +99,11 @@ export default function HomePage() {
       id: "qrcode",
       name: "QR Code Generator",
       slug: "tools/qrcode",
+    },
+    {
+      id: "favicon-generator",
+      name: "Favicon Generator",
+      slug: "favicon-generator",
     },
     {
       id: "jwt-decoder",
@@ -206,6 +217,14 @@ export default function HomePage() {
       href: "/diff-checker",
       tone: "featured-tone-json",
     },
+    {
+      icon: "FC",
+      pill: "Launch",
+      title: "Favicon Generator",
+      desc: "Create SVG, PNG, ICO, and manifest assets for browser and mobile icons.",
+      href: "/favicon-generator",
+      tone: "featured-tone-graphql",
+    },
   ];
 
   const heroMetrics = [
@@ -259,7 +278,7 @@ export default function HomePage() {
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    itemListElement: spotlight.slice(0, 6).map((tool, index) => ({
+    itemListElement: spotlight.map((tool, index) => ({
       "@type": "ListItem",
       position: index + 1,
       item: {

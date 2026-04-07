@@ -1,0 +1,274 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Daxnoria Logo Daxnoria Code tools for fast workflows" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Daxnoria Logo" [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e9]: Daxnoria
+          - generic [ref=e10]: Code tools for fast workflows
+      - link "Request feature" [ref=e12] [cursor=pointer]:
+        - /url: /request-feature
+    - navigation "Main navigation" [ref=e13]:
+      - link "Home" [ref=e14] [cursor=pointer]:
+        - /url: /
+      - link "Tools" [ref=e15] [cursor=pointer]:
+        - /url: /tools
+      - link "Format" [ref=e16] [cursor=pointer]:
+        - /url: /tools/format
+      - link "Encode" [ref=e17] [cursor=pointer]:
+        - /url: /encode
+      - link "Text Count" [ref=e18] [cursor=pointer]:
+        - /url: /text-count
+      - link "Timestamp" [ref=e19] [cursor=pointer]:
+        - /url: /timestamp
+      - link "Image" [ref=e20] [cursor=pointer]:
+        - /url: /image
+      - link "PDF" [ref=e21] [cursor=pointer]:
+        - /url: /pdf
+      - link "QR Code" [ref=e22] [cursor=pointer]:
+        - /url: /qrcode
+      - link "JWT Decoder" [ref=e23] [cursor=pointer]:
+        - /url: /jwt-decoder
+      - link "Diff Checker" [ref=e24] [cursor=pointer]:
+        - /url: /diff-checker
+      - link "Blog" [ref=e25] [cursor=pointer]:
+        - /url: /blog
+  - generic [ref=e26]:
+    - heading "Image Tools" [level=1] [ref=e27]
+    - paragraph [ref=e28]: Compress, resize, and convert PNG/JPG images directly in your browser.
+  - generic [ref=e29]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Image tools
+      - heading "Compress Image, Resize Image, Convert PNG/JPG" [level=2] [ref=e33]
+      - paragraph [ref=e34]: Process images directly in your browser with quick export and no server upload.
+    - button "Upload image by dragging or browsing" [ref=e36] [cursor=pointer]:
+      - paragraph [ref=e37]: Drop an image here
+      - paragraph [ref=e38]: Drag and drop PNG, JPG, or WEBP files, or click to browse
+      - button "Browse file" [ref=e39]
+      - button "Choose File" [ref=e40]
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e43]: Convert target format
+        - combobox "Convert target format" [ref=e44]:
+          - option "JPG" [selected]
+          - option "PNG"
+      - generic [ref=e45]:
+        - generic [ref=e46]: Resize width
+        - textbox "Resize width" [ref=e47]: "1280"
+      - generic [ref=e48]:
+        - generic [ref=e49]: Resize height
+        - textbox "Resize height" [ref=e50]: "720"
+    - generic [ref=e51]:
+      - generic [ref=e52]: Compress quality (0.1 - 1.0)
+      - textbox "Compress quality (0.1 - 1.0)" [ref=e53]: "0.75"
+    - generic [ref=e54]:
+      - button "Compress Image Reduce file size while keeping visual quality" [ref=e55] [cursor=pointer]:
+        - generic [ref=e56]: Compress Image
+        - generic [ref=e57]: Reduce file size while keeping visual quality
+      - button "Resize Image Apply custom output dimensions" [ref=e58] [cursor=pointer]:
+        - generic [ref=e59]: Resize Image
+        - generic [ref=e60]: Apply custom output dimensions
+      - button "Convert PNG/JPG Change format for compatibility needs" [active] [ref=e61] [cursor=pointer]:
+        - generic [ref=e62]: Convert PNG/JPG
+        - generic [ref=e63]: Change format for compatibility needs
+  - region "About Image Tools" [ref=e64]:
+    - heading "About Image Tools" [level=2] [ref=e65]
+    - paragraph [ref=e66]: Image optimization improves page speed, upload performance, and storage efficiency. This toolkit helps you quickly prepare assets for websites, apps, and documents.
+    - heading "What is Image Optimization?" [level=2] [ref=e67]
+    - paragraph [ref=e68]: Image optimization is the process of reducing file size or adjusting dimensions while maintaining acceptable visual quality for the target channel.
+    - heading "Frequently Asked Questions" [level=2] [ref=e69]
+    - generic [ref=e70]:
+      - heading "Which image operations are available?" [level=3] [ref=e71]
+      - paragraph [ref=e72]: You can compress images, resize dimensions, and convert between common formats like PNG and JPG.
+    - generic [ref=e73]:
+      - heading "Will image quality be preserved?" [level=3] [ref=e74]
+      - paragraph [ref=e75]: You can choose settings to balance quality and file size depending on your export target.
+    - generic [ref=e76]:
+      - heading "Is processing local?" [level=3] [ref=e77]
+      - paragraph [ref=e78]: Yes. Image processing is browser-based to keep uploads private and avoid server transfer delays.
+  - region "Related Tools" [ref=e79]:
+    - heading "Related Tools" [level=2] [ref=e80]
+    - list [ref=e81]:
+      - listitem [ref=e82]:
+        - link "Favicon Generator Open tool ->" [ref=e83] [cursor=pointer]:
+          - /url: /favicon-generator
+          - generic [ref=e84]: Favicon Generator
+          - generic [ref=e85]: Open tool ->
+      - listitem [ref=e86]:
+        - link "PDF Tools Open tool ->" [ref=e87] [cursor=pointer]:
+          - /url: /pdf
+          - generic [ref=e88]: PDF Tools
+          - generic [ref=e89]: Open tool ->
+      - listitem [ref=e90]:
+        - link "QR Code Generator Open tool ->" [ref=e91] [cursor=pointer]:
+          - /url: /qrcode
+          - generic [ref=e92]: QR Code Generator
+          - generic [ref=e93]: Open tool ->
+      - listitem [ref=e94]:
+        - link "Encode Tools Open tool ->" [ref=e95] [cursor=pointer]:
+          - /url: /encode
+          - generic [ref=e96]: Encode Tools
+          - generic [ref=e97]: Open tool ->
+      - listitem [ref=e98]:
+        - link "Diff Checker Open tool ->" [ref=e99] [cursor=pointer]:
+          - /url: /diff-checker
+          - generic [ref=e100]: Diff Checker
+          - generic [ref=e101]: Open tool ->
+  - region "Developer Guides" [ref=e102]:
+    - heading "Developer Guides" [level=2] [ref=e103]
+    - list [ref=e104]:
+      - listitem [ref=e105]:
+        - link "AI Tools For Developers Workflow guide ->" [ref=e106] [cursor=pointer]:
+          - /url: /blog/ai-tools-for-developers
+          - generic [ref=e107]: AI Tools For Developers
+          - generic [ref=e108]: Workflow guide ->
+      - listitem [ref=e109]:
+        - link "JSON Formatter Best Practices Validation guide ->" [ref=e110] [cursor=pointer]:
+          - /url: /blog/json-formatter-best-practices
+          - generic [ref=e111]: JSON Formatter Best Practices
+          - generic [ref=e112]: Validation guide ->
+      - listitem [ref=e113]:
+        - link "JSON Format Guide Structure guide ->" [ref=e114] [cursor=pointer]:
+          - /url: /blog/json-format-guide
+          - generic [ref=e115]: JSON Format Guide
+          - generic [ref=e116]: Structure guide ->
+      - listitem [ref=e117]:
+        - link "Fix Invalid JSON Repair guide ->" [ref=e118] [cursor=pointer]:
+          - /url: /blog/fix-invalid-json
+          - generic [ref=e119]: Fix Invalid JSON
+          - generic [ref=e120]: Repair guide ->
+      - listitem [ref=e121]:
+        - link "Common JSON Errors Error checklist ->" [ref=e122] [cursor=pointer]:
+          - /url: /blog/common-json-errors
+          - generic [ref=e123]: Common JSON Errors
+          - generic [ref=e124]: Error checklist ->
+      - listitem [ref=e125]:
+        - link "XML Validator Best Practices SOAP guide ->" [ref=e126] [cursor=pointer]:
+          - /url: /blog/xml-validator-best-practices
+          - generic [ref=e127]: XML Validator Best Practices
+          - generic [ref=e128]: SOAP guide ->
+      - listitem [ref=e129]:
+        - link "JWT Debugging Workflow Auth guide ->" [ref=e130] [cursor=pointer]:
+          - /url: /blog/jwt-debugging-workflow
+          - generic [ref=e131]: JWT Debugging Workflow
+          - generic [ref=e132]: Auth guide ->
+      - listitem [ref=e133]:
+        - link "Unix Timestamp Converter Use Cases Debugging guide ->" [ref=e134] [cursor=pointer]:
+          - /url: /blog/unix-timestamp-converter-use-cases
+          - generic [ref=e135]: Unix Timestamp Converter Use Cases
+          - generic [ref=e136]: Debugging guide ->
+      - listitem [ref=e137]:
+        - link "Base64 Encode And Decode Workflow Encoding guide ->" [ref=e138] [cursor=pointer]:
+          - /url: /blog/base64-encode-decode-workflow
+          - generic [ref=e139]: Base64 Encode And Decode Workflow
+          - generic [ref=e140]: Encoding guide ->
+      - listitem [ref=e141]:
+        - link "URL Encoding Guide Query string guide ->" [ref=e142] [cursor=pointer]:
+          - /url: /blog/url-encoding-guide-for-webworkflows
+          - generic [ref=e143]: URL Encoding Guide
+          - generic [ref=e144]: Query string guide ->
+      - listitem [ref=e145]:
+        - link "Text Counting Guide Copy length guide ->" [ref=e146] [cursor=pointer]:
+          - /url: /blog/text-counting-guide-for-writers-and-seo
+          - generic [ref=e147]: Text Counting Guide
+          - generic [ref=e148]: Copy length guide ->
+      - listitem [ref=e149]:
+        - link "Timestamp Converter Use Cases Time workflow guide ->" [ref=e150] [cursor=pointer]:
+          - /url: /blog/timestamp-converter-for-productivity
+          - generic [ref=e151]: Timestamp Converter Use Cases
+          - generic [ref=e152]: Time workflow guide ->
+      - listitem [ref=e153]:
+        - link "QR Code Sharing Guide Sharing guide ->" [ref=e154] [cursor=pointer]:
+          - /url: /blog/qrcode-link-sharing-guide
+          - generic [ref=e155]: QR Code Sharing Guide
+          - generic [ref=e156]: Sharing guide ->
+      - listitem [ref=e157]:
+        - link "URL Decode Practical Guide Decoding guide ->" [ref=e158] [cursor=pointer]:
+          - /url: /blog/url-decode-practical-guide
+          - generic [ref=e159]: URL Decode Practical Guide
+          - generic [ref=e160]: Decoding guide ->
+      - listitem [ref=e161]:
+        - link "Base64 Decode Inspection Guide Inspection guide ->" [ref=e162] [cursor=pointer]:
+          - /url: /blog/base64-decode-inspection-guide
+          - generic [ref=e163]: Base64 Decode Inspection Guide
+          - generic [ref=e164]: Inspection guide ->
+      - listitem [ref=e165]:
+        - link "Diff Checker Review Workflow Review guide ->" [ref=e166] [cursor=pointer]:
+          - /url: /blog/diff-checker-review-workflow
+          - generic [ref=e167]: Diff Checker Review Workflow
+          - generic [ref=e168]: Review guide ->
+      - listitem [ref=e169]:
+        - link "XML Formatter Clean XML Workflow Legacy XML guide ->" [ref=e170] [cursor=pointer]:
+          - /url: /blog/xml-formatter-clean-xml-workflow
+          - generic [ref=e171]: XML Formatter Clean XML Workflow
+          - generic [ref=e172]: Legacy XML guide ->
+      - listitem [ref=e173]:
+        - link "PDF Tool Workflow For Large Documents Document guide ->" [ref=e174] [cursor=pointer]:
+          - /url: /blog/pdf-tool-workflow-for-large-documents
+          - generic [ref=e175]: PDF Tool Workflow For Large Documents
+          - generic [ref=e176]: Document guide ->
+      - listitem [ref=e177]:
+        - link "JSON Tools Hub Cluster page ->" [ref=e178] [cursor=pointer]:
+          - /url: /json-tools
+          - generic [ref=e179]: JSON Tools Hub
+          - generic [ref=e180]: Cluster page ->
+  - generic [ref=e181]:
+    - generic [ref=e182]:
+      - generic [ref=e183]:
+        - generic [ref=e184]:
+          - img "Daxnoria Logo" [ref=e185]
+          - paragraph [ref=e186]: Daxnoria
+        - paragraph [ref=e187]: A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.
+        - paragraph [ref=e188]:
+          - text: "Contact:"
+          - link "daxnoria@gmail.com" [ref=e189] [cursor=pointer]:
+            - /url: mailto:daxnoria@gmail.com
+        - paragraph [ref=e190]:
+          - text: "Facebook:"
+          - link "Daxnoria" [ref=e191] [cursor=pointer]:
+            - /url: https://web.facebook.com/people/Daxnoria/61575367715805/
+      - generic [ref=e192]:
+        - paragraph [ref=e193]: Core Tools
+        - generic [ref=e194]:
+          - link "JSON Formatter" [ref=e195] [cursor=pointer]:
+            - /url: /json-formatter
+          - link "XML Formatter" [ref=e196] [cursor=pointer]:
+            - /url: /xml-formatter
+          - link "Timestamp Converter" [ref=e197] [cursor=pointer]:
+            - /url: /timestamp
+      - generic [ref=e198]:
+        - paragraph [ref=e199]: Utilities
+        - generic [ref=e200]:
+          - link "Encode Tools" [ref=e201] [cursor=pointer]:
+            - /url: /encode
+          - link "Image Tools" [ref=e202] [cursor=pointer]:
+            - /url: /image
+          - link "PDF Tools" [ref=e203] [cursor=pointer]:
+            - /url: /pdf
+          - link "QR Code Tools" [ref=e204] [cursor=pointer]:
+            - /url: /qrcode
+      - generic [ref=e205]:
+        - paragraph [ref=e206]: Resources
+        - generic [ref=e207]:
+          - link "Homepage" [ref=e208] [cursor=pointer]:
+            - /url: /
+          - link "Tools Directory" [ref=e209] [cursor=pointer]:
+            - /url: /tools
+          - link "Developer Blog" [ref=e210] [cursor=pointer]:
+            - /url: /blog
+          - link "Developer Tools Online" [ref=e211] [cursor=pointer]:
+            - /url: /developer-tools-online
+          - link "API Debugging Tools" [ref=e212] [cursor=pointer]:
+            - /url: /api-debugging-tools
+          - link "Request Feature" [ref=e213] [cursor=pointer]:
+            - /url: /request-feature
+          - link "Sitemap" [ref=e214] [cursor=pointer]:
+            - /url: /sitemap.xml
+          - link "Robots" [ref=e215] [cursor=pointer]:
+            - /url: /robots.txt
+    - paragraph [ref=e217]: © 2026 Daxnoria. Built for developers, technical teams, and fast workflows.
+```

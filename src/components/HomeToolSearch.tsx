@@ -29,6 +29,10 @@ export default function HomeToolSearch({ items }: HomeToolSearchProps) {
       encode: "/encode",
       timestamp: "/timestamp",
       image: "/image",
+      favicon: "/favicon-generator",
+      favicons: "/favicon-generator",
+      icon: "/favicon-generator",
+      logo: "/favicon-generator",
       pdf: "/pdf",
       qrcode: "/qrcode",
       jwt: "/jwt-decoder",
@@ -46,7 +50,7 @@ export default function HomeToolSearch({ items }: HomeToolSearchProps) {
     [],
   );
 
-  const quickTags = ["JSON", "XML", "JWT", "Diff", "Text Count", "PDF", "Encode"];
+  const quickTags = ["JSON", "XML", "JWT", "Diff", "Text Count", "PDF", "Encode", "Favicon"];
 
   const liveSuggestions = useMemo(() => {
     const normalized = normalize(query);

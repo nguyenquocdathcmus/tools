@@ -1,0 +1,276 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Daxnoria Logo Daxnoria Code tools for fast workflows" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Daxnoria Logo" [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e9]: Daxnoria
+          - generic [ref=e10]: Code tools for fast workflows
+      - link "Request feature" [ref=e12] [cursor=pointer]:
+        - /url: /request-feature
+    - navigation "Main navigation" [ref=e13]:
+      - link "Home" [ref=e14] [cursor=pointer]:
+        - /url: /
+      - link "Tools" [ref=e15] [cursor=pointer]:
+        - /url: /tools
+      - link "Format" [ref=e16] [cursor=pointer]:
+        - /url: /tools/format
+      - link "Encode" [ref=e17] [cursor=pointer]:
+        - /url: /encode
+      - link "Text Count" [ref=e18] [cursor=pointer]:
+        - /url: /text-count
+      - link "Timestamp" [ref=e19] [cursor=pointer]:
+        - /url: /timestamp
+      - link "Image" [ref=e20] [cursor=pointer]:
+        - /url: /image
+      - link "PDF" [ref=e21] [cursor=pointer]:
+        - /url: /pdf
+      - link "QR Code" [ref=e22] [cursor=pointer]:
+        - /url: /qrcode
+      - link "JWT Decoder" [ref=e23] [cursor=pointer]:
+        - /url: /jwt-decoder
+      - link "Diff Checker" [ref=e24] [cursor=pointer]:
+        - /url: /diff-checker
+      - link "Blog" [ref=e25] [cursor=pointer]:
+        - /url: /blog
+  - generic [ref=e26]:
+    - heading "Unix and Timezone Converter" [level=1] [ref=e27]
+    - paragraph [ref=e28]: Convert timestamps and timezone values quickly for APIs, logs, and data pipelines.
+  - generic [ref=e29]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Timestamp converter
+      - heading "Unix to Date, Date to Unix, Timezone Convert" [level=2] [ref=e33]
+      - paragraph [ref=e34]: Convert Unix values and timezone outputs quickly without leaving your workflow.
+    - generic [ref=e35]:
+      - generic [ref=e36]:
+        - generic [ref=e37]: Unix timestamp
+        - textbox "Unix timestamp" [ref=e38]: "0"
+      - generic [ref=e39]:
+        - generic [ref=e40]: Date input
+        - textbox "Date input" [ref=e41]: 2026-03-27T12:00
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - generic [ref=e44]: Source timezone
+        - combobox "Source timezone" [ref=e45]:
+          - option "UTC" [selected]
+          - option "Asia/Ho_Chi_Minh"
+          - option "Asia/Tokyo"
+          - option "Europe/London"
+          - option "America/New_York"
+      - generic [ref=e46]:
+        - generic [ref=e47]: Target timezone
+        - combobox "Target timezone" [ref=e48]:
+          - option "UTC"
+          - option "Asia/Ho_Chi_Minh" [selected]
+          - option "Asia/Tokyo"
+          - option "Europe/London"
+          - option "America/New_York"
+    - generic [ref=e49]:
+      - button "Unix to Date Convert Unix seconds into ISO date" [active] [ref=e50] [cursor=pointer]:
+        - generic [ref=e51]: Unix to Date
+        - generic [ref=e52]: Convert Unix seconds into ISO date
+      - button "Date to Unix Convert date input into Unix seconds" [ref=e53] [cursor=pointer]:
+        - generic [ref=e54]: Date to Unix
+        - generic [ref=e55]: Convert date input into Unix seconds
+      - button "Timezone Convert Preview source and target timezone output" [ref=e56] [cursor=pointer]:
+        - generic [ref=e57]: Timezone Convert
+        - generic [ref=e58]: Preview source and target timezone output
+    - generic [ref=e59]:
+      - paragraph [ref=e60]: Result
+      - textbox "Run a conversion action to view output" [ref=e61]
+  - region "About Timestamp Tools" [ref=e62]:
+    - heading "About Timestamp Tools" [level=2] [ref=e63]
+    - paragraph [ref=e64]: Timestamp conversion is a daily task in backend debugging and observability workflows. This page helps you map Unix values to human-readable dates and verify timezone behavior quickly.
+    - heading "What is Unix Time?" [level=2] [ref=e65]
+    - paragraph [ref=e66]: Unix time represents the number of seconds (or milliseconds) elapsed since 00:00:00 UTC on January 1, 1970, and is commonly used for machine-friendly event timestamps.
+    - heading "Frequently Asked Questions" [level=2] [ref=e67]
+    - generic [ref=e68]:
+      - heading "What timestamp formats are supported?" [level=3] [ref=e69]
+      - paragraph [ref=e70]: You can convert Unix seconds, Unix milliseconds, and readable date formats in both directions.
+    - generic [ref=e71]:
+      - heading "Does this tool support timezones?" [level=3] [ref=e72]
+      - paragraph [ref=e73]: Yes. You can compare UTC and local outputs to validate timezone-sensitive values.
+    - generic [ref=e74]:
+      - heading "Who uses timestamp conversion most?" [level=3] [ref=e75]
+      - paragraph [ref=e76]: Developers, analysts, and DevOps teams commonly use it to inspect logs, events, and API responses.
+  - region "Related Tools" [ref=e77]:
+    - heading "Related Tools" [level=2] [ref=e78]
+    - list [ref=e79]:
+      - listitem [ref=e80]:
+        - link "Encode Tools Open tool ->" [ref=e81] [cursor=pointer]:
+          - /url: /encode
+          - generic [ref=e82]: Encode Tools
+          - generic [ref=e83]: Open tool ->
+      - listitem [ref=e84]:
+        - link "JWT Decoder Open tool ->" [ref=e85] [cursor=pointer]:
+          - /url: /jwt-decoder
+          - generic [ref=e86]: JWT Decoder
+          - generic [ref=e87]: Open tool ->
+      - listitem [ref=e88]:
+        - link "Text Counter Open tool ->" [ref=e89] [cursor=pointer]:
+          - /url: /text-count
+          - generic [ref=e90]: Text Counter
+          - generic [ref=e91]: Open tool ->
+      - listitem [ref=e92]:
+        - link "Diff Checker Open tool ->" [ref=e93] [cursor=pointer]:
+          - /url: /diff-checker
+          - generic [ref=e94]: Diff Checker
+          - generic [ref=e95]: Open tool ->
+  - region "Developer Guides" [ref=e96]:
+    - heading "Developer Guides" [level=2] [ref=e97]
+    - list [ref=e98]:
+      - listitem [ref=e99]:
+        - link "AI Tools For Developers Workflow guide ->" [ref=e100] [cursor=pointer]:
+          - /url: /blog/ai-tools-for-developers
+          - generic [ref=e101]: AI Tools For Developers
+          - generic [ref=e102]: Workflow guide ->
+      - listitem [ref=e103]:
+        - link "JSON Formatter Best Practices Validation guide ->" [ref=e104] [cursor=pointer]:
+          - /url: /blog/json-formatter-best-practices
+          - generic [ref=e105]: JSON Formatter Best Practices
+          - generic [ref=e106]: Validation guide ->
+      - listitem [ref=e107]:
+        - link "JSON Format Guide Structure guide ->" [ref=e108] [cursor=pointer]:
+          - /url: /blog/json-format-guide
+          - generic [ref=e109]: JSON Format Guide
+          - generic [ref=e110]: Structure guide ->
+      - listitem [ref=e111]:
+        - link "Fix Invalid JSON Repair guide ->" [ref=e112] [cursor=pointer]:
+          - /url: /blog/fix-invalid-json
+          - generic [ref=e113]: Fix Invalid JSON
+          - generic [ref=e114]: Repair guide ->
+      - listitem [ref=e115]:
+        - link "Common JSON Errors Error checklist ->" [ref=e116] [cursor=pointer]:
+          - /url: /blog/common-json-errors
+          - generic [ref=e117]: Common JSON Errors
+          - generic [ref=e118]: Error checklist ->
+      - listitem [ref=e119]:
+        - link "XML Validator Best Practices SOAP guide ->" [ref=e120] [cursor=pointer]:
+          - /url: /blog/xml-validator-best-practices
+          - generic [ref=e121]: XML Validator Best Practices
+          - generic [ref=e122]: SOAP guide ->
+      - listitem [ref=e123]:
+        - link "JWT Debugging Workflow Auth guide ->" [ref=e124] [cursor=pointer]:
+          - /url: /blog/jwt-debugging-workflow
+          - generic [ref=e125]: JWT Debugging Workflow
+          - generic [ref=e126]: Auth guide ->
+      - listitem [ref=e127]:
+        - link "Unix Timestamp Converter Use Cases Debugging guide ->" [ref=e128] [cursor=pointer]:
+          - /url: /blog/unix-timestamp-converter-use-cases
+          - generic [ref=e129]: Unix Timestamp Converter Use Cases
+          - generic [ref=e130]: Debugging guide ->
+      - listitem [ref=e131]:
+        - link "Base64 Encode And Decode Workflow Encoding guide ->" [ref=e132] [cursor=pointer]:
+          - /url: /blog/base64-encode-decode-workflow
+          - generic [ref=e133]: Base64 Encode And Decode Workflow
+          - generic [ref=e134]: Encoding guide ->
+      - listitem [ref=e135]:
+        - link "URL Encoding Guide Query string guide ->" [ref=e136] [cursor=pointer]:
+          - /url: /blog/url-encoding-guide-for-webworkflows
+          - generic [ref=e137]: URL Encoding Guide
+          - generic [ref=e138]: Query string guide ->
+      - listitem [ref=e139]:
+        - link "Text Counting Guide Copy length guide ->" [ref=e140] [cursor=pointer]:
+          - /url: /blog/text-counting-guide-for-writers-and-seo
+          - generic [ref=e141]: Text Counting Guide
+          - generic [ref=e142]: Copy length guide ->
+      - listitem [ref=e143]:
+        - link "Timestamp Converter Use Cases Time workflow guide ->" [ref=e144] [cursor=pointer]:
+          - /url: /blog/timestamp-converter-for-productivity
+          - generic [ref=e145]: Timestamp Converter Use Cases
+          - generic [ref=e146]: Time workflow guide ->
+      - listitem [ref=e147]:
+        - link "QR Code Sharing Guide Sharing guide ->" [ref=e148] [cursor=pointer]:
+          - /url: /blog/qrcode-link-sharing-guide
+          - generic [ref=e149]: QR Code Sharing Guide
+          - generic [ref=e150]: Sharing guide ->
+      - listitem [ref=e151]:
+        - link "URL Decode Practical Guide Decoding guide ->" [ref=e152] [cursor=pointer]:
+          - /url: /blog/url-decode-practical-guide
+          - generic [ref=e153]: URL Decode Practical Guide
+          - generic [ref=e154]: Decoding guide ->
+      - listitem [ref=e155]:
+        - link "Base64 Decode Inspection Guide Inspection guide ->" [ref=e156] [cursor=pointer]:
+          - /url: /blog/base64-decode-inspection-guide
+          - generic [ref=e157]: Base64 Decode Inspection Guide
+          - generic [ref=e158]: Inspection guide ->
+      - listitem [ref=e159]:
+        - link "Diff Checker Review Workflow Review guide ->" [ref=e160] [cursor=pointer]:
+          - /url: /blog/diff-checker-review-workflow
+          - generic [ref=e161]: Diff Checker Review Workflow
+          - generic [ref=e162]: Review guide ->
+      - listitem [ref=e163]:
+        - link "XML Formatter Clean XML Workflow Legacy XML guide ->" [ref=e164] [cursor=pointer]:
+          - /url: /blog/xml-formatter-clean-xml-workflow
+          - generic [ref=e165]: XML Formatter Clean XML Workflow
+          - generic [ref=e166]: Legacy XML guide ->
+      - listitem [ref=e167]:
+        - link "PDF Tool Workflow For Large Documents Document guide ->" [ref=e168] [cursor=pointer]:
+          - /url: /blog/pdf-tool-workflow-for-large-documents
+          - generic [ref=e169]: PDF Tool Workflow For Large Documents
+          - generic [ref=e170]: Document guide ->
+      - listitem [ref=e171]:
+        - link "JSON Tools Hub Cluster page ->" [ref=e172] [cursor=pointer]:
+          - /url: /json-tools
+          - generic [ref=e173]: JSON Tools Hub
+          - generic [ref=e174]: Cluster page ->
+  - generic [ref=e175]:
+    - generic [ref=e176]:
+      - generic [ref=e177]:
+        - generic [ref=e178]:
+          - img "Daxnoria Logo" [ref=e179]
+          - paragraph [ref=e180]: Daxnoria
+        - paragraph [ref=e181]: A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.
+        - paragraph [ref=e182]:
+          - text: "Contact:"
+          - link "daxnoria@gmail.com" [ref=e183] [cursor=pointer]:
+            - /url: mailto:daxnoria@gmail.com
+        - paragraph [ref=e184]:
+          - text: "Facebook:"
+          - link "Daxnoria" [ref=e185] [cursor=pointer]:
+            - /url: https://web.facebook.com/people/Daxnoria/61575367715805/
+      - generic [ref=e186]:
+        - paragraph [ref=e187]: Core Tools
+        - generic [ref=e188]:
+          - link "JSON Formatter" [ref=e189] [cursor=pointer]:
+            - /url: /json-formatter
+          - link "XML Formatter" [ref=e190] [cursor=pointer]:
+            - /url: /xml-formatter
+          - link "Timestamp Converter" [ref=e191] [cursor=pointer]:
+            - /url: /timestamp
+      - generic [ref=e192]:
+        - paragraph [ref=e193]: Utilities
+        - generic [ref=e194]:
+          - link "Encode Tools" [ref=e195] [cursor=pointer]:
+            - /url: /encode
+          - link "Image Tools" [ref=e196] [cursor=pointer]:
+            - /url: /image
+          - link "PDF Tools" [ref=e197] [cursor=pointer]:
+            - /url: /pdf
+          - link "QR Code Tools" [ref=e198] [cursor=pointer]:
+            - /url: /qrcode
+      - generic [ref=e199]:
+        - paragraph [ref=e200]: Resources
+        - generic [ref=e201]:
+          - link "Homepage" [ref=e202] [cursor=pointer]:
+            - /url: /
+          - link "Tools Directory" [ref=e203] [cursor=pointer]:
+            - /url: /tools
+          - link "Developer Blog" [ref=e204] [cursor=pointer]:
+            - /url: /blog
+          - link "Developer Tools Online" [ref=e205] [cursor=pointer]:
+            - /url: /developer-tools-online
+          - link "API Debugging Tools" [ref=e206] [cursor=pointer]:
+            - /url: /api-debugging-tools
+          - link "Request Feature" [ref=e207] [cursor=pointer]:
+            - /url: /request-feature
+          - link "Sitemap" [ref=e208] [cursor=pointer]:
+            - /url: /sitemap.xml
+          - link "Robots" [ref=e209] [cursor=pointer]:
+            - /url: /robots.txt
+    - paragraph [ref=e211]: © 2026 Daxnoria. Built for developers, technical teams, and fast workflows.
+```

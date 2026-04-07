@@ -1,0 +1,327 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Daxnoria Logo Daxnoria Code tools for fast workflows" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Daxnoria Logo" [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e9]: Daxnoria
+          - generic [ref=e10]: Code tools for fast workflows
+      - link "Request feature" [ref=e12] [cursor=pointer]:
+        - /url: /request-feature
+    - navigation "Main navigation" [ref=e13]:
+      - link "Home" [ref=e14] [cursor=pointer]:
+        - /url: /
+      - link "Tools" [ref=e15] [cursor=pointer]:
+        - /url: /tools
+      - link "Format" [ref=e16] [cursor=pointer]:
+        - /url: /tools/format
+      - link "Encode" [ref=e17] [cursor=pointer]:
+        - /url: /encode
+      - link "Text Count" [ref=e18] [cursor=pointer]:
+        - /url: /text-count
+      - link "Timestamp" [ref=e19] [cursor=pointer]:
+        - /url: /timestamp
+      - link "Image" [ref=e20] [cursor=pointer]:
+        - /url: /image
+      - link "PDF" [ref=e21] [cursor=pointer]:
+        - /url: /pdf
+      - link "QR Code" [ref=e22] [cursor=pointer]:
+        - /url: /qrcode
+      - link "JWT Decoder" [ref=e23] [cursor=pointer]:
+        - /url: /jwt-decoder
+      - link "Diff Checker" [ref=e24] [cursor=pointer]:
+        - /url: /diff-checker
+      - link "Blog" [ref=e25] [cursor=pointer]:
+        - /url: /blog
+  - generic [ref=e26]:
+    - paragraph [ref=e27]: JSON authority page
+    - heading "JSON Formatter & Validator Online (Free, Fast, No Login)" [level=1] [ref=e28]
+    - paragraph [ref=e29]: Format, beautify, minify, and validate JSON instantly. Use this page as your primary JSON workflow hub for API payloads, config files, and developer debugging.
+  - generic [ref=e30]: Loading JSON Tools...
+  - region "About JSON Formatter & Validator" [ref=e31]:
+    - heading "About JSON Formatter & Validator" [level=2] [ref=e32]
+    - paragraph [ref=e33]:
+      - text: Our
+      - strong [ref=e34]: JSON Formatter
+      - text: instantly turns raw payloads into clean, readable structures. It is ideal for API debugging, config reviews, and day-to-day data inspection. If the input is invalid, use the linked validator first, then come back here to format the corrected JSON.
+    - heading "What is JSON?" [level=2] [ref=e35]
+    - paragraph [ref=e36]:
+      - strong [ref=e37]: JSON
+      - text: (JavaScript Object Notation) is a lightweight data format for structured data exchange. It is easy for humans to read, easy for machines to parse, and widely used in REST APIs, web apps, and configuration files.
+    - heading "How to use JSON Formatter" [level=2] [ref=e38]
+    - list [ref=e39]:
+      - listitem [ref=e40]: Paste your raw JSON into the editor.
+      - listitem [ref=e41]:
+        - text: Click
+        - strong [ref=e42]: JSON Formatter
+        - text: to auto format the payload.
+      - listitem [ref=e43]: If an error appears, jump to the error line and fix the first broken token.
+      - listitem [ref=e44]:
+        - text: Use
+        - link "JSON Validator" [ref=e45] [cursor=pointer]:
+          - /url: /json-validator
+        - text: to confirm the final payload is valid.
+      - listitem [ref=e46]:
+        - text: Use
+        - link "JSON Minify" [ref=e47] [cursor=pointer]:
+          - /url: /json-minify
+        - text: when you need a compact production version.
+    - heading "Common JSON errors" [level=2] [ref=e48]
+    - paragraph [ref=e49]: The most common syntax problems are missing commas, trailing commas, unquoted keys, single quotes, and mismatched braces or brackets. These errors often appear in API payloads copied from logs, UI forms, or AI generated content.
+    - generic [ref=e50]:
+      - heading "Invalid JSON example" [level=3] [ref=e51]
+      - generic [ref=e52]: "{ \"name\": \"Daxnoria\", \"version\": 2, \"features\": [\"formatter\", \"validator\",] }"
+      - paragraph [ref=e53]: "Problem: trailing comma after the last array item."
+    - generic [ref=e54]:
+      - heading "Valid JSON example" [level=3] [ref=e55]
+      - generic [ref=e56]: "{ \"name\": \"Daxnoria\", \"version\": 2, \"features\": [\"formatter\", \"validator\"] }"
+      - paragraph [ref=e57]: "Fix: remove the trailing comma and keep double quotes everywhere."
+    - heading "JSON Formatter best practices" [level=2] [ref=e58]
+    - paragraph [ref=e59]: A strong workflow uses formatting, validation, and diffing together. Format to improve readability, validate to catch syntax issues, and compare revisions before merging changes. This is the same workflow used in the related guides below.
+    - heading "Why line-level error detection matters" [level=3] [ref=e60]
+    - paragraph [ref=e61]: Line-level feedback is the fastest way to fix malformed JSON. Instead of scanning an entire payload for a missing quote or bracket, you can jump directly to the reported line and patch the exact character causing the parse failure.
+    - heading "When to minify JSON" [level=3] [ref=e62]
+    - paragraph [ref=e63]: Minify JSON when you need a smaller payload for production, network transport, or storage. Keep the pretty formatted version for reviews and debugging, then convert to the minified form only when you are ready to ship.
+    - heading "Frequently Asked Questions" [level=2] [ref=e64]
+    - generic [ref=e65]:
+      - heading "What is a JSON Formatter?" [level=3] [ref=e66]
+      - paragraph [ref=e67]: A JSON formatter is an online tool that takes unformatted, minified, or messy JSON data and formats it with proper indentation and line breaks, making it readable for humans.
+    - generic [ref=e68]:
+      - heading "Is my JSON data secure?" [level=3] [ref=e69]
+      - paragraph [ref=e70]: Yes! Our JSON formatter runs entirely in your local browser using client-side processing. We do not send, save, or store your JSON data on our servers.
+    - generic [ref=e71]:
+      - heading "How do I validate JSON syntax?" [level=3] [ref=e72]
+      - paragraph [ref=e73]:
+        - text: Paste the payload into
+        - link "JSON Validator" [ref=e74] [cursor=pointer]:
+          - /url: /json-validator
+        - text: . If there are syntax errors like missing commas or quotes, the tool will highlight the exact line and column where the error occurred.
+    - generic [ref=e75]:
+      - heading "Can I use this page without logging in?" [level=3] [ref=e76]
+      - paragraph [ref=e77]: No login is required. All formatting and validation happen locally in your browser.
+    - heading "Related JSON workflows" [level=2] [ref=e78]
+    - paragraph [ref=e79]:
+      - text: After formatting, many teams move to
+      - link "JSON Minify" [ref=e80] [cursor=pointer]:
+        - /url: /json-minify
+      - text: for production payloads, or use
+      - link "the JSON format guide" [ref=e81] [cursor=pointer]:
+        - /url: /blog/json-format-guide
+      - text: and
+      - link "fix invalid JSON guide" [ref=e82] [cursor=pointer]:
+        - /url: /blog/fix-invalid-json
+      - text: to standardize review and debugging steps.
+  - region "Related tools" [ref=e83]:
+    - heading "Related tools" [level=2] [ref=e84]
+    - paragraph [ref=e85]: Use these pages together to build a compact JSON content cluster.
+    - list [ref=e86]:
+      - listitem [ref=e87]:
+        - link "JSON Validator Check syntax and surface line errors." [ref=e88] [cursor=pointer]:
+          - /url: /json-validator
+          - generic [ref=e89]: JSON Validator
+          - generic [ref=e90]: Check syntax and surface line errors.
+      - listitem [ref=e91]:
+        - link "JSON Minify Compress payloads for production and APIs." [ref=e92] [cursor=pointer]:
+          - /url: /json-minify
+          - generic [ref=e93]: JSON Minify
+          - generic [ref=e94]: Compress payloads for production and APIs.
+      - listitem [ref=e95]:
+        - link "JSON Tools Hub Navigate the full JSON cluster page." [ref=e96] [cursor=pointer]:
+          - /url: /json-tools
+          - generic [ref=e97]: JSON Tools Hub
+          - generic [ref=e98]: Navigate the full JSON cluster page.
+      - listitem [ref=e99]:
+        - link "JSON Format Guide Learn the formatting workflow." [ref=e100] [cursor=pointer]:
+          - /url: /blog/json-format-guide
+          - generic [ref=e101]: JSON Format Guide
+          - generic [ref=e102]: Learn the formatting workflow.
+      - listitem [ref=e103]:
+        - link "Fix Invalid JSON Repair broken payloads faster." [ref=e104] [cursor=pointer]:
+          - /url: /blog/fix-invalid-json
+          - generic [ref=e105]: Fix Invalid JSON
+          - generic [ref=e106]: Repair broken payloads faster.
+      - listitem [ref=e107]:
+        - link "Common JSON Errors Prevent syntax mistakes before release." [ref=e108] [cursor=pointer]:
+          - /url: /blog/common-json-errors
+          - generic [ref=e109]: Common JSON Errors
+          - generic [ref=e110]: Prevent syntax mistakes before release.
+  - region "JSON Learning Hub" [ref=e111]:
+    - heading "JSON Learning Hub" [level=2] [ref=e112]
+    - list [ref=e113]:
+      - listitem [ref=e114]:
+        - link "AI Tools For Developers Workflow guide ->" [ref=e115] [cursor=pointer]:
+          - /url: /blog/ai-tools-for-developers
+          - generic [ref=e116]: AI Tools For Developers
+          - generic [ref=e117]: Workflow guide ->
+      - listitem [ref=e118]:
+        - link "JSON Formatter Best Practices Validation guide ->" [ref=e119] [cursor=pointer]:
+          - /url: /blog/json-formatter-best-practices
+          - generic [ref=e120]: JSON Formatter Best Practices
+          - generic [ref=e121]: Validation guide ->
+      - listitem [ref=e122]:
+        - link "JSON Format Guide Structure guide ->" [ref=e123] [cursor=pointer]:
+          - /url: /blog/json-format-guide
+          - generic [ref=e124]: JSON Format Guide
+          - generic [ref=e125]: Structure guide ->
+      - listitem [ref=e126]:
+        - link "Fix Invalid JSON Repair guide ->" [ref=e127] [cursor=pointer]:
+          - /url: /blog/fix-invalid-json
+          - generic [ref=e128]: Fix Invalid JSON
+          - generic [ref=e129]: Repair guide ->
+      - listitem [ref=e130]:
+        - link "Common JSON Errors Error checklist ->" [ref=e131] [cursor=pointer]:
+          - /url: /blog/common-json-errors
+          - generic [ref=e132]: Common JSON Errors
+          - generic [ref=e133]: Error checklist ->
+      - listitem [ref=e134]:
+        - link "XML Validator Best Practices SOAP guide ->" [ref=e135] [cursor=pointer]:
+          - /url: /blog/xml-validator-best-practices
+          - generic [ref=e136]: XML Validator Best Practices
+          - generic [ref=e137]: SOAP guide ->
+      - listitem [ref=e138]:
+        - link "JWT Debugging Workflow Auth guide ->" [ref=e139] [cursor=pointer]:
+          - /url: /blog/jwt-debugging-workflow
+          - generic [ref=e140]: JWT Debugging Workflow
+          - generic [ref=e141]: Auth guide ->
+      - listitem [ref=e142]:
+        - link "Unix Timestamp Converter Use Cases Debugging guide ->" [ref=e143] [cursor=pointer]:
+          - /url: /blog/unix-timestamp-converter-use-cases
+          - generic [ref=e144]: Unix Timestamp Converter Use Cases
+          - generic [ref=e145]: Debugging guide ->
+      - listitem [ref=e146]:
+        - link "Base64 Encode And Decode Workflow Encoding guide ->" [ref=e147] [cursor=pointer]:
+          - /url: /blog/base64-encode-decode-workflow
+          - generic [ref=e148]: Base64 Encode And Decode Workflow
+          - generic [ref=e149]: Encoding guide ->
+      - listitem [ref=e150]:
+        - link "URL Encoding Guide Query string guide ->" [ref=e151] [cursor=pointer]:
+          - /url: /blog/url-encoding-guide-for-webworkflows
+          - generic [ref=e152]: URL Encoding Guide
+          - generic [ref=e153]: Query string guide ->
+      - listitem [ref=e154]:
+        - link "Text Counting Guide Copy length guide ->" [ref=e155] [cursor=pointer]:
+          - /url: /blog/text-counting-guide-for-writers-and-seo
+          - generic [ref=e156]: Text Counting Guide
+          - generic [ref=e157]: Copy length guide ->
+      - listitem [ref=e158]:
+        - link "Timestamp Converter Use Cases Time workflow guide ->" [ref=e159] [cursor=pointer]:
+          - /url: /blog/timestamp-converter-for-productivity
+          - generic [ref=e160]: Timestamp Converter Use Cases
+          - generic [ref=e161]: Time workflow guide ->
+      - listitem [ref=e162]:
+        - link "QR Code Sharing Guide Sharing guide ->" [ref=e163] [cursor=pointer]:
+          - /url: /blog/qrcode-link-sharing-guide
+          - generic [ref=e164]: QR Code Sharing Guide
+          - generic [ref=e165]: Sharing guide ->
+      - listitem [ref=e166]:
+        - link "URL Decode Practical Guide Decoding guide ->" [ref=e167] [cursor=pointer]:
+          - /url: /blog/url-decode-practical-guide
+          - generic [ref=e168]: URL Decode Practical Guide
+          - generic [ref=e169]: Decoding guide ->
+      - listitem [ref=e170]:
+        - link "Base64 Decode Inspection Guide Inspection guide ->" [ref=e171] [cursor=pointer]:
+          - /url: /blog/base64-decode-inspection-guide
+          - generic [ref=e172]: Base64 Decode Inspection Guide
+          - generic [ref=e173]: Inspection guide ->
+      - listitem [ref=e174]:
+        - link "Diff Checker Review Workflow Review guide ->" [ref=e175] [cursor=pointer]:
+          - /url: /blog/diff-checker-review-workflow
+          - generic [ref=e176]: Diff Checker Review Workflow
+          - generic [ref=e177]: Review guide ->
+      - listitem [ref=e178]:
+        - link "XML Formatter Clean XML Workflow Legacy XML guide ->" [ref=e179] [cursor=pointer]:
+          - /url: /blog/xml-formatter-clean-xml-workflow
+          - generic [ref=e180]: XML Formatter Clean XML Workflow
+          - generic [ref=e181]: Legacy XML guide ->
+      - listitem [ref=e182]:
+        - link "PDF Tool Workflow For Large Documents Document guide ->" [ref=e183] [cursor=pointer]:
+          - /url: /blog/pdf-tool-workflow-for-large-documents
+          - generic [ref=e184]: PDF Tool Workflow For Large Documents
+          - generic [ref=e185]: Document guide ->
+      - listitem [ref=e186]:
+        - link "JSON Tools Hub Cluster page ->" [ref=e187] [cursor=pointer]:
+          - /url: /json-tools
+          - generic [ref=e188]: JSON Tools Hub
+          - generic [ref=e189]: Cluster page ->
+  - region "JSON cluster navigation" [ref=e190]:
+    - heading "JSON cluster navigation" [level=2] [ref=e191]
+    - paragraph [ref=e192]: This site is designed as a topical cluster around JSON formatting, validation, minification, and error repair. That structure helps search engines understand that the site is an authority on the topic rather than a single isolated tool.
+    - list [ref=e193]:
+      - listitem [ref=e194]:
+        - link "JSON Tools Hub" [ref=e195] [cursor=pointer]:
+          - /url: /json-tools
+      - listitem [ref=e196]:
+        - link "JSON Validator" [ref=e197] [cursor=pointer]:
+          - /url: /json-validator
+      - listitem [ref=e198]:
+        - link "JSON Minify" [ref=e199] [cursor=pointer]:
+          - /url: /json-minify
+      - listitem [ref=e200]:
+        - link "JSON Format Guide" [ref=e201] [cursor=pointer]:
+          - /url: /blog/json-format-guide
+      - listitem [ref=e202]:
+        - link "Fix Invalid JSON" [ref=e203] [cursor=pointer]:
+          - /url: /blog/fix-invalid-json
+      - listitem [ref=e204]:
+        - link "Common JSON Errors" [ref=e205] [cursor=pointer]:
+          - /url: /blog/common-json-errors
+  - generic [ref=e206]:
+    - generic [ref=e207]:
+      - generic [ref=e208]:
+        - generic [ref=e209]:
+          - img "Daxnoria Logo" [ref=e210]
+          - paragraph [ref=e211]: Daxnoria
+        - paragraph [ref=e212]: A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.
+        - paragraph [ref=e213]:
+          - text: "Contact:"
+          - link "daxnoria@gmail.com" [ref=e214] [cursor=pointer]:
+            - /url: mailto:daxnoria@gmail.com
+        - paragraph [ref=e215]:
+          - text: "Facebook:"
+          - link "Daxnoria" [ref=e216] [cursor=pointer]:
+            - /url: https://web.facebook.com/people/Daxnoria/61575367715805/
+      - generic [ref=e217]:
+        - paragraph [ref=e218]: Core Tools
+        - generic [ref=e219]:
+          - link "JSON Formatter" [ref=e220] [cursor=pointer]:
+            - /url: /json-formatter
+          - link "XML Formatter" [ref=e221] [cursor=pointer]:
+            - /url: /xml-formatter
+          - link "Timestamp Converter" [ref=e222] [cursor=pointer]:
+            - /url: /timestamp
+      - generic [ref=e223]:
+        - paragraph [ref=e224]: Utilities
+        - generic [ref=e225]:
+          - link "Encode Tools" [ref=e226] [cursor=pointer]:
+            - /url: /encode
+          - link "Image Tools" [ref=e227] [cursor=pointer]:
+            - /url: /image
+          - link "PDF Tools" [ref=e228] [cursor=pointer]:
+            - /url: /pdf
+          - link "QR Code Tools" [ref=e229] [cursor=pointer]:
+            - /url: /qrcode
+      - generic [ref=e230]:
+        - paragraph [ref=e231]: Resources
+        - generic [ref=e232]:
+          - link "Homepage" [ref=e233] [cursor=pointer]:
+            - /url: /
+          - link "Tools Directory" [ref=e234] [cursor=pointer]:
+            - /url: /tools
+          - link "Developer Blog" [ref=e235] [cursor=pointer]:
+            - /url: /blog
+          - link "Developer Tools Online" [ref=e236] [cursor=pointer]:
+            - /url: /developer-tools-online
+          - link "API Debugging Tools" [ref=e237] [cursor=pointer]:
+            - /url: /api-debugging-tools
+          - link "Request Feature" [ref=e238] [cursor=pointer]:
+            - /url: /request-feature
+          - link "Sitemap" [ref=e239] [cursor=pointer]:
+            - /url: /sitemap.xml
+          - link "Robots" [ref=e240] [cursor=pointer]:
+            - /url: /robots.txt
+    - paragraph [ref=e242]: © 2026 Daxnoria. Built for developers, technical teams, and fast workflows.
+```

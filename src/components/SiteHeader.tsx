@@ -23,9 +23,9 @@ export default function SiteHeader({ compact = false }: SiteHeaderProps) {
     { href: "/image", label: "Image" },
     { href: "/pdf", label: "PDF" },
     { href: "/qrcode", label: "QR Code" },
+    { href: "/favicon-generator", label: "Favicon" },
     { href: "/jwt-decoder", label: "JWT Decoder" },
     { href: "/diff-checker", label: "Diff Checker" },
-    { href: "/blog", label: "Blog" },
   ];
 
   function closeMenu() {

@@ -1,0 +1,266 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Daxnoria Logo Daxnoria Code tools for fast workflows" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Daxnoria Logo" [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e9]: Daxnoria
+          - generic [ref=e10]: Code tools for fast workflows
+      - link "Request feature" [ref=e12] [cursor=pointer]:
+        - /url: /request-feature
+    - navigation "Main navigation" [ref=e13]:
+      - link "Home" [ref=e14] [cursor=pointer]:
+        - /url: /
+      - link "Tools" [ref=e15] [cursor=pointer]:
+        - /url: /tools
+      - link "Format" [ref=e16] [cursor=pointer]:
+        - /url: /tools/format
+      - link "Encode" [ref=e17] [cursor=pointer]:
+        - /url: /encode
+      - link "Text Count" [ref=e18] [cursor=pointer]:
+        - /url: /text-count
+      - link "Timestamp" [ref=e19] [cursor=pointer]:
+        - /url: /timestamp
+      - link "Image" [ref=e20] [cursor=pointer]:
+        - /url: /image
+      - link "PDF" [ref=e21] [cursor=pointer]:
+        - /url: /pdf
+      - link "QR Code" [ref=e22] [cursor=pointer]:
+        - /url: /qrcode
+      - link "JWT Decoder" [ref=e23] [cursor=pointer]:
+        - /url: /jwt-decoder
+      - link "Diff Checker" [ref=e24] [cursor=pointer]:
+        - /url: /diff-checker
+      - link "Blog" [ref=e25] [cursor=pointer]:
+        - /url: /blog
+  - generic [ref=e26]:
+    - heading "Encode Tools" [level=1] [ref=e27]
+    - paragraph [ref=e28]: Base64, URL, and HTML encode/decode in one fast browser toolkit.
+  - generic [ref=e29]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Encode tools
+      - heading "Base64, URL, HTML Encode" [level=2] [ref=e33]
+      - paragraph [ref=e34]: Encode and decode text quickly for APIs, links, and frontend HTML payloads.
+    - generic [ref=e35]:
+      - button "Base64 Encoder Convert plain text to Base64" [ref=e36] [cursor=pointer]:
+        - generic [ref=e37]: Base64 Encoder
+        - generic [ref=e38]: Convert plain text to Base64
+      - button "Base64 Decoder Decode Base64 into readable text" [ref=e39] [cursor=pointer]:
+        - generic [ref=e40]: Base64 Decoder
+        - generic [ref=e41]: Decode Base64 into readable text
+      - button "URL Encoder Escape characters for URLs" [active] [ref=e42] [cursor=pointer]:
+        - generic [ref=e43]: URL Encoder
+        - generic [ref=e44]: Escape characters for URLs
+      - button "URL Decoder Decode URL-encoded values" [ref=e45] [cursor=pointer]:
+        - generic [ref=e46]: URL Decoder
+        - generic [ref=e47]: Decode URL-encoded values
+      - button "HTML Encode Escape text for safe HTML output" [ref=e48] [cursor=pointer]:
+        - generic [ref=e49]: HTML Encode
+        - generic [ref=e50]: Escape text for safe HTML output
+      - button "HTML Decode Decode HTML entities to plain text" [ref=e51] [cursor=pointer]:
+        - generic [ref=e52]: HTML Decode
+        - generic [ref=e53]: Decode HTML entities to plain text
+    - generic [ref=e54]:
+      - generic [ref=e55]:
+        - paragraph [ref=e56]: Input
+        - textbox "Paste your text to encode or decode" [ref=e57]: hello world?
+      - generic [ref=e58]:
+        - paragraph [ref=e59]: Output
+        - textbox "Result will appear here" [ref=e60]
+        - button "Copy output" [disabled] [ref=e62]
+  - region "About Encode Tools" [ref=e63]:
+    - heading "About Encode Tools" [level=2] [ref=e64]
+    - paragraph [ref=e65]: Encode utilities are essential when moving data between browsers, APIs, and backend systems. This toolkit helps you quickly switch between Base64, URL encoding, and HTML escaping without leaving your workflow.
+    - heading "What is Text Encoding?" [level=2] [ref=e66]
+    - paragraph [ref=e67]: Text encoding transforms content into formats that are safe for transport or display in specific contexts, such as URLs, headers, HTML templates, and serialized payloads.
+    - heading "Frequently Asked Questions" [level=2] [ref=e68]
+    - generic [ref=e69]:
+      - heading "What can I encode with this tool?" [level=3] [ref=e70]
+      - paragraph [ref=e71]: You can encode and decode text with Base64, URL, and HTML utilities in one place.
+    - generic [ref=e72]:
+      - heading "Is my input uploaded to a server?" [level=3] [ref=e73]
+      - paragraph [ref=e74]: No. All processing runs directly in your browser for privacy and speed.
+    - generic [ref=e75]:
+      - heading "Can I use this for API debugging?" [level=3] [ref=e76]
+      - paragraph [ref=e77]: Yes. It is useful for preparing query params, decoding payloads, and troubleshooting encoded values.
+  - region "Related Tools" [ref=e78]:
+    - heading "Related Tools" [level=2] [ref=e79]
+    - list [ref=e80]:
+      - listitem [ref=e81]:
+        - link "Text Counter Open tool ->" [ref=e82] [cursor=pointer]:
+          - /url: /text-count
+          - generic [ref=e83]: Text Counter
+          - generic [ref=e84]: Open tool ->
+      - listitem [ref=e85]:
+        - link "Timestamp Converter Open tool ->" [ref=e86] [cursor=pointer]:
+          - /url: /timestamp
+          - generic [ref=e87]: Timestamp Converter
+          - generic [ref=e88]: Open tool ->
+      - listitem [ref=e89]:
+        - link "JWT Decoder Open tool ->" [ref=e90] [cursor=pointer]:
+          - /url: /jwt-decoder
+          - generic [ref=e91]: JWT Decoder
+          - generic [ref=e92]: Open tool ->
+      - listitem [ref=e93]:
+        - link "Diff Checker Open tool ->" [ref=e94] [cursor=pointer]:
+          - /url: /diff-checker
+          - generic [ref=e95]: Diff Checker
+          - generic [ref=e96]: Open tool ->
+  - region "Developer Guides" [ref=e97]:
+    - heading "Developer Guides" [level=2] [ref=e98]
+    - list [ref=e99]:
+      - listitem [ref=e100]:
+        - link "AI Tools For Developers Workflow guide ->" [ref=e101] [cursor=pointer]:
+          - /url: /blog/ai-tools-for-developers
+          - generic [ref=e102]: AI Tools For Developers
+          - generic [ref=e103]: Workflow guide ->
+      - listitem [ref=e104]:
+        - link "JSON Formatter Best Practices Validation guide ->" [ref=e105] [cursor=pointer]:
+          - /url: /blog/json-formatter-best-practices
+          - generic [ref=e106]: JSON Formatter Best Practices
+          - generic [ref=e107]: Validation guide ->
+      - listitem [ref=e108]:
+        - link "JSON Format Guide Structure guide ->" [ref=e109] [cursor=pointer]:
+          - /url: /blog/json-format-guide
+          - generic [ref=e110]: JSON Format Guide
+          - generic [ref=e111]: Structure guide ->
+      - listitem [ref=e112]:
+        - link "Fix Invalid JSON Repair guide ->" [ref=e113] [cursor=pointer]:
+          - /url: /blog/fix-invalid-json
+          - generic [ref=e114]: Fix Invalid JSON
+          - generic [ref=e115]: Repair guide ->
+      - listitem [ref=e116]:
+        - link "Common JSON Errors Error checklist ->" [ref=e117] [cursor=pointer]:
+          - /url: /blog/common-json-errors
+          - generic [ref=e118]: Common JSON Errors
+          - generic [ref=e119]: Error checklist ->
+      - listitem [ref=e120]:
+        - link "XML Validator Best Practices SOAP guide ->" [ref=e121] [cursor=pointer]:
+          - /url: /blog/xml-validator-best-practices
+          - generic [ref=e122]: XML Validator Best Practices
+          - generic [ref=e123]: SOAP guide ->
+      - listitem [ref=e124]:
+        - link "JWT Debugging Workflow Auth guide ->" [ref=e125] [cursor=pointer]:
+          - /url: /blog/jwt-debugging-workflow
+          - generic [ref=e126]: JWT Debugging Workflow
+          - generic [ref=e127]: Auth guide ->
+      - listitem [ref=e128]:
+        - link "Unix Timestamp Converter Use Cases Debugging guide ->" [ref=e129] [cursor=pointer]:
+          - /url: /blog/unix-timestamp-converter-use-cases
+          - generic [ref=e130]: Unix Timestamp Converter Use Cases
+          - generic [ref=e131]: Debugging guide ->
+      - listitem [ref=e132]:
+        - link "Base64 Encode And Decode Workflow Encoding guide ->" [ref=e133] [cursor=pointer]:
+          - /url: /blog/base64-encode-decode-workflow
+          - generic [ref=e134]: Base64 Encode And Decode Workflow
+          - generic [ref=e135]: Encoding guide ->
+      - listitem [ref=e136]:
+        - link "URL Encoding Guide Query string guide ->" [ref=e137] [cursor=pointer]:
+          - /url: /blog/url-encoding-guide-for-webworkflows
+          - generic [ref=e138]: URL Encoding Guide
+          - generic [ref=e139]: Query string guide ->
+      - listitem [ref=e140]:
+        - link "Text Counting Guide Copy length guide ->" [ref=e141] [cursor=pointer]:
+          - /url: /blog/text-counting-guide-for-writers-and-seo
+          - generic [ref=e142]: Text Counting Guide
+          - generic [ref=e143]: Copy length guide ->
+      - listitem [ref=e144]:
+        - link "Timestamp Converter Use Cases Time workflow guide ->" [ref=e145] [cursor=pointer]:
+          - /url: /blog/timestamp-converter-for-productivity
+          - generic [ref=e146]: Timestamp Converter Use Cases
+          - generic [ref=e147]: Time workflow guide ->
+      - listitem [ref=e148]:
+        - link "QR Code Sharing Guide Sharing guide ->" [ref=e149] [cursor=pointer]:
+          - /url: /blog/qrcode-link-sharing-guide
+          - generic [ref=e150]: QR Code Sharing Guide
+          - generic [ref=e151]: Sharing guide ->
+      - listitem [ref=e152]:
+        - link "URL Decode Practical Guide Decoding guide ->" [ref=e153] [cursor=pointer]:
+          - /url: /blog/url-decode-practical-guide
+          - generic [ref=e154]: URL Decode Practical Guide
+          - generic [ref=e155]: Decoding guide ->
+      - listitem [ref=e156]:
+        - link "Base64 Decode Inspection Guide Inspection guide ->" [ref=e157] [cursor=pointer]:
+          - /url: /blog/base64-decode-inspection-guide
+          - generic [ref=e158]: Base64 Decode Inspection Guide
+          - generic [ref=e159]: Inspection guide ->
+      - listitem [ref=e160]:
+        - link "Diff Checker Review Workflow Review guide ->" [ref=e161] [cursor=pointer]:
+          - /url: /blog/diff-checker-review-workflow
+          - generic [ref=e162]: Diff Checker Review Workflow
+          - generic [ref=e163]: Review guide ->
+      - listitem [ref=e164]:
+        - link "XML Formatter Clean XML Workflow Legacy XML guide ->" [ref=e165] [cursor=pointer]:
+          - /url: /blog/xml-formatter-clean-xml-workflow
+          - generic [ref=e166]: XML Formatter Clean XML Workflow
+          - generic [ref=e167]: Legacy XML guide ->
+      - listitem [ref=e168]:
+        - link "PDF Tool Workflow For Large Documents Document guide ->" [ref=e169] [cursor=pointer]:
+          - /url: /blog/pdf-tool-workflow-for-large-documents
+          - generic [ref=e170]: PDF Tool Workflow For Large Documents
+          - generic [ref=e171]: Document guide ->
+      - listitem [ref=e172]:
+        - link "JSON Tools Hub Cluster page ->" [ref=e173] [cursor=pointer]:
+          - /url: /json-tools
+          - generic [ref=e174]: JSON Tools Hub
+          - generic [ref=e175]: Cluster page ->
+  - generic [ref=e176]:
+    - generic [ref=e177]:
+      - generic [ref=e178]:
+        - generic [ref=e179]:
+          - img "Daxnoria Logo" [ref=e180]
+          - paragraph [ref=e181]: Daxnoria
+        - paragraph [ref=e182]: A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.
+        - paragraph [ref=e183]:
+          - text: "Contact:"
+          - link "daxnoria@gmail.com" [ref=e184] [cursor=pointer]:
+            - /url: mailto:daxnoria@gmail.com
+        - paragraph [ref=e185]:
+          - text: "Facebook:"
+          - link "Daxnoria" [ref=e186] [cursor=pointer]:
+            - /url: https://web.facebook.com/people/Daxnoria/61575367715805/
+      - generic [ref=e187]:
+        - paragraph [ref=e188]: Core Tools
+        - generic [ref=e189]:
+          - link "JSON Formatter" [ref=e190] [cursor=pointer]:
+            - /url: /json-formatter
+          - link "XML Formatter" [ref=e191] [cursor=pointer]:
+            - /url: /xml-formatter
+          - link "Timestamp Converter" [ref=e192] [cursor=pointer]:
+            - /url: /timestamp
+      - generic [ref=e193]:
+        - paragraph [ref=e194]: Utilities
+        - generic [ref=e195]:
+          - link "Encode Tools" [ref=e196] [cursor=pointer]:
+            - /url: /encode
+          - link "Image Tools" [ref=e197] [cursor=pointer]:
+            - /url: /image
+          - link "PDF Tools" [ref=e198] [cursor=pointer]:
+            - /url: /pdf
+          - link "QR Code Tools" [ref=e199] [cursor=pointer]:
+            - /url: /qrcode
+      - generic [ref=e200]:
+        - paragraph [ref=e201]: Resources
+        - generic [ref=e202]:
+          - link "Homepage" [ref=e203] [cursor=pointer]:
+            - /url: /
+          - link "Tools Directory" [ref=e204] [cursor=pointer]:
+            - /url: /tools
+          - link "Developer Blog" [ref=e205] [cursor=pointer]:
+            - /url: /blog
+          - link "Developer Tools Online" [ref=e206] [cursor=pointer]:
+            - /url: /developer-tools-online
+          - link "API Debugging Tools" [ref=e207] [cursor=pointer]:
+            - /url: /api-debugging-tools
+          - link "Request Feature" [ref=e208] [cursor=pointer]:
+            - /url: /request-feature
+          - link "Sitemap" [ref=e209] [cursor=pointer]:
+            - /url: /sitemap.xml
+          - link "Robots" [ref=e210] [cursor=pointer]:
+            - /url: /robots.txt
+    - paragraph [ref=e212]: © 2026 Daxnoria. Built for developers, technical teams, and fast workflows.
+```

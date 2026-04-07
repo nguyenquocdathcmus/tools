@@ -1,0 +1,326 @@
+# Page snapshot
+
+```yaml
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - link "Daxnoria Logo Daxnoria Code tools for fast workflows" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img "Daxnoria Logo" [ref=e7]
+        - generic [ref=e8]:
+          - generic [ref=e9]: Daxnoria
+          - generic [ref=e10]: Code tools for fast workflows
+      - link "Request feature" [ref=e12] [cursor=pointer]:
+        - /url: /request-feature
+    - navigation "Main navigation" [ref=e13]:
+      - link "Home" [ref=e14] [cursor=pointer]:
+        - /url: /
+      - link "Tools" [ref=e15] [cursor=pointer]:
+        - /url: /tools
+      - link "Format" [ref=e16] [cursor=pointer]:
+        - /url: /tools/format
+      - link "Encode" [ref=e17] [cursor=pointer]:
+        - /url: /encode
+      - link "Text Count" [ref=e18] [cursor=pointer]:
+        - /url: /text-count
+      - link "Timestamp" [ref=e19] [cursor=pointer]:
+        - /url: /timestamp
+      - link "Image" [ref=e20] [cursor=pointer]:
+        - /url: /image
+      - link "PDF" [ref=e21] [cursor=pointer]:
+        - /url: /pdf
+      - link "QR Code" [ref=e22] [cursor=pointer]:
+        - /url: /qrcode
+      - link "JWT Decoder" [ref=e23] [cursor=pointer]:
+        - /url: /jwt-decoder
+      - link "Diff Checker" [ref=e24] [cursor=pointer]:
+        - /url: /diff-checker
+      - link "Blog" [ref=e25] [cursor=pointer]:
+        - /url: /blog
+  - generic [ref=e26]:
+    - heading "Favicon Generator" [level=1] [ref=e27]
+    - paragraph [ref=e28]: Create favicon files, app icons, and install snippets directly in your browser.
+  - region "Favicon generator tool" [ref=e29]:
+    - generic [ref=e31]:
+      - paragraph [ref=e32]: Favicon generator
+      - heading "Favicon, SVG icon, PNG pack, ICO, manifest" [level=2] [ref=e33]
+      - paragraph [ref=e34]: Create browser and mobile icon assets in your browser with instant previews and install snippets.
+      - list "Favicon generation steps" [ref=e35]:
+        - listitem [ref=e36]: Choose text logo or upload your image.
+        - listitem [ref=e37]: Adjust colors and padding until the preview looks balanced.
+        - listitem [ref=e38]: Download SVG, ICO, PNG sizes, then apply the generated snippet.
+    - generic [ref=e39]:
+      - button "Upload image Turn an existing logo into icon sizes" [ref=e40] [cursor=pointer]:
+        - generic [ref=e41]: Upload image
+        - generic [ref=e42]: Turn an existing logo into icon sizes
+      - button "Text logo Build a monogram favicon from initials" [ref=e43] [cursor=pointer]:
+        - generic [ref=e44]: Text logo
+        - generic [ref=e45]: Build a monogram favicon from initials
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]: Brand name
+            - textbox "Brand name" [ref=e51]:
+              - /placeholder: Your product name
+              - text: Daxnoria
+          - generic [ref=e52]:
+            - generic [ref=e53]: Background color
+            - textbox "Background color" [ref=e54]: "#0f172a"
+          - generic [ref=e55]:
+            - generic [ref=e56]: Foreground color
+            - textbox "Foreground color" [ref=e57]: "#ffffff"
+          - generic [ref=e58]:
+            - generic [ref=e59]: Background mode
+            - generic [ref=e60]:
+              - checkbox "Background mode Keep transparent background for exported icons" [checked] [ref=e61]
+              - text: Keep transparent background for exported icons
+          - generic [ref=e62]:
+            - generic [ref=e63]: Logo padding % (0 - 35)
+            - textbox "Logo padding % (0 - 35)" [ref=e64]: "14"
+        - button "Upload logo image" [ref=e66] [cursor=pointer]:
+          - paragraph [ref=e67]: Drop a logo here
+          - paragraph [ref=e68]: PNG, JPG, WEBP, or SVG works best. Transparent logos keep alpha when the option above is enabled.
+          - button "Browse file" [ref=e69]
+          - button "Choose File" [ref=e70]
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - paragraph [ref=e73]: Source preview
+          - generic [ref=e74]: Choose a logo or switch to text mode to start generating.
+        - generic [ref=e75]:
+          - paragraph [ref=e76]: Install checklist
+          - list [ref=e77]:
+            - listitem [ref=e78]:
+              - generic [ref=e79]: SVG favicon
+              - generic [ref=e80]: Pending
+            - listitem [ref=e81]:
+              - generic [ref=e82]: ICO pack
+              - generic [ref=e83]: Pending
+            - listitem [ref=e84]:
+              - generic [ref=e85]: PNG sizes
+              - generic [ref=e86]: Pending
+            - listitem [ref=e87]:
+              - generic [ref=e88]: Manifest JSON
+              - generic [ref=e89]: Ready
+            - listitem [ref=e90]:
+              - generic [ref=e91]: HTML head snippet
+              - generic [ref=e92]: Ready
+    - generic [ref=e93]:
+      - generic [ref=e94]:
+        - paragraph [ref=e95]: Manifest JSON
+        - generic [ref=e96]: "{ \"name\": \"Daxnoria\", \"short_name\": \"Daxnoria\", \"start_url\": \"/\", \"display\": \"standalone\", \"background_color\": \"#0f172a\", \"theme_color\": \"#0f172a\", \"icons\": [ { \"src\": \"/icon-192x192.png\", \"sizes\": \"192x192\", \"type\": \"image/png\", \"purpose\": \"any\" }, { \"src\": \"/icon-512x512.png\", \"sizes\": \"512x512\", \"type\": \"image/png\", \"purpose\": \"any maskable\" } ] }"
+        - generic [ref=e97]:
+          - button "Copy manifest" [ref=e98] [cursor=pointer]
+          - link "Download manifest" [ref=e99] [cursor=pointer]:
+            - /url: data:application/manifest+json;charset=utf-8,%7B%0A%20%20%22name%22%3A%20%22Daxnoria%22%2C%0A%20%20%22short_name%22%3A%20%22Daxnoria%22%2C%0A%20%20%22start_url%22%3A%20%22%2F%22%2C%0A%20%20%22display%22%3A%20%22standalone%22%2C%0A%20%20%22background_color%22%3A%20%22%230f172a%22%2C%0A%20%20%22theme_color%22%3A%20%22%230f172a%22%2C%0A%20%20%22icons%22%3A%20%5B%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%22src%22%3A%20%22%2Ficon-192x192.png%22%2C%0A%20%20%20%20%20%20%22sizes%22%3A%20%22192x192%22%2C%0A%20%20%20%20%20%20%22type%22%3A%20%22image%2Fpng%22%2C%0A%20%20%20%20%20%20%22purpose%22%3A%20%22any%22%0A%20%20%20%20%7D%2C%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%22src%22%3A%20%22%2Ficon-512x512.png%22%2C%0A%20%20%20%20%20%20%22sizes%22%3A%20%22512x512%22%2C%0A%20%20%20%20%20%20%22type%22%3A%20%22image%2Fpng%22%2C%0A%20%20%20%20%20%20%22purpose%22%3A%20%22any%20maskable%22%0A%20%20%20%20%7D%0A%20%20%5D%0A%7D
+      - generic [ref=e100]:
+        - paragraph [ref=e101]: HTML head snippet
+        - generic [ref=e102]: <link rel="icon" href="/favicon.svg" type="image/svg+xml"> <link rel="icon" href="/favicon.ico" sizes="any"> <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png"> <link rel="icon" href="/favicon-48x48.png" sizes="48x48" type="image/png"> <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180"> <link rel="manifest" href="/site.webmanifest"> <meta name="theme-color" content="#0f172a">
+        - generic [ref=e103]:
+          - button "Copy snippet" [ref=e104] [cursor=pointer]
+          - link "Download snippet" [ref=e105] [cursor=pointer]:
+            - /url: data:text/plain;charset=utf-8,%3Clink%20rel%3D%22icon%22%20href%3D%22%2Ffavicon.svg%22%20type%3D%22image%2Fsvg%2Bxml%22%3E%0A%3Clink%20rel%3D%22icon%22%20href%3D%22%2Ffavicon.ico%22%20sizes%3D%22any%22%3E%0A%3Clink%20rel%3D%22icon%22%20href%3D%22%2Ffavicon-32x32.png%22%20sizes%3D%2232x32%22%20type%3D%22image%2Fpng%22%3E%0A%3Clink%20rel%3D%22icon%22%20href%3D%22%2Ffavicon-48x48.png%22%20sizes%3D%2248x48%22%20type%3D%22image%2Fpng%22%3E%0A%3Clink%20rel%3D%22apple-touch-icon%22%20href%3D%22%2Fapple-touch-icon.png%22%20sizes%3D%22180x180%22%3E%0A%3Clink%20rel%3D%22manifest%22%20href%3D%22%2Fsite.webmanifest%22%3E%0A%3Cmeta%20name%3D%22theme-color%22%20content%3D%22%230f172a%22%3E
+    - generic [ref=e106]:
+      - generic [ref=e108]:
+        - paragraph [ref=e109]: Favicon checker
+        - heading "Platform favicon visibility test" [level=3] [ref=e110]
+        - paragraph [ref=e111]: Validate how your favicon setup is discovered from HTML and manifest files, then inspect response status and content metadata.
+      - generic [ref=e112]: Website URL
+      - generic [ref=e113]:
+        - textbox "Website URL" [ref=e114]:
+          - /placeholder: "Enter a full website URL, for example: https://example.com"
+          - text: https://example.com
+        - button "Check favicon" [ref=e115] [cursor=pointer]
+      - paragraph [ref=e116]: "Tip: include https:// for the most accurate production-like result."
+  - region "About Favicon Generation" [ref=e117]:
+    - heading "About Favicon Generation" [level=2] [ref=e118]
+    - paragraph [ref=e119]: Favicons are part branding and part browser compatibility. A good icon pack covers modern SVG support, PNG fallbacks, ICO compatibility, and platform-specific touch icons.
+    - heading "What is included in the icon pack?" [level=2] [ref=e120]
+    - paragraph [ref=e121]: The generator creates SVG, PNG, and ICO files, plus a manifest JSON file and a head snippet you can paste into your layout or HTML template.
+    - heading "Frequently Asked Questions" [level=2] [ref=e122]
+    - generic [ref=e123]:
+      - heading "What assets does the favicon generator create?" [level=3] [ref=e124]
+      - paragraph [ref=e125]: It creates SVG, PNG, and ICO favicon files along with a manifest JSON and HTML head snippet.
+    - generic [ref=e126]:
+      - heading "Can I use my own logo image?" [level=3] [ref=e127]
+      - paragraph [ref=e128]: Yes. You can upload PNG, JPG, WEBP, or SVG artwork and export the icon pack from it.
+    - generic [ref=e129]:
+      - heading "Is generation local to the browser?" [level=3] [ref=e130]
+      - paragraph [ref=e131]: Yes. The generator works locally in your browser so you can preview and export without sending files to a server.
+  - region "Related Tools" [ref=e132]:
+    - heading "Related Tools" [level=2] [ref=e133]
+    - list [ref=e134]:
+      - listitem [ref=e135]:
+        - link "Image Tools Open tool ->" [ref=e136] [cursor=pointer]:
+          - /url: /image
+          - generic [ref=e137]: Image Tools
+          - generic [ref=e138]: Open tool ->
+      - listitem [ref=e139]:
+        - link "QR Code Generator Open tool ->" [ref=e140] [cursor=pointer]:
+          - /url: /qrcode
+          - generic [ref=e141]: QR Code Generator
+          - generic [ref=e142]: Open tool ->
+      - listitem [ref=e143]:
+        - link "Encode Tools Open tool ->" [ref=e144] [cursor=pointer]:
+          - /url: /encode
+          - generic [ref=e145]: Encode Tools
+          - generic [ref=e146]: Open tool ->
+      - listitem [ref=e147]:
+        - link "PDF Tools Open tool ->" [ref=e148] [cursor=pointer]:
+          - /url: /pdf
+          - generic [ref=e149]: PDF Tools
+          - generic [ref=e150]: Open tool ->
+  - region "Developer Guides" [ref=e151]:
+    - heading "Developer Guides" [level=2] [ref=e152]
+    - list [ref=e153]:
+      - listitem [ref=e154]:
+        - link "AI Tools For Developers Workflow guide ->" [ref=e155] [cursor=pointer]:
+          - /url: /blog/ai-tools-for-developers
+          - generic [ref=e156]: AI Tools For Developers
+          - generic [ref=e157]: Workflow guide ->
+      - listitem [ref=e158]:
+        - link "JSON Formatter Best Practices Validation guide ->" [ref=e159] [cursor=pointer]:
+          - /url: /blog/json-formatter-best-practices
+          - generic [ref=e160]: JSON Formatter Best Practices
+          - generic [ref=e161]: Validation guide ->
+      - listitem [ref=e162]:
+        - link "JSON Format Guide Structure guide ->" [ref=e163] [cursor=pointer]:
+          - /url: /blog/json-format-guide
+          - generic [ref=e164]: JSON Format Guide
+          - generic [ref=e165]: Structure guide ->
+      - listitem [ref=e166]:
+        - link "Fix Invalid JSON Repair guide ->" [ref=e167] [cursor=pointer]:
+          - /url: /blog/fix-invalid-json
+          - generic [ref=e168]: Fix Invalid JSON
+          - generic [ref=e169]: Repair guide ->
+      - listitem [ref=e170]:
+        - link "Common JSON Errors Error checklist ->" [ref=e171] [cursor=pointer]:
+          - /url: /blog/common-json-errors
+          - generic [ref=e172]: Common JSON Errors
+          - generic [ref=e173]: Error checklist ->
+      - listitem [ref=e174]:
+        - link "XML Validator Best Practices SOAP guide ->" [ref=e175] [cursor=pointer]:
+          - /url: /blog/xml-validator-best-practices
+          - generic [ref=e176]: XML Validator Best Practices
+          - generic [ref=e177]: SOAP guide ->
+      - listitem [ref=e178]:
+        - link "JWT Debugging Workflow Auth guide ->" [ref=e179] [cursor=pointer]:
+          - /url: /blog/jwt-debugging-workflow
+          - generic [ref=e180]: JWT Debugging Workflow
+          - generic [ref=e181]: Auth guide ->
+      - listitem [ref=e182]:
+        - link "Unix Timestamp Converter Use Cases Debugging guide ->" [ref=e183] [cursor=pointer]:
+          - /url: /blog/unix-timestamp-converter-use-cases
+          - generic [ref=e184]: Unix Timestamp Converter Use Cases
+          - generic [ref=e185]: Debugging guide ->
+      - listitem [ref=e186]:
+        - link "Base64 Encode And Decode Workflow Encoding guide ->" [ref=e187] [cursor=pointer]:
+          - /url: /blog/base64-encode-decode-workflow
+          - generic [ref=e188]: Base64 Encode And Decode Workflow
+          - generic [ref=e189]: Encoding guide ->
+      - listitem [ref=e190]:
+        - link "URL Encoding Guide Query string guide ->" [ref=e191] [cursor=pointer]:
+          - /url: /blog/url-encoding-guide-for-webworkflows
+          - generic [ref=e192]: URL Encoding Guide
+          - generic [ref=e193]: Query string guide ->
+      - listitem [ref=e194]:
+        - link "Text Counting Guide Copy length guide ->" [ref=e195] [cursor=pointer]:
+          - /url: /blog/text-counting-guide-for-writers-and-seo
+          - generic [ref=e196]: Text Counting Guide
+          - generic [ref=e197]: Copy length guide ->
+      - listitem [ref=e198]:
+        - link "Timestamp Converter Use Cases Time workflow guide ->" [ref=e199] [cursor=pointer]:
+          - /url: /blog/timestamp-converter-for-productivity
+          - generic [ref=e200]: Timestamp Converter Use Cases
+          - generic [ref=e201]: Time workflow guide ->
+      - listitem [ref=e202]:
+        - link "QR Code Sharing Guide Sharing guide ->" [ref=e203] [cursor=pointer]:
+          - /url: /blog/qrcode-link-sharing-guide
+          - generic [ref=e204]: QR Code Sharing Guide
+          - generic [ref=e205]: Sharing guide ->
+      - listitem [ref=e206]:
+        - link "URL Decode Practical Guide Decoding guide ->" [ref=e207] [cursor=pointer]:
+          - /url: /blog/url-decode-practical-guide
+          - generic [ref=e208]: URL Decode Practical Guide
+          - generic [ref=e209]: Decoding guide ->
+      - listitem [ref=e210]:
+        - link "Base64 Decode Inspection Guide Inspection guide ->" [ref=e211] [cursor=pointer]:
+          - /url: /blog/base64-decode-inspection-guide
+          - generic [ref=e212]: Base64 Decode Inspection Guide
+          - generic [ref=e213]: Inspection guide ->
+      - listitem [ref=e214]:
+        - link "Diff Checker Review Workflow Review guide ->" [ref=e215] [cursor=pointer]:
+          - /url: /blog/diff-checker-review-workflow
+          - generic [ref=e216]: Diff Checker Review Workflow
+          - generic [ref=e217]: Review guide ->
+      - listitem [ref=e218]:
+        - link "XML Formatter Clean XML Workflow Legacy XML guide ->" [ref=e219] [cursor=pointer]:
+          - /url: /blog/xml-formatter-clean-xml-workflow
+          - generic [ref=e220]: XML Formatter Clean XML Workflow
+          - generic [ref=e221]: Legacy XML guide ->
+      - listitem [ref=e222]:
+        - link "PDF Tool Workflow For Large Documents Document guide ->" [ref=e223] [cursor=pointer]:
+          - /url: /blog/pdf-tool-workflow-for-large-documents
+          - generic [ref=e224]: PDF Tool Workflow For Large Documents
+          - generic [ref=e225]: Document guide ->
+      - listitem [ref=e226]:
+        - link "JSON Tools Hub Cluster page ->" [ref=e227] [cursor=pointer]:
+          - /url: /json-tools
+          - generic [ref=e228]: JSON Tools Hub
+          - generic [ref=e229]: Cluster page ->
+  - generic [ref=e230]:
+    - generic [ref=e231]:
+      - generic [ref=e232]:
+        - generic [ref=e233]:
+          - img "Daxnoria Logo" [ref=e234]
+          - paragraph [ref=e235]: Daxnoria
+        - paragraph [ref=e236]: A code-first toolkit for formatting, encoding, counting and converting developer data in seconds.
+        - paragraph [ref=e237]:
+          - text: "Contact:"
+          - link "daxnoria@gmail.com" [ref=e238] [cursor=pointer]:
+            - /url: mailto:daxnoria@gmail.com
+        - paragraph [ref=e239]:
+          - text: "Facebook:"
+          - link "Daxnoria" [ref=e240] [cursor=pointer]:
+            - /url: https://web.facebook.com/people/Daxnoria/61575367715805/
+      - generic [ref=e241]:
+        - paragraph [ref=e242]: Core Tools
+        - generic [ref=e243]:
+          - link "JSON Formatter" [ref=e244] [cursor=pointer]:
+            - /url: /json-formatter
+          - link "XML Formatter" [ref=e245] [cursor=pointer]:
+            - /url: /xml-formatter
+          - link "Timestamp Converter" [ref=e246] [cursor=pointer]:
+            - /url: /timestamp
+      - generic [ref=e247]:
+        - paragraph [ref=e248]: Utilities
+        - generic [ref=e249]:
+          - link "Encode Tools" [ref=e250] [cursor=pointer]:
+            - /url: /encode
+          - link "Image Tools" [ref=e251] [cursor=pointer]:
+            - /url: /image
+          - link "PDF Tools" [ref=e252] [cursor=pointer]:
+            - /url: /pdf
+          - link "QR Code Tools" [ref=e253] [cursor=pointer]:
+            - /url: /qrcode
+      - generic [ref=e254]:
+        - paragraph [ref=e255]: Resources
+        - generic [ref=e256]:
+          - link "Homepage" [ref=e257] [cursor=pointer]:
+            - /url: /
+          - link "Tools Directory" [ref=e258] [cursor=pointer]:
+            - /url: /tools
+          - link "Developer Blog" [ref=e259] [cursor=pointer]:
+            - /url: /blog
+          - link "Developer Tools Online" [ref=e260] [cursor=pointer]:
+            - /url: /developer-tools-online
+          - link "API Debugging Tools" [ref=e261] [cursor=pointer]:
+            - /url: /api-debugging-tools
+          - link "Request Feature" [ref=e262] [cursor=pointer]:
+            - /url: /request-feature
+          - link "Sitemap" [ref=e263] [cursor=pointer]:
+            - /url: /sitemap.xml
+          - link "Robots" [ref=e264] [cursor=pointer]:
+            - /url: /robots.txt
+    - paragraph [ref=e266]: © 2026 Daxnoria. Built for developers, technical teams, and fast workflows.
+```
