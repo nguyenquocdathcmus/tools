@@ -1,13 +1,12 @@
 "use client";
 
 import { useEffect } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { GA_MEASUREMENT_ID, pageview } from "@/lib/analytics";
 
 export default function GoogleAnalytics() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const isProduction = process.env.NODE_ENV === "production";
 
   useEffect(() => {
@@ -15,10 +14,10 @@ export default function GoogleAnalytics() {
       return;
     }
 
-    const query = searchParams?.toString();
-    const url = query ? `${pathname}?${query}` : pathname;
+    const query = typeof window !== "undefined" ? window.location.search : "";
+    const url = query ? `${pathname}${query}` : pathname;
     pageview(url);
-  }, [isProduction, pathname, searchParams]);
+  }, [isProduction, pathname]);
 
   if (!isProduction) {
     return null;
