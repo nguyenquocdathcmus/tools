@@ -183,3 +183,34 @@ test("favicon generator checker validates domain favicons", async ({ page }) => 
   await expect(page.getByText("Homepage status:")).toBeVisible();
   await expect(page.getByText("Icons found:")).toBeVisible();
 });
+
+test("password generator page renders and accepts generation inputs", async ({ page }) => {
+  await page.goto("/password-generator");
+
+  await expect(page.locator("#password-generator-title")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Password Generator" }).nth(1)).toBeVisible();
+
+  await expect(page.getByLabel("Include uppercase (A-Z)")).toBeChecked();
+  await expect(page.getByLabel("Include lowercase (a-z)")).toBeChecked();
+  await expect(page.getByLabel("Include numbers (0-9)")).toBeChecked();
+  await expect(page.getByLabel("Include symbols (!@#$...)")).toBeChecked();
+
+  await page.locator('input[type="range"]').fill("20");
+  await page.locator('input[type="number"]').fill("3");
+
+  await page.getByRole("button", { name: "Generate Passwords" }).click();
+
+  await expect(page.getByRole("region", { name: "Generated Passwords" })).toBeVisible();
+  await expect(page.getByRole("button", { name: "Copy all" })).toBeVisible();
+});
+
+test("color converter shows hex rgb hsl and cmyk outputs", async ({ page }) => {
+  await page.goto("/color-converter");
+
+  await page.getByLabel("Enter a color value").fill("#ff5733");
+
+  await expect(page.getByText("HEX ↔ RGB", { exact: true })).toBeVisible();
+  await expect(page.getByText("rgb(255, 87, 51)").first()).toBeVisible();
+  await expect(page.getByText("hsl(11, 100%, 60%)").first()).toBeVisible();
+  await expect(page.getByText("cmyk(0%, 66%, 80%, 0%)").first()).toBeVisible();
+});

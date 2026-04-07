@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { SITE_URL } from "@/lib/site";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -118,6 +119,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en" className={`${plusJakarta.variable} ${jetBrainsMono.variable}`}>
       <body>
         {children}
+        <GoogleAnalytics />
         <Script
           id="schema-website"
           type="application/ld+json"

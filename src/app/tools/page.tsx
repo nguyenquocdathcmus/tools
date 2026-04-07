@@ -6,9 +6,9 @@ import SiteFooter from "@/components/SiteFooter";
 import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Developer Tools Directory: JSON, Encode, Timestamp, JWT, PDF",
+  title: "Developer Tools Directory: JSON, Encode, Timestamp, JWT, PDF, Password, Color",
   description:
-    "Browse the full online developer tools directory for JSON formatting, Base64 encode/decode, Unix timestamp conversion, JWT inspection, diff checks, and file utilities.",
+    "Browse the full online developer tools directory for JSON formatting, Base64 encode/decode, Unix timestamp conversion, JWT inspection, color conversion, password generation, diff checks, and file utilities.",
   alternates: {
     canonical: "/tools",
   },
@@ -101,11 +101,23 @@ export default function ToolsDirectoryPage() {
           <Link href="/image">Image Tools</Link> when you need to resize or convert the source logo before export.
         </p>
 
+        <h3>Design system and UI color workflows</h3>
+        <p>
+          Use <Link href="/color-converter">Color Converter</Link> to switch between HEX, RGB, RGBA, HSL, HSV, and CMYK while
+          keeping color tokens aligned across Figma files, CSS variables, and print handoff documents.
+        </p>
+
         <h3>Auth and time-sensitive incident triage</h3>
         <p>
           Pair <Link href="/jwt-decoder">JWT Decoder</Link> with <Link href="/timestamp-converter">Timestamp Converter</Link>
           to validate expiration windows and issued-at claims. This is one of the fastest ways to debug login failures
           and token lifecycle bugs.
+        </p>
+
+        <h3>Credential hardening and account security</h3>
+        <p>
+          Use <Link href="/password-generator">Password Generator</Link> to create strong browser-only credentials,
+          then store them in your password manager before provisioning user, admin, and service accounts.
         </p>
 
         <h3>Related guides</h3>
@@ -132,6 +144,18 @@ export default function ToolsDirectoryPage() {
             <Link href="/json-tools">
               <span>JSON Tools Hub</span>
               <small>Open hub -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/password-generator">
+              <span>Password Generator</span>
+              <small>Open tool -&gt;</small>
+            </Link>
+          </li>
+          <li>
+            <Link href="/color-converter">
+              <span>Color Converter</span>
+              <small>Open tool -&gt;</small>
             </Link>
           </li>
         </ul>

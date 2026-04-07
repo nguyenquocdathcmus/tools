@@ -2050,6 +2050,69 @@ h2 {
   font-size: 0.9rem;
 }
 
+.password-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.password-list-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  border: 1px solid rgba(143, 180, 255, 0.22);
+  border-radius: 10px;
+  background: rgba(12, 19, 36, 0.72);
+}
+
+.password-list-item code {
+  font-family: var(--font-mono);
+  font-size: 0.94rem;
+  color: #e7efff;
+  overflow-wrap: anywhere;
+}
+
+.color-format-help {
+  margin-top: 10px;
+}
+
+.color-preview-strip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(143, 180, 255, 0.22);
+  border-radius: 12px;
+  background: rgba(12, 19, 36, 0.72);
+  margin: 12px 0 14px;
+}
+
+.color-preview-strip p {
+  margin: 4px 0 0;
+  color: #c2d5ff;
+}
+
+.color-swatch {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.12);
+}
+
+.color-output-card pre {
+  color: #eef4ff;
+  background: rgba(19, 30, 56, 0.88);
+  border: 1px solid rgba(141, 176, 243, 0.28);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
 .compare-card {
   margin-top: 14px;
 }
@@ -2112,7 +2175,7 @@ h2 {
 
 textarea {
   width: 100%;
-  min-height: 270px;
+  min-height: 500px;
   border: 1px solid #2b3142;
   border-radius: 12px;
   padding: 12px;
