@@ -2,6 +2,7 @@
 
 import NextImage from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { trackEvent } from "@/lib/analytics";
 
 type ImageAction = "compress" | "resize" | "convert";
 
@@ -15,7 +16,7 @@ export default function ImageToolsPanel() {
   const [width, setWidth] = useState("1280");
   const [height, setHeight] = useState("720");
   const [quality, setQuality] = useState("0.75");
-  const [convertTo, setConvertTo] = useState<"image/png" | "image/jpeg">("image/jpeg");
+  const [convertTo, setConvertTo] = useState<"image/png" | "image/jpeg" | "image/webp">("image/jpeg");
   const [error, setError] = useState("");
   const [sourceInfo, setSourceInfo] = useState<{ width: number; height: number } | null>(null);
   const fileInputRef = useRef<HTMLInputElement | null>(null);
@@ -66,6 +67,11 @@ export default function ImageToolsPanel() {
     setResultInfo(null);
     setResultMimeType("image/jpeg");
     setSourceUrl(URL.createObjectURL(nextFile));
+
+    trackEvent("upload_image", {
+      file_type: nextFile.type || "unknown",
+      file_size_kb: Number((nextFile.size / 1024).toFixed(1)),
+    });
 
     try {
       await readImageMeta(nextFile);
@@ -127,6 +133,15 @@ export default function ImageToolsPanel() {
       setResultUrl(output);
       setResultMimeType(outputType === "image/png" ? "image/png" : outputType === "image/webp" ? "image/webp" : "image/jpeg");
       setResultInfo({ width: targetWidth, height: targetHeight });
+
+      if (action === "compress") {
+        trackEvent("compress_image", {
+          source_type: normalizedFileType || "image/jpeg",
+          output_type: outputType,
+          output_width: targetWidth,
+          output_height: targetHeight,
+        });
+      }
     } catch (toolError) {
       setResultUrl("");
       setResultInfo(null);
@@ -143,7 +158,7 @@ export default function ImageToolsPanel() {
       <div className="panel-head">
         <div>
           <p className="eyebrow">Image tools</p>
-          <h2>Compress Image, Resize Image, Convert PNG/JPG</h2>
+          <h2>Compress Image, Resize Image, Convert JPEG/JPG, PNG, WEBP</h2>
           <p className="panel-subtext">Process images directly in your browser with quick export and no server upload.</p>
         </div>
       </div>
@@ -214,9 +229,15 @@ export default function ImageToolsPanel() {
       <div className="two-col-fields">
         <label className="field">
           <span>Convert target format</span>
-          <select value={convertTo} onChange={(event) => setConvertTo(event.target.value as "image/png" | "image/jpeg")}>
+          <select
+            value={convertTo}
+            onChange={(event) =>
+              setConvertTo(event.target.value as "image/png" | "image/jpeg" | "image/webp")
+            }
+          >
             <option value="image/jpeg">JPG</option>
             <option value="image/png">PNG</option>
+            <option value="image/webp">WEBP</option>
           </select>
         </label>
         <label className="field">
@@ -244,7 +265,7 @@ export default function ImageToolsPanel() {
           <small>Apply custom output dimensions</small>
         </button>
         <button className="mode-btn" onClick={() => processImage("convert")} type="button">
-          <span>Convert PNG/JPG</span>
+          <span>Convert JPEG/JPG, PNG, WEBP</span>
           <small>Change format for compatibility needs</small>
         </button>
       </div>
@@ -260,7 +281,18 @@ export default function ImageToolsPanel() {
             height={resultInfo?.height ?? sourceInfo?.height ?? 800}
             unoptimized
           />
-          <a href={resultUrl} download={`processed-image.${downloadExtension}`} className="btn primary download-btn">
+          <a
+            href={resultUrl}
+            download={`processed-image.${downloadExtension}`}
+            className="btn primary download-btn"
+            onClick={() => {
+              trackEvent("download_image", {
+                output_type: resultMimeType,
+                output_width: resultInfo?.width ?? sourceInfo?.width ?? 0,
+                output_height: resultInfo?.height ?? sourceInfo?.height ?? 0,
+              });
+            }}
+          >
             Download result
           </a>
         </div>

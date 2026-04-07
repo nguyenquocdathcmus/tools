@@ -63,6 +63,18 @@ export default function HomePage() {
       slug: "tools/qrcode",
       seoDescription: "Generate QR codes for URLs, text, and contact info directly in the browser.",
     },
+    {
+      id: "password-generator",
+      name: "Password Generator",
+      slug: "password-generator",
+      seoDescription: "Generate secure passwords instantly in your browser with customizable rules and length.",
+    },
+    {
+      id: "color-converter",
+      name: "Color Converter",
+      slug: "color-converter",
+      seoDescription: "Convert HEX, RGB, RGBA, HSL, HSV, CMYK, and CSS color names for design and CSS workflows.",
+    },
   ];
   const searchItems = [
     ...FORMATTERS.map((formatter) => ({
@@ -104,6 +116,16 @@ export default function HomePage() {
       id: "favicon-generator",
       name: "Favicon Generator",
       slug: "favicon-generator",
+    },
+    {
+      id: "password-generator",
+      name: "Password Generator",
+      slug: "password-generator",
+    },
+    {
+      id: "color-converter",
+      name: "Color Converter",
+      slug: "color-converter",
     },
     {
       id: "jwt-decoder",

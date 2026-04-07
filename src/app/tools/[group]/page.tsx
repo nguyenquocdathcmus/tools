@@ -7,6 +7,8 @@ import SiteHeader from "@/components/SiteHeader";
 import { FORMATTERS, type FormatterId } from "@/lib/formatters";
 import { SITE_URL } from "@/lib/site";
 
+export const runtime = "nodejs";
+
 type GroupKey = "all" | "format" | "data" | "web" | "code";
 
 type GroupConfig = {

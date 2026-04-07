@@ -33,6 +33,18 @@ export default function HomeToolSearch({ items }: HomeToolSearchProps) {
       favicons: "/favicon-generator",
       icon: "/favicon-generator",
       logo: "/favicon-generator",
+      color: "/color-converter",
+      colors: "/color-converter",
+      hex: "/color-converter",
+      rgb: "/color-converter",
+      rgba: "/color-converter",
+      hsl: "/color-converter",
+      hsv: "/color-converter",
+      cmyk: "/color-converter",
+      password: "/password-generator",
+      passwords: "/password-generator",
+      passwd: "/password-generator",
+      security: "/password-generator",
       pdf: "/pdf",
       qrcode: "/qrcode",
       jwt: "/jwt-decoder",
@@ -50,7 +62,18 @@ export default function HomeToolSearch({ items }: HomeToolSearchProps) {
     [],
   );
 
-  const quickTags = ["JSON", "XML", "JWT", "Diff", "Text Count", "PDF", "Encode", "Favicon"];
+  const quickTags = [
+    "JSON",
+    "XML",
+    "JWT",
+    "Diff",
+    "Text Count",
+    "PDF",
+    "Encode",
+    "Favicon",
+    "Color",
+    "Password",
+  ];
 
   const liveSuggestions = useMemo(() => {
     const normalized = normalize(query);
